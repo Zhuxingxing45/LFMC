@@ -1,0 +1,36 @@
+Given a problem statement as contexts, the task is to answer a logical reasoning question. Besides,include the option of the question  on the last line
+------
+
+Input:
+Given the following context:
+Shipping Clerk: The five specially ordered shipments sent out last week were sent out on Thursday. Last week, all of the shipments that were sent out on Friday consisted entirely of building supplies, and the shipping department then closed for the weekend. Four shipments were sent to Truax Construction last week, only three of which consisted of building supplies.
+For the following question:If the shipping clerk's statements are true, which of the following must also be true?
+Which of the following options is correct? A)At least one of the shipments sent to Truax Construction last week was sent out before Friday., B)At least one of last week's specially ordered shipments did not consist of building supplies., C)At least one of the shipments sent to Truax Construction last week was specially ordered., D)At least one of the shipments sent to Truax Construction was not sent out on Thursday of last week.
+Please provide the correct option and the reasoning process to verify this conclusion, and indicate the correct option in the last sentence.
+
+Reasoning:
+Let's break down the given statements:
+1. The five specially ordered shipments were sent out on Thursday.
+2. All shipments sent out on Friday consisted entirely of building supplies.
+3. The shipping department closed for the weekend after sending out the Friday shipments.
+4. Four shipments were sent to Truax Construction last week.
+5. Only three of the shipments sent to Truax Construction consisted of building supplies.
+We need to find the statement that must be true based on these conditions.
+Let's analyze the options:
+Option 0: At least one of the shipments sent to Truax Construction last week was sent out before Friday.
+This option seems plausible. If the shipping department closed for the weekend after sending out the Friday shipments, it means that any shipments sent to Truax Construction before Friday would have been sent out before the department closed.
+Option 1: At least one of last week's specially ordered shipments did not consist of building supplies.
+This option is possible, but not necessarily true. We know that the specially ordered shipments were sent out on Thursday, and we don't have any information about their contents.
+Option 2: At least one of the shipments sent to Truax Construction last week was specially ordered.
+This option is also possible, but not necessarily true. We know that four shipments were sent to Truax Construction, and only three consisted of building supplies. The remaining shipment could be a non-building supply shipment, but it could also be a building supply shipment that was not specially ordered.
+Option 3: At least one of the shipments sent to Truax Construction was not sent out on Thursday of last week.
+This option is not necessarily true. We know that the specially ordered shipments were sent out on Thursday, and we don't have any information about the other shipments sent to Truax Construction.\n\nBased on the given conditions, option 0 is the most likely correct answer. The shipping department closed for the weekend after sending out the Friday shipments, so any shipments sent to Truax Construction before Friday would have been sent out before the department closed.
+
+Therefore, the answer is:A) At least one of the shipments sent to Truax Construction last week was sent out before Friday.
+
+------
+Input:
+[[INPUT]]
+
+Reasoning:
+
