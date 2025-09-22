@@ -1,0 +1,1 @@
+huggingface-cli download --repo-type dataset --resume-download metaeval/reclor --local-dir metaeval/reclor
