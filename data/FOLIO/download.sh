@@ -1,0 +1,1 @@
+huggingface-cli download --repo-type dataset --resume-download tasksource/folio --local-dir tasksource/folio

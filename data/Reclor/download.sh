@@ -1,0 +1,1 @@
+huggingface-cli download --repo-type dataset --resume-download tasksource/logiqa-2.0-nli --local-dir tasksource/logiqa-2.0-nli

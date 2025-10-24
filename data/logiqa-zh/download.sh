@@ -1,0 +1,1 @@
+huggingface-cli download --repo-type dataset --resume-download jiacheng-ye/logiqa-zh --local-dir jiacheng-ye/logiqa-zh

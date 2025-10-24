@@ -1,0 +1,1 @@
+huggingface-cli download --repo-type dataset --resume-download datatune/LogiCoT --local-dir datatune/LogiCoT

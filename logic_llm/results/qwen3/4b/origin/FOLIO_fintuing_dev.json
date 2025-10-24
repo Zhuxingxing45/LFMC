@@ -1,0 +1,1423 @@
+[
+    {
+        "folio_id": 0,
+        "premises": "People in this club who perform in school talent shows often attend and are very engaged with school events.\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\nPeople in this club who chaperone high school dances are not students who attend the school.\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school. \nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.",
+        "conclusion": "Bonnie performs in school talent shows often.",
+        "label": "Uncertain",
+        "generate_answer": "Answer:A) True."
+    },
+    {
+        "folio_id": 1,
+        "premises": "People in this club who perform in school talent shows often attend and are very engaged with school events.\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\nPeople in this club who chaperone high school dances are not students who attend the school.\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school. \nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.",
+        "conclusion": "If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to understand the question. It's about whether a certain hypothesis is true, false, or uncertain based on the premises. The hypothesis is:\n\n\"If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and dis"
+    },
+    {
+        "folio_id": 2,
+        "premises": "People in this club who perform in school talent shows often attend and are very engaged with school events.\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\nPeople in this club who chaperone high school dances are not students who attend the school.\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school. \nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.",
+        "conclusion": "If Bonnie either chaperones high school dances or, if she does not, she performs in school talent shows often, then Bonnie is both a young child or teenager who wishes to further her academic career and educational opportunities and an inactive and disinterested member of the community.",
+        "label": "False",
+        "generate_answer": "Answer:A) True."
+    },
+    {
+        "folio_id": 3,
+        "premises": "All employees who schedule a meeting with their customers will go to the company building today. \nEveryone who has lunch in the company building schedules meetings with their customers. \nEmployees have lunch either in the company building or at home.\nIf an employee has lunch at home, they are working remotely from home.\nAll employees who are in other countries work remotely from home. \nNo managers work remotely from home. \nJames will appear in the company today if and only if he is a manager.",
+        "conclusion": "James has lunch in the company.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"James has lunch in the company\" is true, false, or uncertain based on the premises.\n\nHere are all the premises again for clarity:\n\n1. All employees who schedule a meeting with their customers will go to the company building today.\n\n2. Everyone who has lunch in the company building schedules meetings with their customers.\n\n3. Employees have lunch either in the company building or at home.\n\n4. If an employee has"
+    },
+    {
+        "folio_id": 4,
+        "premises": "All employees who schedule a meeting with their customers will go to the company building today. \nEveryone who has lunch in the company building schedules meetings with their customers. \nEmployees have lunch either in the company building or at home.\nIf an employee has lunch at home, they are working remotely from home.\nAll employees who are in other countries work remotely from home. \nNo managers work remotely from home. \nJames will appear in the company today if and only if he is a manager.",
+        "conclusion": "James does not have lunch in the company.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"James does not have lunch in the company\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. All employees who schedule a meeting with their customers will go to the company building today.\n\n2. Everyone who has lunch in the company building schedules meetings with their customers.\n\n3. Employees have lunch either in the company building or at home.\n\n4. If an"
+    },
+    {
+        "folio_id": 5,
+        "premises": "All employees who schedule a meeting with their customers will go to the company building today. \nEveryone who has lunch in the company building schedules meetings with their customers. \nEmployees have lunch either in the company building or at home.\nIf an employee has lunch at home, they are working remotely from home.\nAll employees who are in other countries work remotely from home. \nNo managers work remotely from home. \nJames will appear in the company today if and only if he is a manager.",
+        "conclusion": "If James is either a manager or in other countries,  then James does not either has lunch at home or work remotely from home. If James either has lunch at home or works remotely from home, then he is neither a manager nor does he work in other countries. [contrapositive is more natural]",
+        "label": "True",
+        "generate_answer": ""
+    },
+    {
+        "folio_id": 6,
+        "premises": "When the Monkeypox virus occurs in a being, it may get Monkeypox. \nMonkeypox virus can occur in certain animals.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and tiredness. \nPeople feel tired when they get the flu.",
+        "conclusion": "There is an animal.",
+        "label": "True",
+        "generate_answer": "answer\nA)"
+    },
+    {
+        "folio_id": 7,
+        "premises": "When the Monkeypox virus occurs in a being, it may get Monkeypox. \nMonkeypox virus can occur in certain animals.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and tiredness. \nPeople feel tired when they get the flu.",
+        "conclusion": "No one gets the flu.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"No one gets the flu\" is true, false, or uncertain based on the given premises.\n\nHere are the premises:\n\n1. When the Monkeypox virus occurs in a being, it may get Monkeypox.\n\n2. Monkeypox virus can occur in certain animals.\n\n3. Humans are mammals.\n\n4. Mammals are animals.\n\n5. Symptoms of Monkeypox include fever, headache, muscle"
+    },
+    {
+        "folio_id": 8,
+        "premises": "When the Monkeypox virus occurs in a being, it may get Monkeypox. \nMonkeypox virus can occur in certain animals.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and tiredness. \nPeople feel tired when they get the flu.",
+        "conclusion": "Symptoms of Monkeypox include coughing.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out. So the question is whether the hypothesis \"Symptoms of Monkeypox include coughing\" is true, false, or uncertain based on the given premises.\n\nFirst, I need to go through each premise carefully. Let me list them out again to make sure I don't miss anything.\n\nThe premises are:\n\n1. When the Monkeypox virus occurs in a being, it may get Monkeypox.\n2."
+    },
+    {
+        "folio_id": 9,
+        "premises": "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\nTom is not an Eastern wild turkey.\nTom is not an Osceola wild turkey.\nTom is not a Gould's wild turkey.\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\nTom is a wild turkey.",
+        "conclusion": "Tom is an Ocellated wild turkey.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\n\n2. Tom is not an Eastern wild turkey.\n\n3. Tom is not an Osceola wild turkey.\n\n4. Tom is not a Gould's wild turkey.\n\n5. Tom is neither a Merriam's"
+    },
+    {
+        "folio_id": 10,
+        "premises": "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\nTom is not an Eastern wild turkey.\nTom is not an Osceola wild turkey.\nTom is not a Gould's wild turkey.\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\nTom is a wild turkey.",
+        "conclusion": "Tom is an Eastern wild turkey.",
+        "label": "False",
+        "generate_answer": "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\nTom is not an Eastern wild turkey.\nTom is not an Osceola wild turkey.\nTom is not a Gould's wild turkey.\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\nTom is a wild turkey.\nFor the"
+    },
+    {
+        "folio_id": 11,
+        "premises": "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\nTom is not an Eastern wild turkey.\nTom is not an Osceola wild turkey.\nTom is not a Gould's wild turkey.\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\nTom is a wild turkey.",
+        "conclusion": "Joey is a wild turkey.",
+        "label": "Uncertain",
+        "generate_answer": ":::\nThe answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 12,
+        "premises": "A Japanese game company created the game the Legend of Zelda.\nAll games on the Top 10 list are made by Japanese game companies.\nIf a game sells more than one million copies, then it will be included in the Top 10 list.\nThe Legend of Zelda sold more than one million copies.",
+        "conclusion": "The Legend of Zelda is on the Top 10 list.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to determine if the hypothesis \"The Legend of Zelda is on the Top 10 list\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. A Japanese game company created the game the Legend of Zelda.\n\n2. All games on the Top 10 list are made by Japanese game companies.\n\n3. If a game sells more than one million copies, then it will be included in the Top"
+    },
+    {
+        "folio_id": 13,
+        "premises": "A Japanese game company created the game the Legend of Zelda.\nAll games on the Top 10 list are made by Japanese game companies.\nIf a game sells more than one million copies, then it will be included in the Top 10 list.\nThe Legend of Zelda sold more than one million copies.",
+        "conclusion": "FIFA 22 is made by a Japanese video game company.",
+        "label": "Uncertain",
+        "generate_answer": "�"
+    },
+    {
+        "folio_id": 14,
+        "premises": "A Japanese game company created the game the Legend of Zelda.\nAll games on the Top 10 list are made by Japanese game companies.\nIf a game sells more than one million copies, then it will be included in the Top 10 list.\nThe Legend of Zelda sold more than one million copies.",
+        "conclusion": "The Legend of Zelda is not on the Top 10 list.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"The Legend of Zelda is not on the Top 10 list\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. A Japanese game company created the game the Legend of Zelda.\n\n2. All games on the Top 10 list are made by Japanese game companies.\n\n3. If a game sells more than one million copies, then it will be included in the"
+    },
+    {
+        "folio_id": 15,
+        "premises": "All squares are four-sided.\nAll four-sided things are shapes. ",
+        "conclusion": "All squares are shapes.",
+        "label": "True",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 16,
+        "premises": "All rabbits that can be spotted near the campus are cute. \nSome turtles can be spotted near the campus. \nThe only animals that can be spotted near the campus are rabbits and squirrels.\nIf something is skittish, then it is not calm.\nAll the squirrels that can be spotted near the campus are skittish.\nRockie can be spotted near the campus, and it is calm.",
+        "conclusion": "Rockie is a turtle.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises and the hypothesis. The hypothesis is: \"Rockie is a turtle.\" And I have to say if it's true, false, or uncertain given the premises.\n\nLet me list out all the premises clearly:\n\n1. All rabbits that can be spotted near the campus are cute.\n\n2. Some turtles can be spotted near the campus.\n\n3. The only animals that can be spotted near the campus are rabbits and"
+    },
+    {
+        "folio_id": 17,
+        "premises": "All rabbits that can be spotted near the campus are cute. \nSome turtles can be spotted near the campus. \nThe only animals that can be spotted near the campus are rabbits and squirrels.\nIf something is skittish, then it is not calm.\nAll the squirrels that can be spotted near the campus are skittish.\nRockie can be spotted near the campus, and it is calm.",
+        "conclusion": "Rockie is not a turtle.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"Rockie is not a turtle\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises to make sure I don't miss anything.\n\n1. All rabbits that can be spotted near the campus are cute.\n2. Some turtles can be spotted near the campus.\n3. The only animals that can be spotted near"
+    },
+    {
+        "folio_id": 18,
+        "premises": "All rabbits that can be spotted near the campus are cute. \nSome turtles can be spotted near the campus. \nThe only animals that can be spotted near the campus are rabbits and squirrels.\nIf something is skittish, then it is not calm.\nAll the squirrels that can be spotted near the campus are skittish.\nRockie can be spotted near the campus, and it is calm.",
+        "conclusion": "Rockie is a turtle or cute.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Rockie is a turtle or cute\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. All rabbits that can be spotted near the campus are cute.\n\n2. Some turtles can be spotted near the campus.\n\n3. The only animals that can be spotted near the campus are rabbits and squirrels.\n\n4. If something is skittish, then it"
+    },
+    {
+        "folio_id": 19,
+        "premises": "All rabbits that can be spotted near the campus are cute. \nSome turtles can be spotted near the campus. \nThe only animals that can be spotted near the campus are rabbits and squirrels.\nIf something is skittish, then it is not calm.\nAll the squirrels that can be spotted near the campus are skittish.\nRockie can be spotted near the campus, and it is calm.",
+        "conclusion": "If Rockie is not both a turtle and a squirrel, then Rockie is either cute or skittish.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"If Rockie is not both a turtle and a squirrel, then Rockie is either cute or skittish.\"\n\nI should list out all the premises clearly:\n\n1. All rabbits that can be spotted near the campus are cute.\n\n2. Some turtles can be spotted near the campus.\n\n3. The only animals that can be spotted near"
+    },
+    {
+        "folio_id": 20,
+        "premises": "All rabbits that can be spotted near the campus are cute. \nSome turtles can be spotted near the campus. \nThe only animals that can be spotted near the campus are rabbits and squirrels.\nIf something is skittish, then it is not calm.\nAll the squirrels that can be spotted near the campus are skittish.\nRockie can be spotted near the campus, and it is calm.",
+        "conclusion": "If Rockie is cute and calm, then Rockie is a skittish turtle.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"If Rockie is cute and calm, then Rockie is a skittish turtle\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. All rabbits that can be spotted near the campus are cute.\n\n2. Some turtles can be spotted near the campus.\n\n3. The only animals that can be spotted near the campus are rabbits and squirrels.\n\n4"
+    },
+    {
+        "folio_id": 21,
+        "premises": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf and only if Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror.\"\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it with Lisa.",
+        "conclusion": "Karen will share \"Stranger Things\" with Lisa.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if Karen will share \"Stranger Things\" with Lisa based on the premises. The answer choices are A) True, B) False, or C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. \"Stranger Things\" is a popular Netflix show.\n\n2. If a Netflix show is popular, Karen will binge-watch it.\n\n3. If and only if Karen binge-watches a Netflix show, she will"
+    },
+    {
+        "folio_id": 22,
+        "premises": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf and only if Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror.\"\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it with Lisa.",
+        "conclusion": "\"Black Mirror\" is popular.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"Black Mirror\" is popular is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I don't miss anything.\n\n1. \"Stranger Things\" is a popular Netflix show.\n2. If a Netflix show is popular, Karen will binge-watch it.\n3. If and only if Karen binge"
+    },
+    {
+        "folio_id": 23,
+        "premises": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf and only if Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror.\"\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it with Lisa.",
+        "conclusion": "Karen will share \"Black Mirror\" with Lisa.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether Karen will share \"Black Mirror\" with Lisa based on the given premises. The answer choices are True, False, or Uncertain.\n\nFirst, let me list out all the premises to make sure I don't miss anything.\n\n1. \"Stranger Things\" is a popular Netflix show.\n2. If a Netflix show is popular, Karen will binge-watch it.\n3. If"
+    },
+    {
+        "folio_id": 24,
+        "premises": "Beijing is the capital of the People's Republic of China. \nBeijing is the capital city of the world's most populous nation.\nBeijing is located in Northern China.\nBeijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.\nBeijing has hosted the Summer and Winter Olympics and the Summer and Winter Paralympics.\nMany of Beijing's 91 universities consistently rank among the best universities in the world.",
+        "conclusion": "Beijing hosted both the 2008 Summer Olympics and the Winter Olympics.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"Beijing hosted both the 2008 Summer Olympics and the Winter Olympics\" is true, false, or uncertain based on the given premises.\n\nLet me list out the premises:\n\n1. Beijing is the capital of the People's Republic of China.\n\n2. Beijing is the capital city of the world's most populous nation.\n\n3. Beijing is located in Northern China.\n\n4. Beijing hosted the 20"
+    },
+    {
+        "folio_id": 25,
+        "premises": "Beijing is the capital of the People's Republic of China. \nBeijing is the capital city of the world's most populous nation.\nBeijing is located in Northern China.\nBeijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.\nBeijing has hosted the Summer and Winter Olympics and the Summer and Winter Paralympics.\nMany of Beijing's 91 universities consistently rank among the best universities in the world.",
+        "conclusion": "Beijing is located in southern China.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"Beijing is located in southern China\" is true, false, or uncertain based on the given premises.\n\nThe premises are:\n\n1. Beijing is the capital of the People's Republic of China.\n\n2. Beijing is the capital city of the world's most populous nation.\n\n3. Beijing is located in Northern China.\n\n4. Beijing hosted the 2008 Summer Olympics and 2008 Summer Par"
+    },
+    {
+        "folio_id": 26,
+        "premises": "Beijing is the capital of the People's Republic of China. \nBeijing is the capital city of the world's most populous nation.\nBeijing is located in Northern China.\nBeijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.\nBeijing has hosted the Summer and Winter Olympics and the Summer and Winter Paralympics.\nMany of Beijing's 91 universities consistently rank among the best universities in the world.",
+        "conclusion": "Beijing is the second largest Chinese city.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the question is: Given the premises, is the hypothesis \"Beijing is the second largest Chinese city\" true, false, or uncertain?\n\nThe premises are:\n\n1. Beijing is the capital of the People's Republic of China.\n\n2. Beijing is the capital city of the world's most populous nation.\n\n3. Beijing is located in Northern China.\n\n4. Beijing hosted the 2008 Summer Olympics and 2008 Summer Paraly"
+    },
+    {
+        "folio_id": 27,
+        "premises": "All aliens are extraterrestrials.\nIf someone is from Mars, then they are an alien.\nNo extraterrestrials are human.\nAll highly intelligent beings from Earth are humans.\nMarvin is a highly intelligent being.\nMarvin is either from Earth and from Mars, or he is from neither.\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.",
+        "conclusion": "Marvin is an alien.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to work through this step by step. So, the question is whether Marvin is an alien based on the given premises. The answer choices are True, False, or Uncertain.\n\nFirst, let me list out all the premises to make sure I don't miss any:\n\n1. All aliens are extraterrestrials.\n2. If someone is from Mars, then they are an alien.\n3. No extraterrestrials are human"
+    },
+    {
+        "folio_id": 28,
+        "premises": "All aliens are extraterrestrials.\nIf someone is from Mars, then they are an alien.\nNo extraterrestrials are human.\nAll highly intelligent beings from Earth are humans.\nMarvin is a highly intelligent being.\nMarvin is either from Earth and from Mars, or he is from neither.\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.",
+        "conclusion": "Marvin is neither a human nor from Mars.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to work through this step by step. Hmm, the question is whether the hypothesis \"Marvin is neither a human nor from Mars\" is true, false, or uncertain based on the given premises.\n\nFirst, I need to list out all the premises and see how they connect. Let me jot them down:\n\n1. All aliens are extraterrestrials. (A → E)\n2. If someone is from Mars, then they are"
+    },
+    {
+        "folio_id": 29,
+        "premises": "All aliens are extraterrestrials.\nIf someone is from Mars, then they are an alien.\nNo extraterrestrials are human.\nAll highly intelligent beings from Earth are humans.\nMarvin is a highly intelligent being.\nMarvin is either from Earth and from Mars, or he is from neither.\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.",
+        "conclusion": "If Marvin is not from Mars, then Marvin is a human.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"If Marvin is not from Mars, then Marvin is a human\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. All aliens are extraterrestrials. (If something is alien, then it's extraterrestrial.)\n\n2. If someone is from Mars, then they are an alien. (Mars → alien)\n\n3. No extrater"
+    },
+    {
+        "folio_id": 30,
+        "premises": "Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\nEvery Grand Slam champion at the mixer is a professional tennis player.\nAll Oscar-nominated actors at the mixer are celebrities.\nAll professional tennis players at the mixer are athletes.\nIf a person at the mixer is a celebrity, then they are well paid.\nIf a person at the mixer is an athlete, then they are famous.\nAll well-paid people at the mixer live in tax havens.\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.",
+        "conclusion": "Djokovic is a Grand Slam champion.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to answer the question based on the premises and the hypothesis. The hypothesis is: \"Djokovic is a Grand Slam champion.\" And I have to say if this is true, false, or uncertain given the context.\n\nThe context has several premises:\n\n1. Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n\n2. Every Grand Slam champion at the mixer is a professional tennis player.\n\n3. All Oscar-n"
+    },
+    {
+        "folio_id": 31,
+        "premises": "Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\nEvery Grand Slam champion at the mixer is a professional tennis player.\nAll Oscar-nominated actors at the mixer are celebrities.\nAll professional tennis players at the mixer are athletes.\nIf a person at the mixer is a celebrity, then they are well paid.\nIf a person at the mixer is an athlete, then they are famous.\nAll well-paid people at the mixer live in tax havens.\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.",
+        "conclusion": "Djokovic lives in a tax haven.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether Djokovic lives in a tax haven given all the premises. The answer choices are True, False, or Uncertain.\n\nFirst, let's list out all the premises to make sure I understand them correctly.\n\n1. Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n2. Every Grand Slam champion at the mixer is a professional tennis player"
+    },
+    {
+        "folio_id": 32,
+        "premises": "Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\nEvery Grand Slam champion at the mixer is a professional tennis player.\nAll Oscar-nominated actors at the mixer are celebrities.\nAll professional tennis players at the mixer are athletes.\nIf a person at the mixer is a celebrity, then they are well paid.\nIf a person at the mixer is an athlete, then they are famous.\nAll well-paid people at the mixer live in tax havens.\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.",
+        "conclusion": "Djokovic does not live in a tax haven.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether the hypothesis \"Djokovic does not live in a tax haven\" is true, false, or uncertain based on the given premises.\n\nFirst, let's list out all the premises to make sure I don't miss anything.\n\n1. Everyone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n2. Every Grand Slam champion at the mixer is a"
+    },
+    {
+        "folio_id": 33,
+        "premises": "Diamond Mine is a professional wrestling stable formed in WWE.\nRoderick Strong leads Diamond Mine.\nDiamond Mine includes the Creed Brothers and Ivy Nile.\nImperium has a feud with Diamond Mine.",
+        "conclusion": "Roderick Strong leads a professional wrestling stable.",
+        "label": "True",
+        "generate_answer": ".Forms the answer"
+    },
+    {
+        "folio_id": 34,
+        "premises": "Diamond Mine is a professional wrestling stable formed in WWE.\nRoderick Strong leads Diamond Mine.\nDiamond Mine includes the Creed Brothers and Ivy Nile.\nImperium has a feud with Diamond Mine.",
+        "conclusion": "Roderick Strong leads the Creed Brothers.",
+        "label": "Uncertain",
+        "generate_answer": "The answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 35,
+        "premises": "Diamond Mine is a professional wrestling stable formed in WWE.\nRoderick Strong leads Diamond Mine.\nDiamond Mine includes the Creed Brothers and Ivy Nile.\nImperium has a feud with Diamond Mine.",
+        "conclusion": "Imperium doesn't have a feud with a professional wrestling stable that includes Ivy Nile.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Diamond Mine is a professional wrestling stable formed in WWE.\n\n2. Roderick Strong leads Diamond Mine.\n\n3. Diamond Mine includes the Creed Brothers and Ivy Nile.\n\n4. Imperium has a feud with Diamond Mine.\n\nThe hypothesis is: Imperium doesn't have a feud with a professional wrestling stable that includes Ivy Nile.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me"
+    },
+    {
+        "folio_id": 36,
+        "premises": "Symphony No. 9 is a music piece.\nComposers write music pieces.\nBeethoven wrote Symphony No. 9.\nVienna Music Society premiered Symphony No. 9.\nVienna Music Society is an orchestra.\nBeethoven leads the Vienna Music Society.\nOrchestras are led by conductors.",
+        "conclusion": "Beethoven is a composer.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is: For the hypothesis \"Beethoven is a composer.\" which of the options is correct? A) True, B) False, C) Uncertain.\n\nI need to base this on the given premises. Let me list out all the premises clearly:\n\n1. Symphony No. 9 is a music piece.\n\n2. Composers write music pieces.\n\n3. Beethoven wrote Symphony No. 9.\n\n4. Vienna Music Society premiered"
+    },
+    {
+        "folio_id": 37,
+        "premises": "Symphony No. 9 is a music piece.\nComposers write music pieces.\nBeethoven wrote Symphony No. 9.\nVienna Music Society premiered Symphony No. 9.\nVienna Music Society is an orchestra.\nBeethoven leads the Vienna Music Society.\nOrchestras are led by conductors.",
+        "conclusion": "Some orchestras premiered music pieces.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is: Given the premises, is the hypothesis \"Some orchestras premiered music pieces\" true, false, or uncertain?\n\nThe premises are:\n\n1. Symphony No. 9 is a music piece.\n\n2. Composers write music pieces.\n\n3. Beethoven wrote Symphony No. 9.\n\n4. Vienna Music Society premiered Symphony No. 9.\n\n5. Vienna Music Society is an orchestra.\n\n6. Beethoven leads the Vienna Music"
+    },
+    {
+        "folio_id": 38,
+        "premises": "Symphony No. 9 is a music piece.\nComposers write music pieces.\nBeethoven wrote Symphony No. 9.\nVienna Music Society premiered Symphony No. 9.\nVienna Music Society is an orchestra.\nBeethoven leads the Vienna Music Society.\nOrchestras are led by conductors.",
+        "conclusion": "Beethoven is not a conductor.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Beethoven is not a conductor\" is true, false, or uncertain based on the premises given.\n\nHere are the premises:\n\n1. Symphony No. 9 is a music piece.\n\n2. Composers write music pieces.\n\n3. Beethoven wrote Symphony No. 9.\n\n4. Vienna Music Society premiered Symphony No. 9.\n\n5. Vienna Music Society is an orchestra.\n\n6. Beethoven leads"
+    },
+    {
+        "folio_id": 39,
+        "premises": "All of Zaha Hadid's design styles that Max adores have interesting geometries.\nNo brutalist buildings that Max adores have interesting geometries.\nEvery style that Max adores is either Zaha Hadid's design style or Kelly Wearstler's design style. \nAll of Kelly Wearstler's design styles that Max adores are evocative.\nAll of Kelly Wearstler's design styles that Max adores are dreamy.\nIf a design by Max that he adores has interesting geometries, then the design is a brutalist building and evocative.",
+        "conclusion": "A design by Max is a brutalist building.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. Hmm, so the question is about determining whether the hypothesis \"A design by Max is a brutalist building\" is true, false, or uncertain based on the given premises. Let me parse all the premises first.\n\nFirst, let's list out the premises clearly:\n\n1. All of Zaha Hadid's design styles that Max adores have interesting geometries.\n   - So, if Max"
+    },
+    {
+        "folio_id": 40,
+        "premises": "All of Zaha Hadid's design styles that Max adores have interesting geometries.\nNo brutalist buildings that Max adores have interesting geometries.\nEvery style that Max adores is either Zaha Hadid's design style or Kelly Wearstler's design style. \nAll of Kelly Wearstler's design styles that Max adores are evocative.\nAll of Kelly Wearstler's design styles that Max adores are dreamy.\nIf a design by Max that he adores has interesting geometries, then the design is a brutalist building and evocative.",
+        "conclusion": "A design by Max is evocative and dreamy.",
+        "label": "True",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 41,
+        "premises": "All of Zaha Hadid's design styles that Max adores have interesting geometries.\nNo brutalist buildings that Max adores have interesting geometries.\nEvery style that Max adores is either Zaha Hadid's design style or Kelly Wearstler's design style. \nAll of Kelly Wearstler's design styles that Max adores are evocative.\nAll of Kelly Wearstler's design styles that Max adores are dreamy.\nIf a design by Max that he adores has interesting geometries, then the design is a brutalist building and evocative.",
+        "conclusion": "A design by Max is either evocative or dreamy.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether the hypothesis \"A design by Max is either evocative or dreamy.\" is true, false, or uncertain based on the premises given.\n\nFirst, I need to parse all the premises carefully. Let me list them out again to make sure I don't miss anything.\n\nPremises:\n1. All of Zaha Hadid's design styles that Max adores have"
+    },
+    {
+        "folio_id": 42,
+        "premises": "If someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis. \nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\nAll tennis players at Roland Garros 2022 are either female or male.\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\nCoco Gauff is at Roland Garros 2022.",
+        "conclusion": "Coco Gauff is among the most active Grand-Slam players.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Coco Gauff is among the most active Grand-Slam players\" is true, false, or uncertain based on the given premises. But the hypothesis says \"among the most active Grand-Slam players,\" and the premises talk about being \"one of the most active players in major tennis.\" I think \"major tennis\" here might be a bit ambiguous, but let's see.\n\nThe key part is: \"If"
+    },
+    {
+        "folio_id": 43,
+        "premises": "If someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis. \nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\nAll tennis players at Roland Garros 2022 are either female or male.\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\nCoco Gauff is at Roland Garros 2022.",
+        "conclusion": "Coco Gauff has lost to Rafael Nadal.",
+        "label": "Uncertain",
+        "generate_answer": "premises"
+    },
+    {
+        "folio_id": 44,
+        "premises": "If someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis. \nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\nAll tennis players at Roland Garros 2022 are either female or male.\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\nCoco Gauff is at Roland Garros 2022.",
+        "conclusion": "Coco Gauff is not both a player who lost to Iga Świątek at Roland Garros 2022 and one of the most active players in major tennis.",
+        "label": "False",
+        "generate_answer": "The answer is:A) True."
+    },
+    {
+        "folio_id": 45,
+        "premises": "All cats are mammals.\nSome pets are not mammals.",
+        "conclusion": "No pets are cats.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"No pets are cats\" is true, false, or uncertain based on the premises.\n\nThe premises are:\n\n1. All cats are mammals.\n\n2. Some pets are not mammals.\n\nThe hypothesis is: No pets are cats.\n\nI should recall some logic rules. This seems like a syllogism problem.\n\nLet me denote:\n\n- Let C be cats.\n\n- Let M be mammals.\n\n- Let P be pets"
+    },
+    {
+        "folio_id": 46,
+        "premises": "There are four seasons in a year: Spring, Summer, Fall, and Winter.\nAll students who want to have a long vacation have summer as their favorite season.\nEmma's favorite season is summer.\nMia's favorite season is not the same as Emma's. \nJames wants to have a long vacation.",
+        "conclusion": "James's favorite season is summer.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if James's favorite season is summer based on the premises. The answer should be A) True, B) False, or C) Uncertain.\n\nLet me list out the premises clearly:\n\n1. There are four seasons in a year: Spring, Summer, Fall, and Winter.\n\n2. All students who want to have a long vacation have summer as their favorite season.\n\n3. Emma's favorite season is summer.\n\n4. Mia"
+    },
+    {
+        "folio_id": 47,
+        "premises": "There are four seasons in a year: Spring, Summer, Fall, and Winter.\nAll students who want to have a long vacation have summer as their favorite season.\nEmma's favorite season is summer.\nMia's favorite season is not the same as Emma's. \nJames wants to have a long vacation.",
+        "conclusion": "Mia's favorite season is spring.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. There are four seasons in a year: Spring, Summer, Fall, and Winter.\n\n2. All students who want to have a long vacation have summer as their favorite season.\n\n3. Emma's favorite season is summer.\n\n4. Mia's favorite season is not the same as Emma's.\n\n5. James wants to have a long vacation.\n\nThe hypothesis is: Mia's favorite season is spring.\n\nI need to determine if this hypothesis"
+    },
+    {
+        "folio_id": 48,
+        "premises": "No digital media are analog.\nEvery printed text is analog media.\nAll streaming services are digital media.\nIf an object is a hardcover book, then it is printed text.\nIf 1984 is a streaming service, then 1984 is a hardcover book.",
+        "conclusion": "1984 is printed text.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"1984 is printed text\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. No digital media are analog. (So, if something is digital media, it is not analog.)\n\n2. Every printed text is analog media. (So, if something is printed text, it is analog media.)\n\n3. All streaming services are digital media."
+    },
+    {
+        "folio_id": 49,
+        "premises": "No digital media are analog.\nEvery printed text is analog media.\nAll streaming services are digital media.\nIf an object is a hardcover book, then it is printed text.\nIf 1984 is a streaming service, then 1984 is a hardcover book.",
+        "conclusion": "1984 is a streaming service.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"1984 is a streaming service\" is true, false, or uncertain based on the given premises.\n\nLet me list out all the premises clearly:\n\n1. No digital media are analog. (This means digital and analog are disjoint sets; if something is digital, it's not analog.)\n\n2. Every printed text is analog media. (So, printed text ⊆ analog media.)\n\n3. All streaming services"
+    },
+    {
+        "folio_id": 50,
+        "premises": "No digital media are analog.\nEvery printed text is analog media.\nAll streaming services are digital media.\nIf an object is a hardcover book, then it is printed text.\nIf 1984 is a streaming service, then 1984 is a hardcover book.",
+        "conclusion": "1984 is not a streaming service.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. So, the question is about determining whether the hypothesis \"1984 is not a streaming service\" is true, false, or uncertain based on the given premises. The answer choices are A) True, B) False, C) Uncertain.\n\nFirst, I need to list out all the premises clearly to make sure I understand them. Let's parse each one:\n\n1. No digital media"
+    },
+    {
+        "folio_id": 51,
+        "premises": "All Romance languages are Indo-European languages.\nRomance languages are a language family.\nAll languages within a language family are related to each other.\nFrench and Spanish are both Romance languages.\nGerman is related to Spanish.\nBasque is not related to any other language.",
+        "conclusion": "Basque is a Romance language.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises and the hypothesis. The hypothesis is: \"Basque is a Romance language.\" And I have to say if it's true, false, or uncertain given the premises.\n\nLet me list out all the premises clearly:\n\n1. All Romance languages are Indo-European languages.\n\n2. Romance languages are a language family.\n\n3. All languages within a language family are related to each other.\n\n4. French and Spanish are"
+    },
+    {
+        "folio_id": 52,
+        "premises": "All Romance languages are Indo-European languages.\nRomance languages are a language family.\nAll languages within a language family are related to each other.\nFrench and Spanish are both Romance languages.\nGerman is related to Spanish.\nBasque is not related to any other language.",
+        "conclusion": "German is a Romance language.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the given premises. The hypothesis is: \"German is a Romance language.\" I have to say if it's true, false, or uncertain based on the options.\n\nHere are the premises again:\n\n1. All Romance languages are Indo-European languages.\n\n2. Romance languages are a language family.\n\n3. All languages within a language family are related to each other.\n\n4. French and Spanish are both Romance languages.\n\n5."
+    },
+    {
+        "folio_id": 53,
+        "premises": "All Romance languages are Indo-European languages.\nRomance languages are a language family.\nAll languages within a language family are related to each other.\nFrench and Spanish are both Romance languages.\nGerman is related to Spanish.\nBasque is not related to any other language.",
+        "conclusion": "French is an Indo-European language.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer the question based on the premises given. The hypothesis is: \"French is an Indo-European language.\" And I have to say if it's true, false, or uncertain based on the options.\n\nLet me list out all the premises clearly:\n\n1. All Romance languages are Indo-European languages.\n\n2. Romance languages are a language family.\n\n3. All languages within a language family are related to each other.\n\n4. French and Spanish are"
+    },
+    {
+        "folio_id": 54,
+        "premises": "Robert Lewandowski is a striker.\nStrikers are soccer players.\nRobert Lewandowski left Bayern Munchen.\nIf a player leaves a team they no longer play for that team.",
+        "conclusion": "Robert Lewandowski is a soccer player.",
+        "label": "True",
+        "generate_answer": "strikers are soccer players."
+    },
+    {
+        "folio_id": 55,
+        "premises": "Robert Lewandowski is a striker.\nStrikers are soccer players.\nRobert Lewandowski left Bayern Munchen.\nIf a player leaves a team they no longer play for that team.",
+        "conclusion": "Robert Lewandowski plays for Bayern Munchen.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Robert Lewandowski is a striker.\n\n2. Strikers are soccer players.\n\n3. Robert Lewandowski left Bayern Munchen.\n\n4. If a player leaves a team they no longer play for that team.\n\nThe hypothesis is: Robert Lewandowski plays for Bayern Munchen.\n\nI need to determine if this is true, false, or uncertain based on the premises.\n\nLet me break it down logically.\n\nFrom premise"
+    },
+    {
+        "folio_id": 56,
+        "premises": "Robert Lewandowski is a striker.\nStrikers are soccer players.\nRobert Lewandowski left Bayern Munchen.\nIf a player leaves a team they no longer play for that team.",
+        "conclusion": "Robert Lewandowski is a star.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the question is about whether Robert Lewandowski is a star, based on the given premises. The answer choices are A) True, B) False, or C) Uncertain.\n\nLet me list out the premises clearly:\n\n1. Robert Lewandowski is a striker.\n\n2. Strikers are soccer players.\n\n3. Robert Lewandowski left Bayern Munchen.\n\n4. If a player leaves a team they no longer play for that team."
+    },
+    {
+        "folio_id": 57,
+        "premises": "Billings is a city in the state of Montana in U.S.\nThe state of Montana includes the cities of Butte, Helena, and Missoula.\nWhite Sulphur Springs and Butte are cities in the same state in U.S.\nThe city of St Pierre is not in the state of Montana.\nAny city in Butte is not in St Pierre.\nA city can only be in one state in U.S.  except for Bristol, Texarkana, Texhoma and Union City.",
+        "conclusion": "Butte and St Pierre are in the same state.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Butte and St Pierre are in the same state\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Billings is a city in the state of Montana in U.S.\n\n2. The state of Montana includes the cities of Butte, Helena, and Missoula.\n\n3. White Sulphur Springs and Butte are cities in the same"
+    },
+    {
+        "folio_id": 58,
+        "premises": "Billings is a city in the state of Montana in U.S.\nThe state of Montana includes the cities of Butte, Helena, and Missoula.\nWhite Sulphur Springs and Butte are cities in the same state in U.S.\nThe city of St Pierre is not in the state of Montana.\nAny city in Butte is not in St Pierre.\nA city can only be in one state in U.S.  except for Bristol, Texarkana, Texhoma and Union City.",
+        "conclusion": "St Pierre and Bismarck are in the same state.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"St Pierre and Bismarck are in the same state\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Billings is a city in the state of Montana in U.S.\n\n2. The state of Montana includes the cities of Butte, Helena, and Missoula.\n\n3. White Sulphur Springs and Butte are cities in"
+    },
+    {
+        "folio_id": 59,
+        "premises": "Billings is a city in the state of Montana in U.S.\nThe state of Montana includes the cities of Butte, Helena, and Missoula.\nWhite Sulphur Springs and Butte are cities in the same state in U.S.\nThe city of St Pierre is not in the state of Montana.\nAny city in Butte is not in St Pierre.\nA city can only be in one state in U.S.  except for Bristol, Texarkana, Texhoma and Union City.",
+        "conclusion": "Montana is home to the city of Missoula.",
+        "label": "True",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 60,
+        "premises": "International students in the US have either an F1 visa or a J1 visa.\nAn international student in the US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.\nMike is an international student.\nMike needs to apply for CPT if he wants to work in the US.",
+        "conclusion": "Mike has an F1 visa.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises:\n\n1. International students in the US have either an F1 visa or a J1 visa.\n\n2. An international student in the US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.\n\n3. Mike is an international student.\n\n4. Mike needs to apply for CPT if he wants to work in the US.\n\nThe hypothesis is: Mike has an F1 visa.\n\nI"
+    },
+    {
+        "folio_id": 61,
+        "premises": "International students in the US have either an F1 visa or a J1 visa.\nAn international student in the US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.\nMike is an international student.\nMike needs to apply for CPT if he wants to work in the US.",
+        "conclusion": "Mike has a J1 visa.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Mike has a J1 visa\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. International students in the US have either an F1 visa or a J1 visa.\n\n2. An international student in the US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.\n\n3. Mike is an international student."
+    },
+    {
+        "folio_id": 62,
+        "premises": "All Brown Swiss cattle are cows.\nSome pets are Brown Swiss Cattle.\nAll cows are domesticated animals.\nAlligators are not domesticated animals.\nTed is an alligator.",
+        "conclusion": "Ted is a pet.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Ted is a pet\" is true, false, or uncertain based on the premises given.\n\nHere are the premises:\n\n1. All Brown Swiss cattle are cows.\n\n2. Some pets are Brown Swiss Cattle.\n\n3. All cows are domesticated animals.\n\n4. Alligators are not domesticated animals.\n\n5. Ted is an alligator.\n\nAnd the hypothesis is: Ted is a pet.\n\nI should use logic"
+    },
+    {
+        "folio_id": 63,
+        "premises": "All Brown Swiss cattle are cows.\nSome pets are Brown Swiss Cattle.\nAll cows are domesticated animals.\nAlligators are not domesticated animals.\nTed is an alligator.",
+        "conclusion": "Ted is a pet and Brown Swiss cattle",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to understand the question. The hypothesis is: \"Ted is a pet and Brown Swiss cattle\". But looking at the options, it says \"Ted is a pet and Brown Swiss cattle\" – I think it might be a bit poorly worded. Let me read it carefully.\n\nThe hypothesis is: \"Ted is a pet and Brown Swiss cattle\". In logic, this could be interpreted as \"Ted is a pet\" and \"Ted is Brown Swiss cattle"
+    },
+    {
+        "folio_id": 64,
+        "premises": "All Brown Swiss cattle are cows.\nSome pets are Brown Swiss Cattle.\nAll cows are domesticated animals.\nAlligators are not domesticated animals.\nTed is an alligator.",
+        "conclusion": "If Ted is a Brown Swiss cattle, then Ted is not a pet.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer this logic question. The premises are:\n\n1. All Brown Swiss cattle are cows.\n\n2. Some pets are Brown Swiss cattle.\n\n3. All cows are domesticated animals.\n\n4. Alligators are not domesticated animals.\n\n5. Ted is an alligator.\n\nThe hypothesis is: If Ted is a Brown Swiss cattle, then Ted is not a pet.\n\nI have to say if this hypothesis is true, false, or uncertain based on"
+    },
+    {
+        "folio_id": 65,
+        "premises": "Yale University is a private Ivy League research university.\nYale University moved to New Haven in 1716.\nYale university's endowment was valued at $42.3 billion.\nA list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.",
+        "conclusion": "A private Ivy League research university moved to New Haven.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"A private Ivy League research university moved to New Haven\" is true, false, or uncertain based on the given premises.\n\nThe premises are:\n\n1. Yale University is a private Ivy League research university.\n\n2. Yale University moved to New Haven in 1716.\n\n3. Yale university's endowment was valued at $42.3 billion. (This might not be directly relevant to the hypothesis.)"
+    },
+    {
+        "folio_id": 66,
+        "premises": "Yale University is a private Ivy League research university.\nYale University moved to New Haven in 1716.\nYale university's endowment was valued at $42.3 billion.\nA list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.",
+        "conclusion": "Yale University has the largest university endowment of any educational institution.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"Yale University has the largest university endowment of any educational institution\" is true, false, or uncertain based on the given premises.\n\nThe premises are:\n\n1. Yale University is a private Ivy League research university.\n\n2. Yale University moved to New Haven in 1716.\n\n3. Yale university's endowment was valued at $42.3 billion.\n\n4. A list of residential colleges at"
+    },
+    {
+        "folio_id": 67,
+        "premises": "Yale University is a private Ivy League research university.\nYale University moved to New Haven in 1716.\nYale university's endowment was valued at $42.3 billion.\nA list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.",
+        "conclusion": "Pierson College is a residential college at Yale.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is about whether Pierson College is a residential college at Yale, based on the given premises.\n\nThe premises list: \"A list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumb"
+    },
+    {
+        "folio_id": 68,
+        "premises": "Badults is a British Sitcom series starring members of Pappy's.\nBadults was piloted in July 2013 on BBC Three.\nThe Working title \"The Secret Dude Society\" was used for Badults.\nAndrew Collins was the script editor for Badults.",
+        "conclusion": "Andrew Collins was the script editor for a series with the working title \"The Secret Dude Society\".",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis is true: \"Andrew Collins was the script editor for a series with the working title 'The Secret Dude Society'.\"\n\nThe context gives me several premises:\n\n1. Badults is a British Sitcom series starring members of Pappy's.\n\n2. Badults was piloted in July 2013 on BBC Three.\n\n3. The Working title \"The Secret Dude Society\" was used for Badult"
+    },
+    {
+        "folio_id": 69,
+        "premises": "Badults is a British Sitcom series starring members of Pappy's.\nBadults was piloted in July 2013 on BBC Three.\nThe Working title \"The Secret Dude Society\" was used for Badults.\nAndrew Collins was the script editor for Badults.",
+        "conclusion": "No members of Pappy's have starred in a show piloting on BBC Two or BBC Three.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the question is about whether the hypothesis \"No members of Pappy's have starred in a show piloting on BBC Two or BBC Three\" is true, false, or uncertain based on the given premises.\n\nThe premises are:\n\n1. Badults is a British Sitcom series starring members of Pappy's.\n\n2. Badults was piloted in July 2013 on BBC Three.\n\n3. The Working title \"The Secret Dude Society"
+    },
+    {
+        "folio_id": 70,
+        "premises": "All growth stocks are bought to earn profits from rapid price appreciation.\nIf the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a retirement fund.\nSome stocks are growth stocks.\nAll mature stocks are suitable for a retirement fund.\nKO is a mature stock.",
+        "conclusion": "KO is a stock.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to answer the question: For the hypothesis \"KO is a stock,\" which option is correct? The options are A) True, B) False, C) Uncertain.\n\nThe premises are:\n\n1. All growth stocks are bought to earn profits from rapid price appreciation.\n\n2. If the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a retirement fund.\n\n3. Some stocks are growth stocks.\n\n4"
+    },
+    {
+        "folio_id": 71,
+        "premises": "All growth stocks are bought to earn profits from rapid price appreciation.\nIf the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a retirement fund.\nSome stocks are growth stocks.\nAll mature stocks are suitable for a retirement fund.\nKO is a mature stock.",
+        "conclusion": "KO is a stock and a growth stock.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises and the hypothesis. The hypothesis is: \"KO is a stock and a growth stock.\" I have to say if it's true, false, or uncertain given the premises.\n\nLet me list out all the premises clearly:\n\n1. All growth stocks are bought to earn profits from rapid price appreciation.\n\n2. If the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a"
+    },
+    {
+        "folio_id": 72,
+        "premises": "All growth stocks are bought to earn profits from rapid price appreciation.\nIf the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a retirement fund.\nSome stocks are growth stocks.\nAll mature stocks are suitable for a retirement fund.\nKO is a mature stock.",
+        "conclusion": "If KO is a growth stock or bought to earn profits from rapid price appreciation, then KO is neither a stock nor is its price volatile.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. The question is about whether the hypothesis is true, false, or uncertain based on the given premises.\n\nHere are the premises:\n\n1. All growth stocks are bought to earn profits from rapid price appreciation.\n\n2. If the stock price is bought to earn profits from rapid price appreciation, then it is not suitable for a retirement fund.\n\n   - I think this might be a bit messy. Let me read it"
+    },
+    {
+        "folio_id": 73,
+        "premises": "All vehicle registration plates in Istanbul begin with the number 34.\nPlates that do not begin with the number 34 are not from Istanbul. \nJoe's vehicle registration plate is from Istanbul. \nTom's license plate begins with the number 35. \nIf a license plate begins with the number 35, then it does not begin with the number 34.",
+        "conclusion": "Joe's license plate begins with the number 34.",
+        "label": "True",
+        "generate_answer": "The answer is:A) True."
+    },
+    {
+        "folio_id": 74,
+        "premises": "All vehicle registration plates in Istanbul begin with the number 34.\nPlates that do not begin with the number 34 are not from Istanbul. \nJoe's vehicle registration plate is from Istanbul. \nTom's license plate begins with the number 35. \nIf a license plate begins with the number 35, then it does not begin with the number 34.",
+        "conclusion": "Tom's license plate is from Istanbul.",
+        "label": "False",
+        "generate_answer": "The answer is:B) False."
+    },
+    {
+        "folio_id": 75,
+        "premises": "If people at Mary's school work in student jobs on campus, then they need to earn money to help pay for their college tuition.\nIf people at Mary's school order takeout frequently in college, then they work in student jobs on campus.\nPeople at Mary's school order takeout frequently in college or enjoy the dining hall meals and recipes.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they are not picky eaters.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.\nHannah is at Mary's school.\nHannah works in student jobs on campus and if she needs to earn money to help pay for her college tuition, then she is neither picky nor needs to earn money to help pay for her college tuition.",
+        "conclusion": "Hannah needs to earn money to help pay for her college tuition.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Hannah needs to earn money to help pay for her college tuition\" is true, false, or uncertain based on the premises and the given information.\n\nLet me list out all the premises clearly. I'll use symbols to make it easier:\n\n- Let S be: People at Mary's school work in student jobs on campus.\n\n- Let E be: They need to earn money to help pay for their college tuition."
+    },
+    {
+        "folio_id": 76,
+        "premises": "If people at Mary's school work in student jobs on campus, then they need to earn money to help pay for their college tuition.\nIf people at Mary's school order takeout frequently in college, then they work in student jobs on campus.\nPeople at Mary's school order takeout frequently in college or enjoy the dining hall meals and recipes.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they are not picky eaters.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.\nHannah is at Mary's school.\nHannah works in student jobs on campus and if she needs to earn money to help pay for her college tuition, then she is neither picky nor needs to earn money to help pay for her college tuition.",
+        "conclusion": "Hannah is at Mary's school and she is not a picky eater and spends a lot of her time eating and catching up with friends in the campus dining halls.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to work through this step by step. Hmm, the problem is a bit complex with a lot of premises, so I need to break it down carefully.\n\nFirst, let's list out all the premises given:\n\n1. If people at Mary's school work in student jobs on campus (let's call this W), then they need to earn money to help pay for their college tuition (E). So, W → E.\n\n2. If"
+    },
+    {
+        "folio_id": 77,
+        "premises": "If people at Mary's school work in student jobs on campus, then they need to earn money to help pay for their college tuition.\nIf people at Mary's school order takeout frequently in college, then they work in student jobs on campus.\nPeople at Mary's school order takeout frequently in college or enjoy the dining hall meals and recipes.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they are not picky eaters.\nIf people at Mary's school enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.\nHannah is at Mary's school.\nHannah works in student jobs on campus and if she needs to earn money to help pay for her college tuition, then she is neither picky nor needs to earn money to help pay for her college tuition.",
+        "conclusion": "Hannah is at Mary's school and she either is not a picky eater or, if she is, then she spends a lot of her time eating and catching up with friends in the campus dining halls.",
+        "label": "False",
+        "generate_answer": "Answer:A) True."
+    },
+    {
+        "folio_id": 78,
+        "premises": "No baked sweets are spicy.\nAll cupcakes are baked sweets.\nAll mala hotpots are spicy.\nAll products from Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or mala hotpots or not baked sweets.",
+        "conclusion": "Dried Thai chilies are products of Baked by Melissa.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dried Thai chilies are products of Baked by Melissa\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. No baked sweets are spicy. (So, if something is baked sweet, it is not spicy.)\n\n2. All cupcakes are baked sweets. (So, cupcakes are a subset of baked sweets.)\n\n3. All mala hotpots"
+    },
+    {
+        "folio_id": 79,
+        "premises": "No baked sweets are spicy.\nAll cupcakes are baked sweets.\nAll mala hotpots are spicy.\nAll products from Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or mala hotpots or not baked sweets.",
+        "conclusion": "Dried Thai chilies are not products of Baked by Melissa.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dried Thai chilies are not products of Baked by Melissa\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. No baked sweets are spicy. (So, if something is a baked sweet, it is not spicy.)\n\n2. All cupcakes are baked sweets. (So, cupcakes ⊆ baked sweets.)\n\n3. All mala hotpots"
+    },
+    {
+        "folio_id": 80,
+        "premises": "No baked sweets are spicy.\nAll cupcakes are baked sweets.\nAll mala hotpots are spicy.\nAll products from Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or mala hotpots or not baked sweets.",
+        "conclusion": "Dried Thai chilies are a mala hotpot.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dried Thai chilies are a mala hotpot\" is true, false, or uncertain based on the premises.\n\nHere are the premises again:\n\n1. No baked sweets are spicy.\n\n2. All cupcakes are baked sweets.\n\n3. All mala hotpots are spicy.\n\n4. All products from Baked by Melissa are cupcakes.\n\n5. Dried Thai chilies are spicy or mala hotp"
+    },
+    {
+        "folio_id": 81,
+        "premises": "No baked sweets are spicy.\nAll cupcakes are baked sweets.\nAll mala hotpots are spicy.\nAll products from Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or mala hotpots or not baked sweets.",
+        "conclusion": "Dried Thai chilies are neither products of Baked by Melissa nor baked sweets.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dried Thai chilies are neither products of Baked by Melissa nor baked sweets\" is true, false, or uncertain based on the premises.\n\nLet me list out the premises clearly:\n\n1. No baked sweets are spicy. → If something is a baked sweet, it is not spicy.\n\n2. All cupcakes are baked sweets. → If something is a cupcake, it is a baked sweet.\n\n3. All"
+    },
+    {
+        "folio_id": 82,
+        "premises": "No baked sweets are spicy.\nAll cupcakes are baked sweets.\nAll mala hotpots are spicy.\nAll products from Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or mala hotpots or not baked sweets.",
+        "conclusion": "Dried Thai chilies are cupcakes and products of Baked by Melissa.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dried Thai chilies are cupcakes and products of Baked by Melissa\" is true, false, or uncertain based on the premises.\n\nLet me list out the premises clearly:\n\n1. No baked sweets are spicy. (So, if something is baked sweet, it is not spicy.)\n\n2. All cupcakes are baked sweets. (So, cupcakes are a subset of baked sweets.)\n\n3. All mala hotp"
+    },
+    {
+        "folio_id": 83,
+        "premises": "If a restaurant is listed in Yelp’s recommendations, then the restaurant has not received many negative reviews.\nAll restaurants with a rating greater than four are listed in Yelp’s recommendations.\nSome restaurants that do not provide take-out service receive many negative reviews.\nAll restaurants that are popular among local residents have ratings greater than four.\nThe Hamden Plaza Subway store has a rating greater than four, or it is popular among local residents.",
+        "conclusion": "If the Hamden Plaza Subway store provides take-out service and receives many negative reviews, then its rating is greater than 4 and it does not provide take-out service.",
+        "label": "False",
+        "generate_answer": "Answer:A)"
+    },
+    {
+        "folio_id": 84,
+        "premises": "If a restaurant is listed in Yelp’s recommendations, then the restaurant has not received many negative reviews.\nAll restaurants with a rating greater than four are listed in Yelp’s recommendations.\nSome restaurants that do not provide take-out service receive many negative reviews.\nAll restaurants that are popular among local residents have ratings greater than four.\nThe Hamden Plaza Subway store has a rating greater than four, or it is popular among local residents.",
+        "conclusion": "The Hamden Plaza Subway store provides take-out service or does not receive many negative reviews.",
+        "label": "True",
+        "generate_answer": "Answer:A) True."
+    },
+    {
+        "folio_id": 85,
+        "premises": "If a restaurant is listed in Yelp’s recommendations, then the restaurant has not received many negative reviews.\nAll restaurants with a rating greater than four are listed in Yelp’s recommendations.\nSome restaurants that do not provide take-out service receive many negative reviews.\nAll restaurants that are popular among local residents have ratings greater than four.\nThe Hamden Plaza Subway store has a rating greater than four, or it is popular among local residents.",
+        "conclusion": "The Hamden Plaza store does not provide take-out service.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"The Hamden Plaza store does not provide take-out service\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I have them straight:\n\n1. If a restaurant is listed in Yelp’s recommendations, then the restaurant has not received many negative reviews. (Yelp → ¬ManyNeg"
+    },
+    {
+        "folio_id": 86,
+        "premises": "In superhero movies, the good guys always win.\nThe Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie.\nGood guys fight bad guys and vice versa.\nSir Digby fights his nemesis.\nIf a superhero movie is named after a character, that character is a good guy.\nThe Surprising Adventures of Sir Digby Chicken Caesar is named after Sir Digby.\nIf somebody wins a fight, the person they are fighting does not win.\nIf a superhero movie is named after a character, that character is in the movie.",
+        "conclusion": "Sir Digby’s nemesis does not win.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Sir Digby’s nemesis does not win\" is true, false, or uncertain based on the given premises.\n\nLet me list out all the premises clearly:\n\n1. In superhero movies, the good guys always win.\n\n2. The Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie.\n\n3. Good guys fight bad guys and vice versa.\n\n4. Sir Digby fights his nemesis.\n\n5"
+    },
+    {
+        "folio_id": 87,
+        "premises": "Books contain tons of knowledge.\nWhen a person reads a book, that person gains knowledge. \nIf a person gains knowledge, they become smarter.\nHarry read the book “Walden” by Henry Thoreau.",
+        "conclusion": "Walden contains knowledge.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is: Given the premises, which option is correct for the hypothesis \"Walden contains knowledge.\" The options are A) True, B) False, C) Uncertain.\n\nThe premises are:\n\n1. Books contain tons of knowledge.\n\n2. When a person reads a book, that person gains knowledge.\n\n3. If a person gains knowledge, they become smarter.\n\n4. Harry read the book “Walden” by Henry Thore"
+    },
+    {
+        "folio_id": 88,
+        "premises": "Books contain tons of knowledge.\nWhen a person reads a book, that person gains knowledge. \nIf a person gains knowledge, they become smarter.\nHarry read the book “Walden” by Henry Thoreau.",
+        "conclusion": "Harry is smarter than before.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Harry is smarter than before\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. Books contain tons of knowledge.\n\n2. When a person reads a book, that person gains knowledge.\n\n3. If a person gains knowledge, they become smarter.\n\n4. Harry read the book “Walden” by Henry Thoreau.\n\nThe hypothesis is: Harry is smarter than"
+    },
+    {
+        "folio_id": 89,
+        "premises": "Books contain tons of knowledge.\nWhen a person reads a book, that person gains knowledge. \nIf a person gains knowledge, they become smarter.\nHarry read the book “Walden” by Henry Thoreau.",
+        "conclusion": "A smarter person has gained knowledge.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Books contain tons of knowledge.\n\n2. When a person reads a book, that person gains knowledge.\n\n3. If a person gains knowledge, they become smarter.\n\n4. Harry read the book “Walden” by Henry Thoreau.\n\nThe hypothesis is: A smarter person has gained knowledge.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me break it down step by"
+    },
+    {
+        "folio_id": 90,
+        "premises": "A natural language processing task can be categorized as either a language generation task or a language understanding task.\nIf the output of a natural language processing task is a text sequence, then it is a language generation task.\nMachine translation is a natural language processing task.\nThe output of machine translation is a text sequence.",
+        "conclusion": "Machine translation is a language generation task.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises given. The hypothesis is: \"Machine translation is a language generation task.\" And I have to say if it's true, false, or uncertain.\n\nLet me list out the premises clearly:\n\n1. A natural language processing task can be categorized as either a language generation task or a language understanding task. (So, all NLP tasks are either gen or under.)\n\n2. If the output of a natural"
+    },
+    {
+        "folio_id": 91,
+        "premises": "A natural language processing task can be categorized as either a language generation task or a language understanding task.\nIf the output of a natural language processing task is a text sequence, then it is a language generation task.\nMachine translation is a natural language processing task.\nThe output of machine translation is a text sequence.",
+        "conclusion": "Machine translation is a language understanding task.",
+        "label": "False",
+        "generate_answer": "premises"
+    },
+    {
+        "folio_id": 92,
+        "premises": "Pets are allowed in some managed buildings.\nA deposit is required to rent an apartment in a managed building.\nThe security deposit can be either equal to the monthly rent at a managed building or more.\nFluffy is Tom's cat.\nCats are pets.\nThe Olive Garden is a managed building.\nThe monthly rent at the Olive Garden is $2000.\n$2000 is more than $1500.\nTom will rent an apartment in a managed building if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.\nIf a managed building allows pets, then people are allowed to move in with a pet. ",
+        "conclusion": "Tom will rent an apartment in The Olive Garden.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if Tom will rent an apartment in The Olive Garden based on the given premises. The answer choices are True, False, or Uncertain.\n\nLet me list out all the premises clearly:\n\n1. Pets are allowed in some managed buildings.\n\n2. A deposit is required to rent an apartment in a managed building.\n\n3. The security deposit can be either equal to the monthly rent at a managed building or more.\n\n4. Fluffy is"
+    },
+    {
+        "folio_id": 93,
+        "premises": "Pets are allowed in some managed buildings.\nA deposit is required to rent an apartment in a managed building.\nThe security deposit can be either equal to the monthly rent at a managed building or more.\nFluffy is Tom's cat.\nCats are pets.\nThe Olive Garden is a managed building.\nThe monthly rent at the Olive Garden is $2000.\n$2000 is more than $1500.\nTom will rent an apartment in a managed building if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.\nIf a managed building allows pets, then people are allowed to move in with a pet. ",
+        "conclusion": "Tom is allowed to move into an apartment in The Olive Garden with Fluffy.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if Tom is allowed to move into an apartment in The Olive Garden with Fluffy. The answer should be True, False, or Uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Pets are allowed in some managed buildings.\n\n2. A deposit is required to rent an apartment in a managed building.\n\n3. The security deposit can be either equal to the monthly rent at a managed building or more"
+    },
+    {
+        "folio_id": 94,
+        "premises": "Pets are allowed in some managed buildings.\nA deposit is required to rent an apartment in a managed building.\nThe security deposit can be either equal to the monthly rent at a managed building or more.\nFluffy is Tom's cat.\nCats are pets.\nThe Olive Garden is a managed building.\nThe monthly rent at the Olive Garden is $2000.\n$2000 is more than $1500.\nTom will rent an apartment in a managed building if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.\nIf a managed building allows pets, then people are allowed to move in with a pet. ",
+        "conclusion": "The security deposit at the Olive Garden is either $2000 or more.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"The security deposit at the Olive Garden is either $2000 or more\" is true, false, or uncertain based on the given premises.\n\nLet me list all the premises clearly:\n\n1. Pets are allowed in some managed buildings.\n\n2. A deposit is required to rent an apartment in a managed building.\n\n3. The security deposit can be either equal to the monthly rent at a managed building or more."
+    },
+    {
+        "folio_id": 95,
+        "premises": "All business organizations are legal entities.\nAll companies are business organizations.\nAll private companies are companies.\nAll legal entities are created under law. \nAll legal entities have legal obligations.\nIf the Harvard Weekly Book Club is created under law, then it is not a private company. ",
+        "conclusion": "The Harvard Weekly Book club has legal obligations.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether the hypothesis \"The Harvard Weekly Book club has legal obligations\" is true, false, or uncertain based on the given premises.\n\nFirst, let's list out all the premises to make sure I don't miss anything.\n\n1. All business organizations are legal entities.\n2. All companies are business organizations.\n3. All private companies are companies.\n4. All legal entities are created"
+    },
+    {
+        "folio_id": 96,
+        "premises": "All business organizations are legal entities.\nAll companies are business organizations.\nAll private companies are companies.\nAll legal entities are created under law. \nAll legal entities have legal obligations.\nIf the Harvard Weekly Book Club is created under law, then it is not a private company. ",
+        "conclusion": "The Harvard Weekly Book club has legal obligations and is a private company.",
+        "label": "False",
+        "generate_answer": "The answer is:B) False."
+    },
+    {
+        "folio_id": 97,
+        "premises": "All business organizations are legal entities.\nAll companies are business organizations.\nAll private companies are companies.\nAll legal entities are created under law. \nAll legal entities have legal obligations.\nIf the Harvard Weekly Book Club is created under law, then it is not a private company. ",
+        "conclusion": "If the Harvard Weekly Book club is a private company, then it either has legal obligations or is created under law.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"If the Harvard Weekly Book club is a private company, then it either has legal obligations or is created under law.\"\n\nI should list out all the premises clearly:\n\n1. All business organizations are legal entities.\n\n2. All companies are business organizations.\n\n3. All private companies are companies.\n\n4. All legal entities are created under law."
+    },
+    {
+        "folio_id": 98,
+        "premises": "Animals are either invertebrates or vertebrates.\nAll animals with backbones reproduce by male-and-female mating. \nAll vertebrate animals have a backbone.\nAll bees do not reproduce by male-and-female mating.\nAll queen bees are bees.\nHarry is a bee.",
+        "conclusion": "Harry is a queen bee.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Harry is a queen bee\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Animals are either invertebrates or vertebrates.\n\n2. All animals with backbones reproduce by male-and-female mating.\n\n3. All vertebrate animals have a backbone.\n\n4. All bees do not reproduce by male-and-female mating.\n\n5. All queen bees"
+    },
+    {
+        "folio_id": 99,
+        "premises": "Animals are either invertebrates or vertebrates.\nAll animals with backbones reproduce by male-and-female mating. \nAll vertebrate animals have a backbone.\nAll bees do not reproduce by male-and-female mating.\nAll queen bees are bees.\nHarry is a bee.",
+        "conclusion": "Harry is an invertebrate or a queen bee.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Harry is an invertebrate or a queen bee\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Animals are either invertebrates or vertebrates. (So, for any animal, it's invertebrate or vertebrate.)\n\n2. All animals with backbones reproduce by male-and-female mating. (This means vertebrates reproduce this"
+    },
+    {
+        "folio_id": 100,
+        "premises": "Animals are either invertebrates or vertebrates.\nAll animals with backbones reproduce by male-and-female mating. \nAll vertebrate animals have a backbone.\nAll bees do not reproduce by male-and-female mating.\nAll queen bees are bees.\nHarry is a bee.",
+        "conclusion": "If Harry is either both a vertebrate and an animal with a backbone, or neither a vertebrate nor an animal with a backbone, then Harry is neither an invertebrate nor a queen bee.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. The question is whether the hypothesis is true, false, or uncertain based on the given information.\n\nLet me list out all the premises clearly:\n\n1. Animals are either invertebrates or vertebrates. (So, for any animal, it's invertebrate or vertebrate, not both, I assume.)\n\n2. All animals with backbones reproduce by male-and-female mating. (So, if"
+    },
+    {
+        "folio_id": 101,
+        "premises": "People who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\nIf people have siblings who were born together, then they were born in a multiple birth.\nIf people complain often about annoying siblings, then they have siblings who were born together.\nIf people live at home, then they do not live with strangers.\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home. \nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers",
+        "conclusion": "Luke spends a lot of time hanging out and playing with his siblings.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Luke spends a lot of time hanging out and playing with his siblings\" is true, false, or uncertain based on the premises. The answer choices are A) True, B) False, or C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. People who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\n\n   - So,"
+    },
+    {
+        "folio_id": 102,
+        "premises": "People who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\nIf people have siblings who were born together, then they were born in a multiple birth.\nIf people complain often about annoying siblings, then they have siblings who were born together.\nIf people live at home, then they do not live with strangers.\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home. \nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers",
+        "conclusion": "Luke complains often about annoying siblings.",
+        "label": "False",
+        "generate_answer": "<think>\nThe answer is:B) False."
+    },
+    {
+        "folio_id": 103,
+        "premises": "People who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\nIf people have siblings who were born together, then they were born in a multiple birth.\nIf people complain often about annoying siblings, then they have siblings who were born together.\nIf people live at home, then they do not live with strangers.\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home. \nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers",
+        "conclusion": "Luke is neither born in a multiple birth nor complains often about annoying siblings.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is about whether the hypothesis \"Luke is neither born in a multiple birth nor complains often about annoying siblings\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I have them right:\n\n1. People who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their"
+    },
+    {
+        "folio_id": 104,
+        "premises": "It costs $205 to take the GRE test, which is cheaper than $300.\nETS provides financial aid to those GRE applicants who prove economic hardship.\nThose living in single-parent families or having few resources available to them can prove economic hardship.\nTom lives in a single-parent family.\nTom's dad has been out of work, and Tom has few resources available to them. \nTom is applying to take the GRE test.",
+        "conclusion": "ETS provides financial aid to Tom.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"ETS provides financial aid to Tom\" is true, false, or uncertain based on the given premises.\n\nLet me list out the premises clearly:\n\n1. It costs $205 to take the GRE test, which is cheaper than $300. (This seems like background info but might not directly affect the answer.)\n\n2. ETS provides financial aid to those GRE applicants who prove economic hardship. (This"
+    },
+    {
+        "folio_id": 105,
+        "premises": "It costs $205 to take the GRE test, which is cheaper than $300.\nETS provides financial aid to those GRE applicants who prove economic hardship.\nThose living in single-parent families or having few resources available to them can prove economic hardship.\nTom lives in a single-parent family.\nTom's dad has been out of work, and Tom has few resources available to them. \nTom is applying to take the GRE test.",
+        "conclusion": "It costs below US $300 to take the GRE test.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is: \"It costs below US $300 to take the GRE test.\" And I need to say if this is true, false, or uncertain based on the premises.\n\nThe premises are:\n\n1. It costs $205 to take the GRE test, which is cheaper than $300.\n\n2. ETS provides financial aid to those GRE applicants who prove economic hardship.\n\n3. Those living in single-parent families or having"
+    },
+    {
+        "folio_id": 106,
+        "premises": "It costs $205 to take the GRE test, which is cheaper than $300.\nETS provides financial aid to those GRE applicants who prove economic hardship.\nThose living in single-parent families or having few resources available to them can prove economic hardship.\nTom lives in a single-parent family.\nTom's dad has been out of work, and Tom has few resources available to them. \nTom is applying to take the GRE test.",
+        "conclusion": "No one taking the GRE test has financial aid provided to them by something.",
+        "label": "False",
+        "generate_answer": "The answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 107,
+        "premises": "If people spill a lot of food on their clothing, then they are not notably tidy.\nAll clumsy foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.\nIf people are cleanly, then they are notably tidy.\nIf people value order and spotlessness, then they are cleanly.\nAll people whose families prioritize order and spotlessness themselves value order and spotlessness.\nPeter is either a person who spills a lot of food on his clothing and is cleanly, or a person who does not spill a lot of food on his clothing and is not cleanly",
+        "conclusion": "Peter is notably tidy.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. Hmm, the question is whether Peter is notably tidy based on the given premises. The answer choices are True, False, or Uncertain. Let me parse each premise carefully.\n\nFirst, let's list out all the premises:\n\n1. If people spill a lot of food on their clothing, then they are not notably tidy. (Spill → ¬Tidy)\n2. All clumsy foodies who"
+    },
+    {
+        "folio_id": 108,
+        "premises": "If people spill a lot of food on their clothing, then they are not notably tidy.\nAll clumsy foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.\nIf people are cleanly, then they are notably tidy.\nIf people value order and spotlessness, then they are cleanly.\nAll people whose families prioritize order and spotlessness themselves value order and spotlessness.\nPeter is either a person who spills a lot of food on his clothing and is cleanly, or a person who does not spill a lot of food on his clothing and is not cleanly",
+        "conclusion": "Peter is either a  clumsy foodie who goes out frequently to find new food restaurants to try or he is someone whose family prioritizes order and spotlessness.",
+        "label": "False",
+        "generate_answer": "Answer:B) False."
+    },
+    {
+        "folio_id": 109,
+        "premises": "If people spill a lot of food on their clothing, then they are not notably tidy.\nAll clumsy foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.\nIf people are cleanly, then they are notably tidy.\nIf people value order and spotlessness, then they are cleanly.\nAll people whose families prioritize order and spotlessness themselves value order and spotlessness.\nPeter is either a person who spills a lot of food on his clothing and is cleanly, or a person who does not spill a lot of food on his clothing and is not cleanly",
+        "conclusion": "Peter is either both a clumsy foodie who goes out frequently to find new food restaurants to try and issomeone whose family prioritizes order and spotlessness, or he neither is a clumsy foodie who goes out frequently to find new food restaurants to try nor does his family prioritize order and spotlessness.",
+        "label": "True",
+        "generate_answer": "Answer:A) True"
+    },
+    {
+        "folio_id": 110,
+        "premises": "All fir trees are evergreens.\nSome objects of worship are fir trees.",
+        "conclusion": "Some evergreens are not objects of worship.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. All fir trees are evergreens.\n\n2. Some objects of worship are fir trees.\n\nThe hypothesis is: Some evergreens are not objects of worship.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me break this down logically.\n\nFrom premise 1: All fir trees are evergreens. So, if something is a fir tree, it is an evergreen.\n\nFrom premise"
+    },
+    {
+        "folio_id": 111,
+        "premises": "The Picuris Mountains are a mountain range in New Mexico or Texas.\nJuan de Onate visited the Picuris Mountains.\nThe Harding Pegmatite Mine, located in the Picuris Mountains, was donated.\nThere are no mountain ranges in texas that have mines that have been donated.",
+        "conclusion": "Juan de Onate visited a mountain range in New Mexico.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises and the hypothesis. The hypothesis is: \"Juan de Onate visited a mountain range in New Mexico.\"\n\nThe premises are:\n\n1. The Picuris Mountains are a mountain range in New Mexico or Texas.\n\n2. Juan de Onate visited the Picuris Mountains.\n\n3. The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.\n\n4. There are no mountain ranges"
+    },
+    {
+        "folio_id": 112,
+        "premises": "The Picuris Mountains are a mountain range in New Mexico or Texas.\nJuan de Onate visited the Picuris Mountains.\nThe Harding Pegmatite Mine, located in the Picuris Mountains, was donated.\nThere are no mountain ranges in texas that have mines that have been donated.",
+        "conclusion": "Juan de Onate visited a mountain range in Texas.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to answer this logic question. The question is: For the hypothesis \"Juan de Onate visited a mountain range in Texas.\" which option is correct? A) True, B) False, C) Uncertain.\n\nThe premises are:\n\n1. The Picuris Mountains are a mountain range in New Mexico or Texas.\n\n2. Juan de Onate visited the Picuris Mountains.\n\n3. The Harding Pegmatite Mine, located in the Pic"
+    },
+    {
+        "folio_id": 113,
+        "premises": "The Picuris Mountains are a mountain range in New Mexico or Texas.\nJuan de Onate visited the Picuris Mountains.\nThe Harding Pegmatite Mine, located in the Picuris Mountains, was donated.\nThere are no mountain ranges in texas that have mines that have been donated.",
+        "conclusion": "The Harding Pegmatite Mine is not located in a mountain range in New Mexico.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. The hypothesis is: \"The Harding Pegmatite Mine is not located in a mountain range in New Mexico.\"\n\nThe premises are:\n\n1. The Picuris Mountains are a mountain range in New Mexico or Texas.\n\n2. Juan de Onate visited the Picuris Mountains.\n\n3. The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.\n\n4. There are no mountain"
+    },
+    {
+        "folio_id": 114,
+        "premises": "If a man is taller than another man, the taller one can block the other's shooting.\nMichael is a man who is taller than everyone else in his class.\nIf person x is taller than person y, and person y is taller than person z, then x is taller than z\nPeter is a man who is taller than Michael.\nMichael can block any shooting from a person as long as the person does not jump when shooting.\nMichael cannot block Windy's shooting.\nEvery shooter who can jump when shooting is a great shooter.",
+        "conclusion": "Peter is shorter than a man in Michael's class.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"Peter is shorter than a man in Michael's class\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises to make sure I don't miss anything.\n\n1. If a man is taller than another man, the taller one can block the other's shooting.\n2. Michael is a man who is taller than"
+    },
+    {
+        "folio_id": 115,
+        "premises": "If a man is taller than another man, the taller one can block the other's shooting.\nMichael is a man who is taller than everyone else in his class.\nIf person x is taller than person y, and person y is taller than person z, then x is taller than z\nPeter is a man who is taller than Michael.\nMichael can block any shooting from a person as long as the person does not jump when shooting.\nMichael cannot block Windy's shooting.\nEvery shooter who can jump when shooting is a great shooter.",
+        "conclusion": "Windy is a great shooter.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"Windy is a great shooter\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises to make sure I don't miss anything.\n\n1. If a man is taller than another man, the taller one can block the other's shooting.\n2. Michael is a man who is taller than everyone else in his"
+    },
+    {
+        "folio_id": 116,
+        "premises": "If a man is taller than another man, the taller one can block the other's shooting.\nMichael is a man who is taller than everyone else in his class.\nIf person x is taller than person y, and person y is taller than person z, then x is taller than z\nPeter is a man who is taller than Michael.\nMichael can block any shooting from a person as long as the person does not jump when shooting.\nMichael cannot block Windy's shooting.\nEvery shooter who can jump when shooting is a great shooter.",
+        "conclusion": "Peter can block Windy's shooting.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if Peter can block Windy's shooting based on the premises. The answer choices are True, False, or Uncertain.\n\nLet me list out all the premises clearly:\n\n1. If a man is taller than another man, the taller one can block the other's shooting.\n\n2. Michael is a man who is taller than everyone else in his class.\n\n3. If person x is taller than person y, and person y is taller"
+    },
+    {
+        "folio_id": 117,
+        "premises": "Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\nBarutin Cove is on the southwest coast of Snow Island.\nSnow Island, Greenwich Island, and Deception Island are located in the South Shetland Islands.\nAntarctica is located on the South Shetland Islands. \nIf place A is located in place B and place B is located in place C, then place A is located in place C.",
+        "conclusion": "Barutin Cove is named after all islands in Antarctica.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to evaluate the hypothesis: \"Barutin Cove is named after all islands in Antarctica.\" Based on the premises given.\n\nLet me list out the premises clearly:\n\n1. Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\n\n2. Barutin Cove is on the southwest coast of Snow Island.\n\n3. Snow Island, Greenwich Island, and Deception Island are located in the South Shetland Islands."
+    },
+    {
+        "folio_id": 118,
+        "premises": "Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\nBarutin Cove is on the southwest coast of Snow Island.\nSnow Island, Greenwich Island, and Deception Island are located in the South Shetland Islands.\nAntarctica is located on the South Shetland Islands. \nIf place A is located in place B and place B is located in place C, then place A is located in place C.",
+        "conclusion": "There is at least one cove in Antarctica named after a place in Bulgaria.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer whether the hypothesis \"There is at least one cove in Antarctica named after a place in Bulgaria\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\n\n2. Barutin Cove is on the southwest coast of Snow Island.\n\n3. Snow Island, Greenwich Island, and Deception Island are located in"
+    },
+    {
+        "folio_id": 119,
+        "premises": "Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\nBarutin Cove is on the southwest coast of Snow Island.\nSnow Island, Greenwich Island, and Deception Island are located in the South Shetland Islands.\nAntarctica is located on the South Shetland Islands. \nIf place A is located in place B and place B is located in place C, then place A is located in place C.",
+        "conclusion": "Barutin Cove is not located in Antarctica.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Barutin Cove is not located in Antarctica\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Barutin Cove is a cove named after the Bulgarian settlement of Barutin.\n\n2. Barutin Cove is on the southwest coast of Snow Island.\n\n3. Snow Island, Greenwich Island, and Deception Island are located in the"
+    },
+    {
+        "folio_id": 120,
+        "premises": "Some affection is love.\nSome love is positive.",
+        "conclusion": "Some affection is positive.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Some affection is love.\n\n2. Some love is positive.\n\nThe hypothesis is: Some affection is positive.\n\nI need to determine if this hypothesis must be true, must be false, or is uncertain based on the premises.\n\nThis seems like a categorical syllogism problem. Let me recall the rules of syllogisms.\n\nIn syllogistic logic, we have categories like subjects and predicates.\n\nLet:\n\n- A ="
+    },
+    {
+        "folio_id": 121,
+        "premises": "If something can transport multiple passengers, then they are not one-seaters.\nAll Tesla Model 3 can transport multiple passengers.\nAll single-seat electric cars are one-seaters.\nAll Solo EV cars are single-seat electric cars. \nIf John's car is not a Tesla Model 3, then John's car is not a Tesla Model 3 or a single-seat electric car. ",
+        "conclusion": "John's car is a Tesla Model 3.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether the hypothesis \"John's car is a Tesla Model 3\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I have them right:\n\n1. If something can transport multiple passengers, then they are not one-seaters.\n2. All Tesla Model 3 can transport multiple passengers.\n3"
+    },
+    {
+        "folio_id": 122,
+        "premises": "If something can transport multiple passengers, then they are not one-seaters.\nAll Tesla Model 3 can transport multiple passengers.\nAll single-seat electric cars are one-seaters.\nAll Solo EV cars are single-seat electric cars. \nIf John's car is not a Tesla Model 3, then John's car is not a Tesla Model 3 or a single-seat electric car. ",
+        "conclusion": "John's car is a Solo EV.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"John's car is a Solo EV\" is true, false, or uncertain based on the premises. The answer choices are A) True, B) False, C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. If something can transport multiple passengers, then they are not one-seaters. (In logical terms: TransportMultiple → ¬OneSeater)\n\n2. All Tesla Model 3"
+    },
+    {
+        "folio_id": 123,
+        "premises": "If something can transport multiple passengers, then they are not one-seaters.\nAll Tesla Model 3 can transport multiple passengers.\nAll single-seat electric cars are one-seaters.\nAll Solo EV cars are single-seat electric cars. \nIf John's car is not a Tesla Model 3, then John's car is not a Tesla Model 3 or a single-seat electric car. ",
+        "conclusion": "John's car is not a Solo EV.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"John's car is not a Solo EV\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. If something can transport multiple passengers, then they are not one-seaters. (So, multiple passengers ⇒ not one-seaters)\n\n2. All Tesla Model 3 can transport multiple passengers. (So, Tesla Model 3 ⇒ multiple passengers)\n\n3"
+    },
+    {
+        "folio_id": 124,
+        "premises": "All of Peter's pets that are mammals are also animals.\nAll monkeys are mammals. \nPeter's pets are all either monkeys or birds. \nPeter's birds can fly.\nAll animals that are Peter's pets can breathe.\nIf Peter's pet can fly, then it has wings.\nRock is Peter's pet.\nRock can fly, or Rock is a bird, or Rock cannot breathe. ",
+        "conclusion": "Rock is a monkey.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Rock is a monkey\" is true, false, or uncertain based on the premises. The answer choices are A) True, B) False, C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. All of Peter's pets that are mammals are also animals.\n\n2. All monkeys are mammals.\n\n3. Peter's pets are all either monkeys or birds.\n\n4. Peter's birds can fly"
+    },
+    {
+        "folio_id": 125,
+        "premises": "All of Peter's pets that are mammals are also animals.\nAll monkeys are mammals. \nPeter's pets are all either monkeys or birds. \nPeter's birds can fly.\nAll animals that are Peter's pets can breathe.\nIf Peter's pet can fly, then it has wings.\nRock is Peter's pet.\nRock can fly, or Rock is a bird, or Rock cannot breathe. ",
+        "conclusion": "Rock has wings.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Rock has wings\" is true, false, or uncertain based on the premises.\n\nLet me list all the premises clearly:\n\n1. All of Peter's pets that are mammals are also animals. (This seems redundant because mammals are animals, but it might be emphasizing something.)\n\nActually, the first premise says: \"All of Peter's pets that are mammals are also animals.\" But since all mammals are animals, this might"
+    },
+    {
+        "folio_id": 126,
+        "premises": "All of Peter's pets that are mammals are also animals.\nAll monkeys are mammals. \nPeter's pets are all either monkeys or birds. \nPeter's birds can fly.\nAll animals that are Peter's pets can breathe.\nIf Peter's pet can fly, then it has wings.\nRock is Peter's pet.\nRock can fly, or Rock is a bird, or Rock cannot breathe. ",
+        "conclusion": "Rock does not have wings.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Rock does not have wings\" is true, false, or uncertain based on the given premises. The answer choices are A) True, B) False, C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. All of Peter's pets that are mammals are also animals.\n\n2. All monkeys are mammals.\n\n3. Peter's pets are all either monkeys or birds.\n\n4. Peter's birds"
+    },
+    {
+        "folio_id": 127,
+        "premises": "All people who make wedding plans are people who are engaged.\nAll people who invite others to come to their ceremony make wedding plans.\nAnyone who has a well-attended wedding invites others to come to their ceremony.\nSome people that have well-attended weddings have larger families.\nIf John is engaged, then John does not invite friends to their ceremony and make wedding plans.\nIf John has a larger family, then either John has a well-attended wedding or invites friends to their ceremony. ",
+        "conclusion": "John has a larger family.",
+        "label": "False",
+        "generate_answer": ""
+    },
+    {
+        "folio_id": 128,
+        "premises": "All people who make wedding plans are people who are engaged.\nAll people who invite others to come to their ceremony make wedding plans.\nAnyone who has a well-attended wedding invites others to come to their ceremony.\nSome people that have well-attended weddings have larger families.\nIf John is engaged, then John does not invite friends to their ceremony and make wedding plans.\nIf John has a larger family, then either John has a well-attended wedding or invites friends to their ceremony. ",
+        "conclusion": "John does not have a larger family.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"John does not have a larger family\" is true, false, or uncertain based on the given premises. The answer choices are A) True, B) False, or C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. All people who make wedding plans are people who are engaged. → If make wedding plans, then engaged.\n\n2. All people who invite others to come to their ceremony"
+    },
+    {
+        "folio_id": 129,
+        "premises": "All people who make wedding plans are people who are engaged.\nAll people who invite others to come to their ceremony make wedding plans.\nAnyone who has a well-attended wedding invites others to come to their ceremony.\nSome people that have well-attended weddings have larger families.\nIf John is engaged, then John does not invite friends to their ceremony and make wedding plans.\nIf John has a larger family, then either John has a well-attended wedding or invites friends to their ceremony. ",
+        "conclusion": "John is engaged.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. So, the question is whether the hypothesis \"John is engaged\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I have them straight:\n\n1. All people who make wedding plans are people who are engaged.\n   - So, if someone makes wedding plans (let's call that M), then they are engaged ("
+    },
+    {
+        "folio_id": 130,
+        "premises": "All people who make wedding plans are people who are engaged.\nAll people who invite others to come to their ceremony make wedding plans.\nAnyone who has a well-attended wedding invites others to come to their ceremony.\nSome people that have well-attended weddings have larger families.\nIf John is engaged, then John does not invite friends to their ceremony and make wedding plans.\nIf John has a larger family, then either John has a well-attended wedding or invites friends to their ceremony. ",
+        "conclusion": "John neither has a larger family nor does he invite others to his wedding.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"John neither has a larger family nor does he invite others to his wedding\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises again to make sure I have them right:\n\n1. All people who make wedding plans are people who are engaged.\n2. All people who invite others to come to their ceremony make"
+    },
+    {
+        "folio_id": 131,
+        "premises": "Some mammals have teeth.\nPlatypuses have no teeth.\nPlatypuses are mammals. \nHumans have teeth.",
+        "conclusion": "Platypuses are mammals with no teeth.",
+        "label": "True",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 132,
+        "premises": "Some mammals have teeth.\nPlatypuses have no teeth.\nPlatypuses are mammals. \nHumans have teeth.",
+        "conclusion": "Platypuses are reptiles.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Some mammals have teeth.\n\n2. Platypuses have no teeth.\n\n3. Platypuses are mammals.\n\n4. Humans have teeth.\n\nThe hypothesis is: Platypuses are reptiles.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me think logically.\n\nFrom premise 3: Platypuses are mammals. That means platypuses belong to the class Mamm"
+    },
+    {
+        "folio_id": 133,
+        "premises": "Some mammals have teeth.\nPlatypuses have no teeth.\nPlatypuses are mammals. \nHumans have teeth.",
+        "conclusion": "Humans are mammals.",
+        "label": "Uncertain",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 134,
+        "premises": "Plungers suck.\nVacuums suck.\nVampires suck.\nSpace is a vacuum.\nA duster is a household appliance that doesn't suck.",
+        "conclusion": "Space sucks.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Plungers suck.\n\n2. Vacuums suck.\n\n3. Vampires suck.\n\n4. Space is a vacuum.\n\n5. A duster is a household appliance that doesn't suck.\n\nThe hypothesis is: Space sucks.\n\nI need to figure out if this is true, false, or uncertain based on the premises.\n\nLet me think logically. Premise 4 says: \"Space is a vacuum.\" And premise"
+    },
+    {
+        "folio_id": 135,
+        "premises": "Plungers suck.\nVacuums suck.\nVampires suck.\nSpace is a vacuum.\nA duster is a household appliance that doesn't suck.",
+        "conclusion": "Space is a vampire.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Plungers suck.\n\n2. Vacuums suck.\n\n3. Vampires suck.\n\n4. Space is a vacuum.\n\n5. A duster is a household appliance that doesn't suck.\n\nThe hypothesis is: Space is a vampire.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me think logically. The key is to see if the premises imply that space is"
+    },
+    {
+        "folio_id": 136,
+        "premises": "Plungers suck.\nVacuums suck.\nVampires suck.\nSpace is a vacuum.\nA duster is a household appliance that doesn't suck.",
+        "conclusion": "If something is a household appliance, it sucks.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Plungers suck.\n\n2. Vacuums suck.\n\n3. Vampires suck.\n\n4. Space is a vacuum.\n\n5. A duster is a household appliance that doesn't suck.\n\nThe hypothesis is: If something is a household appliance, it sucks.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nThe hypothesis says: \"If something is a household appliance, it"
+    },
+    {
+        "folio_id": 137,
+        "premises": "Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.\nUnsupervised learning algorithms do not require labeled data.\nThe state-of-the-art text summarization model is trained with machine learning algorithms.\nReinforcement learning is not used to train the state-of-the-art text summarization model.\nThe Machine Learning algorithm for training text summarization models requires labeled data.",
+        "conclusion": "Supervised learning is used to train the state-of-the-art text summarization model.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Supervised learning is used to train the state-of-the-art text summarization model\" is true, false, or uncertain based on the given premises.\n\nLet me list out all the premises clearly:\n\n1. Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.\n\n2. Unsupervised learning algorithms do not require labeled data.\n\n3. The state-of-the-art text summarization"
+    },
+    {
+        "folio_id": 138,
+        "premises": "Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.\nUnsupervised learning algorithms do not require labeled data.\nThe state-of-the-art text summarization model is trained with machine learning algorithms.\nReinforcement learning is not used to train the state-of-the-art text summarization model.\nThe Machine Learning algorithm for training text summarization models requires labeled data.",
+        "conclusion": "Unsupervised learning is used to train the state-of-the-art text summarization model.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer whether the hypothesis \"Unsupervised learning is used to train the state-of-the-art text summarization model\" is true, false, or uncertain based on the given premises.\n\nLet me list out the premises clearly:\n\n1. Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.\n\n2. Unsupervised learning algorithms do not require labeled data.\n\n3. The state-of-the-art text summarization model"
+    },
+    {
+        "folio_id": 139,
+        "premises": "If a film is appropriate for people of all ages, then children can watch it without guidance from parents.\nIf a film contains excessive erotic and violent content, children cannot watch it without guidance from their parents.\nIf a film is rated General Audience, then it is appropriate for people of all ages.\nAll family-friendly animated films are rated General Audience.\nAll movies in the Frozen series are family-friendly animated films.\n“Hachi: A dog’s Tale” is a film.\n“Hachi: A dog’s Tale”  is either a family-friendly animated film or is appropriate for people of all ages. ",
+        "conclusion": "\"Hachi: A dog's Tale\" is rated General Audience.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Hachi: A dog's Tale\" is rated General Audience is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. If a film is appropriate for people of all ages, then children can watch it without guidance from parents. (Let's denote: A → C)\n\n   - A: appropriate for all ages\n\n   - C: children can watch without guidance"
+    },
+    {
+        "folio_id": 140,
+        "premises": "If a film is appropriate for people of all ages, then children can watch it without guidance from parents.\nIf a film contains excessive erotic and violent content, children cannot watch it without guidance from their parents.\nIf a film is rated General Audience, then it is appropriate for people of all ages.\nAll family-friendly animated films are rated General Audience.\nAll movies in the Frozen series are family-friendly animated films.\n“Hachi: A dog’s Tale” is a film.\n“Hachi: A dog’s Tale”  is either a family-friendly animated film or is appropriate for people of all ages. ",
+        "conclusion": "\"Hachi: A dog's Tale\" contains excessive erotic and violent content or is in the \"Frozen\" series or both.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"Hachi: A dog's Tale\" contains excessive erotic and violent content or is in the \"Frozen\" series or both.\n\nLet me list all the premises clearly:\n\n1. If a film is appropriate for people of all ages, then children can watch it without guidance from parents. (A → C)\n\n2. If a film contains"
+    },
+    {
+        "folio_id": 141,
+        "premises": "If a film is appropriate for people of all ages, then children can watch it without guidance from parents.\nIf a film contains excessive erotic and violent content, children cannot watch it without guidance from their parents.\nIf a film is rated General Audience, then it is appropriate for people of all ages.\nAll family-friendly animated films are rated General Audience.\nAll movies in the Frozen series are family-friendly animated films.\n“Hachi: A dog’s Tale” is a film.\n“Hachi: A dog’s Tale”  is either a family-friendly animated film or is appropriate for people of all ages. ",
+        "conclusion": "\"Hachi: A dog's Tale\" either contains excessive erotic and violent content and is a film in the \"Frozen\" series, or it neither contains excessive erotic and violent content nor is a film in the \"Frozen\" series.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"Hachi: A dog's Tale\" either contains excessive erotic and violent content and is a film in the \"Frozen\" series, or it neither contains excessive erotic and violent content nor is a film in the \"Frozen\" series.\n\nLet me denote some things to make this easier.\n\nLet:\n\n- A: A film is appropriate for people"
+    },
+    {
+        "folio_id": 142,
+        "premises": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.\nHeck cattle were bred back in the 1920s to resemble the aurochs.\nHeck cattle are animals.\nAurochs are animals.\nSome animals to be bred back resemble extinct animals.",
+        "conclusion": "Some Heck cattle are artificially selected.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises given. The hypothesis is: \"Some Heck cattle are artificially selected.\"\n\nThe options are: A) True, B) False, C) Uncertain.\n\nLet me list out the premises clearly:\n\n1. Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.\n\n2. Heck cattle were bred back in the 1920s to resemble the aurochs.\n\n3"
+    },
+    {
+        "folio_id": 143,
+        "premises": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.\nHeck cattle were bred back in the 1920s to resemble the aurochs.\nHeck cattle are animals.\nAurochs are animals.\nSome animals to be bred back resemble extinct animals.",
+        "conclusion": "Aurochs are extinct.",
+        "label": "Uncertain",
+        "generate_answer": "'the answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 144,
+        "premises": "Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\nIf someone has United States citizenship, then they can register to vote in the United States.\nA person either has United States citizenship or Taiwanese citizenship.\nNo Russian Federation officials hold Taiwanese citizenship. \nVladimir neither holds Taiwanese citizenship nor is he a manager at Gazprom. \nEkaterina she can register to vote in the United States, or she is a Russian federation official.",
+        "conclusion": "Vladimir is a Russian federation official",
+        "label": "Uncertain",
+        "generate_answer": "The answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 145,
+        "premises": "Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\nIf someone has United States citizenship, then they can register to vote in the United States.\nA person either has United States citizenship or Taiwanese citizenship.\nNo Russian Federation officials hold Taiwanese citizenship. \nVladimir neither holds Taiwanese citizenship nor is he a manager at Gazprom. \nEkaterina she can register to vote in the United States, or she is a Russian federation official.",
+        "conclusion": "Vladimir is not a Russian federation official",
+        "label": "Uncertain",
+        "generate_answer": "'the answer is:A) True."
+    },
+    {
+        "folio_id": 146,
+        "premises": "Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\nIf someone has United States citizenship, then they can register to vote in the United States.\nA person either has United States citizenship or Taiwanese citizenship.\nNo Russian Federation officials hold Taiwanese citizenship. \nVladimir neither holds Taiwanese citizenship nor is he a manager at Gazprom. \nEkaterina she can register to vote in the United States, or she is a Russian federation official.",
+        "conclusion": "Ekaterina can participate in the 2024 United States presidential election or is a manager at Gazprom.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Ekaterina can participate in the 2024 United States presidential election or is a manager at Gazprom\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\n\n2. If someone has United States citizenship, then they can"
+    },
+    {
+        "folio_id": 147,
+        "premises": "Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\nIf someone has United States citizenship, then they can register to vote in the United States.\nA person either has United States citizenship or Taiwanese citizenship.\nNo Russian Federation officials hold Taiwanese citizenship. \nVladimir neither holds Taiwanese citizenship nor is he a manager at Gazprom. \nEkaterina she can register to vote in the United States, or she is a Russian federation official.",
+        "conclusion": "Ekaterina can participate in the 2024 United States presidential election or Vladimir is a manager at Gazprom.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. Hmm, it's a bit complicated with all these premises, but I'll take it slowly.\n\nFirst, let's list out all the premises to make sure I understand them:\n\n1. Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\n   - So, Register → Participate (if you can register, you can participate)\n\n2"
+    },
+    {
+        "folio_id": 148,
+        "premises": "Everyone who can register to vote in the United States can participate in the 2024 United States presidential election.\nIf someone has United States citizenship, then they can register to vote in the United States.\nA person either has United States citizenship or Taiwanese citizenship.\nNo Russian Federation officials hold Taiwanese citizenship. \nVladimir neither holds Taiwanese citizenship nor is he a manager at Gazprom. \nEkaterina she can register to vote in the United States, or she is a Russian federation official.",
+        "conclusion": "It is not true that Ekaterina can register to vote in the United States and Vladimir can participate in the 2024 United States presidential election.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. So, the question is about determining whether the hypothesis \"It is not true that Ekaterina can register to vote in the United States and Vladimir can participate in the 2024 United States presidential election.\" is true, false, or uncertain based on the given premises.\n\nFirst, I need to parse all the premises and see how they connect to Ekaterina and Vladimir. Let me"
+    },
+    {
+        "folio_id": 149,
+        "premises": "New Vessel Press is a publishing house specializing in translating foreign literature into English.\nAll of New Vessel Press's published books are in English.\nNeapolitan Chronicles is a book published by New Vessel Press.\nNeapolitan Chronicles was translated from Italian.\nPalace of Flies is a book published by New Vessel Press.",
+        "conclusion": "Neapolitan Chronicles is an English book.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. New Vessel Press is a publishing house specializing in translating foreign literature into English.\n\n2. All of New Vessel Press's published books are in English.\n\n3. Neapolitan Chronicles is a book published by New Vessel Press.\n\n4. Neapolitan Chronicles was translated from Italian.\n\n5. Palace of Flies is a book published by New Vessel Press.\n\nThe hypothesis is: Neapolitan Chronicles is an English"
+    },
+    {
+        "folio_id": 150,
+        "premises": "New Vessel Press is a publishing house specializing in translating foreign literature into English.\nAll of New Vessel Press's published books are in English.\nNeapolitan Chronicles is a book published by New Vessel Press.\nNeapolitan Chronicles was translated from Italian.\nPalace of Flies is a book published by New Vessel Press.",
+        "conclusion": "Harry Potter was published by New Vessel Press.",
+        "label": "Uncertain",
+        "generate_answer": "'the answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 151,
+        "premises": "New Vessel Press is a publishing house specializing in translating foreign literature into English.\nAll of New Vessel Press's published books are in English.\nNeapolitan Chronicles is a book published by New Vessel Press.\nNeapolitan Chronicles was translated from Italian.\nPalace of Flies is a book published by New Vessel Press.",
+        "conclusion": "Palace of Flies was translated from Italian.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Palace of Flies was translated from Italian\" is true, false, or uncertain based on the given premises.\n\nLet me list out the premises clearly:\n\n1. New Vessel Press is a publishing house specializing in translating foreign literature into English.\n\n2. All of New Vessel Press's published books are in English.\n\n3. Neapolitan Chronicles is a book published by New Vessel Press.\n\n4."
+    },
+    {
+        "folio_id": 152,
+        "premises": "All hydrocarbons are organic compounds .\nAll alkanes are hydrocarbons\nAll organic compounds are chemical compounds.\nAll organic compounds contain carbon.\nNo chemical compounds contain only one element.\nThe mixture either both is a chemical compound and contains only one element, or neither. ",
+        "conclusion": "The mixture contains carbon.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. The hypothesis is: \"The mixture contains carbon.\"\n\nThe premises are:\n\n1. All hydrocarbons are organic compounds.\n\n2. All alkanes are hydrocarbons.\n\n3. All organic compounds are chemical compounds.\n\n4. All organic compounds contain carbon.\n\n5. No chemical compounds contain only one element.\n\n6. The mixture either both is a chemical compound and contains only one element, or neither.\n\nI"
+    },
+    {
+        "folio_id": 153,
+        "premises": "All hydrocarbons are organic compounds .\nAll alkanes are hydrocarbons\nAll organic compounds are chemical compounds.\nAll organic compounds contain carbon.\nNo chemical compounds contain only one element.\nThe mixture either both is a chemical compound and contains only one element, or neither. ",
+        "conclusion": "The mixture is an alkane and contains carbon.",
+        "label": "False",
+        "generate_answer": ":::\nThe answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 154,
+        "premises": "All hydrocarbons are organic compounds .\nAll alkanes are hydrocarbons\nAll organic compounds are chemical compounds.\nAll organic compounds contain carbon.\nNo chemical compounds contain only one element.\nThe mixture either both is a chemical compound and contains only one element, or neither. ",
+        "conclusion": "If the mixture contains only one element or contains carbon, then the mixture is neither a chemical compound nor an alkane.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to work through this problem step by step. Hmm, the question is a bit complicated with all these premises and a hypothesis. Let me parse it out carefully.\n\nFirst, let me list out all the premises again to make sure I have them right:\n\n1. All hydrocarbons are organic compounds.\n2. All alkanes are hydrocarbons.\n3. All organic compounds are chemical compounds.\n4. All organic compounds contain carbon."
+    },
+    {
+        "folio_id": 155,
+        "premises": "All humans are mortal.\nAll Greeks are humans.",
+        "conclusion": "Some Greeks are mortal.",
+        "label": "Uncertain",
+        "generate_answer": "Answer:A)"
+    },
+    {
+        "folio_id": 156,
+        "premises": "None of the students who currently work in the library are from the computer science department. \nAll of the students with part-time jobs offered by the university currently work in the library. \nAll of the students who are taking the database course are from the computer science department. \nAll of the students taking a class with Professor David are taking the database course. \nAll students working in the lab are taking a class with Professor David.\nJames is a student working in the lab. \nJames doesn't work in the lab or have a part-time job offered by the university.",
+        "conclusion": "James has a part-time job offered by the university.",
+        "label": "False",
+        "generate_answer": ":::\nThe answer is:B) False."
+    },
+    {
+        "folio_id": 157,
+        "premises": "None of the students who currently work in the library are from the computer science department. \nAll of the students with part-time jobs offered by the university currently work in the library. \nAll of the students who are taking the database course are from the computer science department. \nAll of the students taking a class with Professor David are taking the database course. \nAll students working in the lab are taking a class with Professor David.\nJames is a student working in the lab. \nJames doesn't work in the lab or have a part-time job offered by the university.",
+        "conclusion": "James does not have a part-time job offered by the university.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"James does not have a part-time job offered by the university\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. None of the students who currently work in the library are from the computer science department.\n\n2. All of the students with part-time jobs offered by the university currently work in the library.\n\n3. All of the students who are taking the"
+    },
+    {
+        "folio_id": 158,
+        "premises": "None of the students who currently work in the library are from the computer science department. \nAll of the students with part-time jobs offered by the university currently work in the library. \nAll of the students who are taking the database course are from the computer science department. \nAll of the students taking a class with Professor David are taking the database course. \nAll students working in the lab are taking a class with Professor David.\nJames is a student working in the lab. \nJames doesn't work in the lab or have a part-time job offered by the university.",
+        "conclusion": "James either takes the database course or has a part-time job offered by the university.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"James either takes the database course or has a part-time job offered by the university\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. None of the students who currently work in the library are from the computer science department.\n\n2. All of the students with part-time jobs offered by the university currently work in the library.\n\n3. All of the students"
+    },
+    {
+        "folio_id": 159,
+        "premises": "None of the students who currently work in the library are from the computer science department. \nAll of the students with part-time jobs offered by the university currently work in the library. \nAll of the students who are taking the database course are from the computer science department. \nAll of the students taking a class with Professor David are taking the database course. \nAll students working in the lab are taking a class with Professor David.\nJames is a student working in the lab. \nJames doesn't work in the lab or have a part-time job offered by the university.",
+        "conclusion": "James takes the database course.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"James takes the database course\" is true, false, or uncertain based on the given premises and the fact that James doesn't work in the lab or have a part-time job offered by the university.\n\nLet me list out all the premises clearly:\n\n1. None of the students who currently work in the library are from the computer science department.\n\n2. All of the students with part-time jobs offered by the university currently"
+    },
+    {
+        "folio_id": 160,
+        "premises": "If George likes music, he wants to compose.\nIf George has access to a program, he can compose.\nIf George can compose and wants to compose, he will compose.",
+        "conclusion": "If George likes music and has access to a program, he will compose.",
+        "label": "True",
+        "generate_answer": "Answer:A) True"
+    },
+    {
+        "folio_id": 161,
+        "premises": "If George likes music, he wants to compose.\nIf George has access to a program, he can compose.\nIf George can compose and wants to compose, he will compose.",
+        "conclusion": "If George will not compose, George can not compose.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. Here are the premises:\n\n1. If George likes music, he wants to compose. (L → W)\n\n2. If George has access to a program, he can compose. (A → C)\n\n3. If George can compose and wants to compose, he will compose. (C ∧ W → H)\n\nThe hypothesis is: If George will not compose, George can not compose. Which is: ¬"
+    },
+    {
+        "folio_id": 162,
+        "premises": "A hawk never swims. \nSome birds are hawks.",
+        "conclusion": "All birds swim.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's see. So the problem is about logic and determining if the hypothesis \"All birds swim\" is true, false, or uncertain based on the given premises.\n\nFirst, the premises are: \"A hawk never swims.\" And \"Some birds are hawks.\" The hypothesis is \"All birds swim.\" We need to check if the hypothesis must be true (A), must be false (B), or is uncertain (C).\n\nHmm. Let me break this"
+    },
+    {
+        "folio_id": 163,
+        "premises": "Some show airing at 8 pm on Monday gives out roses on TV.\nIf a show gives out roses on TV, then the show is an episode of The Bachelor.\nThe Bachelor portrays the lives of real people.\nAll shows portraying the lives of real people are reality TV shows.\nBreaking Bad is a show.\nBreaking Bad is not a reality TV show.",
+        "conclusion": "Breaking Bad is on Monday at 8 pm.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Breaking Bad is on Monday at 8 pm\" is true, false, or uncertain based on the given premises.\n\nLet me list out all the premises clearly:\n\n1. Some show airing at 8 pm on Monday gives out roses on TV.\n\n2. If a show gives out roses on TV, then the show is an episode of The Bachelor.\n\n3. The Bachelor portrays the lives of real people.\n\n4"
+    },
+    {
+        "folio_id": 164,
+        "premises": "Some show airing at 8 pm on Monday gives out roses on TV.\nIf a show gives out roses on TV, then the show is an episode of The Bachelor.\nThe Bachelor portrays the lives of real people.\nAll shows portraying the lives of real people are reality TV shows.\nBreaking Bad is a show.\nBreaking Bad is not a reality TV show.",
+        "conclusion": "Breaking Bad is a TV show in which roses are given out on Monday at 8 pm.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to work through this logic problem step by step. So, the question is about determining whether the hypothesis \"Breaking Bad is a TV show in which roses are given out on Monday at 8 pm\" is true, false, or uncertain based on the given premises.\n\nFirst, I'll list out all the premises to make sure I understand them correctly:\n\n1. Some show airing at 8 pm on Monday gives out roses on TV.\n2"
+    },
+    {
+        "folio_id": 165,
+        "premises": "Some show airing at 8 pm on Monday gives out roses on TV.\nIf a show gives out roses on TV, then the show is an episode of The Bachelor.\nThe Bachelor portrays the lives of real people.\nAll shows portraying the lives of real people are reality TV shows.\nBreaking Bad is a show.\nBreaking Bad is not a reality TV show.",
+        "conclusion": "If roses are given out during Breaking Bad, then it is on Monday at 8 pm.",
+        "label": "True",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So the question is whether the hypothesis \"If roses are given out during Breaking Bad, then it is on Monday at 8 pm.\" is true, false, or uncertain based on the given premises.\n\nFirst, let me list out all the premises to make sure I understand them correctly.\n\n1. Some show airing at 8 pm on Monday gives out roses on TV.\n2. If a show gives out"
+    },
+    {
+        "folio_id": 166,
+        "premises": "Heinrich Schmidt was a German politician. \nHeinrich Schmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.",
+        "conclusion": "Heinrich Schmidt was German or Russian or both.",
+        "label": "True",
+        "generate_answer": "The answer is:A) True."
+    },
+    {
+        "folio_id": 167,
+        "premises": "Heinrich Schmidt was a German politician. \nHeinrich Schmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.",
+        "conclusion": "Some German politician was part of both the Prussian State Parliament and the Nazi Reichstag.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the question is: Given the premises, is the hypothesis true? The hypothesis is: \"Some German politician was part of both the Prussian State Parliament and the Nazi Reichstag.\"\n\nThe premises are:\n\n1. Heinrich Schmidt was a German politician.\n\n2. Heinrich Schmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.\n\nI need to see if this implies that some German politician was part of both.\n\nFrom premise 2"
+    },
+    {
+        "folio_id": 168,
+        "premises": "Heinrich Schmidt was a German politician. \nHeinrich Schmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.",
+        "conclusion": "No politicians are part of the Nazi Reichstag.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Heinrich Schmidt was a German politician.\n\n2. Heinrich Schmidt was also a member of the Prussian State Parliament and the Nazi Reichstag.\n\nThe hypothesis is: No politicians are part of the Nazi Reichstag.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nThe hypothesis says \"No politicians are part of the Nazi Reichstag.\" That means if someone is part of the Nazi Reich"
+    },
+    {
+        "folio_id": 169,
+        "premises": "If something is a deadly disease, then it comes with a low survival rate. \nSevere cancers are deadly diseases.\nBile duct cancer is a severe form cancer. \nAll Cholangiocarcinoma is bile duct cancer.\nMild flu comes with a low survival rate.\nColorectal cancer is not both a bile duct cancer and with a low survival rate.",
+        "conclusion": "Colorectal cancer is a kind of severe cancer",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Colorectal cancer is a kind of severe cancer\" is true, false, or uncertain based on the given premises.\n\nLet me list out all the premises clearly:\n\n1. If something is a deadly disease, then it comes with a low survival rate. (Disease → Low survival rate)\n\n2. Severe cancers are deadly diseases. (Severe cancer → Deadly disease)\n\n3. Bile duct cancer is"
+    },
+    {
+        "folio_id": 170,
+        "premises": "If something is a deadly disease, then it comes with a low survival rate. \nSevere cancers are deadly diseases.\nBile duct cancer is a severe form cancer. \nAll Cholangiocarcinoma is bile duct cancer.\nMild flu comes with a low survival rate.\nColorectal cancer is not both a bile duct cancer and with a low survival rate.",
+        "conclusion": "If colorectal cancer is a kind of bile duct cancer or a form of Cholangiocarcinoma, then colorectal cancer is a kind of bile duct cancer and a kind of mild flu.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to understand the premises and the hypothesis. The question is about whether the hypothesis is true, false, or uncertain based on the given premises.\n\nHere are the premises:\n\n1. If something is a deadly disease, then it comes with a low survival rate.\n\n2. Severe cancers are deadly diseases.\n\n3. Bile duct cancer is a severe form cancer.\n\n4. All Cholangiocarcinoma is bile duct cancer.\n\n5. Mild"
+    },
+    {
+        "folio_id": 171,
+        "premises": "If something is a deadly disease, then it comes with a low survival rate. \nSevere cancers are deadly diseases.\nBile duct cancer is a severe form cancer. \nAll Cholangiocarcinoma is bile duct cancer.\nMild flu comes with a low survival rate.\nColorectal cancer is not both a bile duct cancer and with a low survival rate.",
+        "conclusion": "Colorectal cancer is a form of Cholangiocarcinoma and it is a kind of mild flu or a kind of bile duct cancer, or all of the above.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to figure this out step by step. So, the question is whether the hypothesis \"Colorectal cancer is a form of Cholangiocarcinoma and it is a kind of mild flu or a kind of bile duct cancer, or all of the above.\" is true, false, or uncertain based on the given premises.\n\nFirst, let's break down all the premises:\n\n1. If something is a deadly disease, then it comes with"
+    },
+    {
+        "folio_id": 172,
+        "premises": "All people who eat salads regularly are very conscious about their health and eating habits.\nAll people who grew up in health-conscious childhood homes eat salads regularly.\nAll people who fulfill their daily nutritional intakes grew up in health-conscious childhood homes.\nAll people who disregard their physical well-being are not very conscious about their health and eating habits.\nIf people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.\nTaylor either grew up in a health-conscious childhood home and disregard her physical well-being, or she did neither.",
+        "conclusion": "Taylor eats salads regularly.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nOkay, let's try to work through this logic problem step by step. Hmm, the question is whether Taylor eats salads regularly given the premises and the hypothesis. Wait, no—the hypothesis here is actually \"Taylor eats salads regularly,\" and we need to determine if that's true, false, or uncertain based on the premises. Wait, no, wait. Wait, the problem says: \"For the following hypothesis: Taylor eats salads regularly. Which of the following options"
+    },
+    {
+        "folio_id": 173,
+        "premises": "All people who eat salads regularly are very conscious about their health and eating habits.\nAll people who grew up in health-conscious childhood homes eat salads regularly.\nAll people who fulfill their daily nutritional intakes grew up in health-conscious childhood homes.\nAll people who disregard their physical well-being are not very conscious about their health and eating habits.\nIf people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.\nTaylor either grew up in a health-conscious childhood home and disregard her physical well-being, or she did neither.",
+        "conclusion": "Taylor visits the gym at least once a day.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if Taylor visits the gym at least once a day is true, false, or uncertain based on the premises. The answer choices are A) True, B) False, C) Uncertain.\n\nLet me list out all the premises clearly:\n\n1. All people who eat salads regularly are very conscious about their health and eating habits.  \n   - If eat_salads → conscious\n\n2. All people who grew up in health-conscious childhood"
+    },
+    {
+        "folio_id": 174,
+        "premises": "All people who eat salads regularly are very conscious about their health and eating habits.\nAll people who grew up in health-conscious childhood homes eat salads regularly.\nAll people who fulfill their daily nutritional intakes grew up in health-conscious childhood homes.\nAll people who disregard their physical well-being are not very conscious about their health and eating habits.\nIf people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.\nTaylor either grew up in a health-conscious childhood home and disregard her physical well-being, or she did neither.",
+        "conclusion": "Taylor neither grew up in a health-conscious childhood home nor does she visit the gym at least once a day.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"Taylor neither grew up in a health-conscious childhood home nor does she visit the gym at least once a day.\"\n\nLet me denote some things to make this clearer. I'll use symbols:\n\n- Let S be: eats salads regularly.\n\n- Let C be: very conscious about health and eating habits.\n\n- Let H be: grew up"
+    },
+    {
+        "folio_id": 175,
+        "premises": "The summer Olympic games is a sporting event. \nThe last summer Olympic games was in Tokyo.\nThe United States won the most medals in Tokyo. ",
+        "conclusion": "The world championships is a sporting event.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nThe answer is:C) Uncertain."
+    },
+    {
+        "folio_id": 176,
+        "premises": "The summer Olympic games is a sporting event. \nThe last summer Olympic games was in Tokyo.\nThe United States won the most medals in Tokyo. ",
+        "conclusion": "The last summer Olympic games were not in Tokyo.",
+        "label": "False",
+        "generate_answer": "The answer is:B) False."
+    },
+    {
+        "folio_id": 177,
+        "premises": "The summer Olympic games is a sporting event. \nThe last summer Olympic games was in Tokyo.\nThe United States won the most medals in Tokyo. ",
+        "conclusion": "The United States won the most medals in the last summer Olympic games.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. The summer Olympic games is a sporting event.\n\n2. The last summer Olympic games was in Tokyo.\n\n3. The United States won the most medals in Tokyo.\n\nThe hypothesis is: The United States won the most medals in the last summer Olympic games.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me break it down.\n\nFrom premise 2: \"The last summer Olympic"
+    },
+    {
+        "folio_id": 178,
+        "premises": "All horses have hooves.\nNo humans have hooves.",
+        "conclusion": "Some humans are horses.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. All horses have hooves.\n\n2. No humans have hooves.\n\nThe hypothesis is: Some humans are horses.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me think logically. From premise 1: All horses have hooves. That means if something is a horse, it has hooves.\n\nFrom premise 2: No humans have hooves. That means if"
+    },
+    {
+        "folio_id": 179,
+        "premises": "Susan flies to LGA airport.\nThe departure and arrival can not be at the same airport.\nJohn flies from LGA airport.",
+        "conclusion": "Susan flies from LGA airport.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Susan flies to LGA airport.\n\n2. The departure and arrival can not be at the same airport.\n\n3. John flies from LGA airport.\n\nThe hypothesis is: Susan flies from LGA airport.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me denote:\n\n- Let S_arrive be \"Susan flies to LGA airport.\" So, S_arrive is true"
+    },
+    {
+        "folio_id": 180,
+        "premises": "Susan flies to LGA airport.\nThe departure and arrival can not be at the same airport.\nJohn flies from LGA airport.",
+        "conclusion": "John flies to LGA airport.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Susan flies to LGA airport.\n\n2. The departure and arrival can not be at the same airport.\n\n3. John flies from LGA airport.\n\nThe hypothesis is: John flies to LGA airport.\n\nI need to figure out if this hypothesis is true, false, or uncertain based on the premises.\n\nLet me break this down.\n\nPremise 1: Susan flies to LGA airport. This means Susan's arrival airport is"
+    },
+    {
+        "folio_id": 181,
+        "premises": "No one nice to animals is also mean to animals.\nSome grumpy people are mean to animals.\nAll animal lovers are nice to animals.\nAll pet owners love animals.\nTom is a pet owner.",
+        "conclusion": "Tom is a grumpy person.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Tom is a grumpy person\" is true, false, or uncertain based on the premises.\n\nHere are the premises again:\n\n1. No one nice to animals is also mean to animals.\n\n2. Some grumpy people are mean to animals.\n\n3. All animal lovers are nice to animals.\n\n4. All pet owners love animals.\n\n5. Tom is a pet owner.\n\nThe hypothesis is: Tom is a gr"
+    },
+    {
+        "folio_id": 182,
+        "premises": "No one nice to animals is also mean to animals.\nSome grumpy people are mean to animals.\nAll animal lovers are nice to animals.\nAll pet owners love animals.\nTom is a pet owner.",
+        "conclusion": "Tom is not both a grumpy person and mean to animals.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Tom is not both a grumpy person and mean to animals\" is true, false, or uncertain based on the premises.\n\nHere are the premises:\n\n1. No one nice to animals is also mean to animals. → If someone is nice to animals, then they are not mean to animals. (Contrapositive: If someone is mean to animals, then they are not nice to animals.)\n\n2. Some gr"
+    },
+    {
+        "folio_id": 183,
+        "premises": "No one nice to animals is also mean to animals.\nSome grumpy people are mean to animals.\nAll animal lovers are nice to animals.\nAll pet owners love animals.\nTom is a pet owner.",
+        "conclusion": "If Tom is not both a grumpy person and mean to animals, then Tom is neither a grumpy person nor an animal lover.",
+        "label": "False",
+        "generate_answer": "<think>\nOkay, let's try to work through this step by step. So, the problem is about logical reasoning with premises and a hypothesis. The answer choices are True, False, or Uncertain. Let me parse all the information carefully.\n\nFirst, let's list out all the premises given:\n\n1. No one nice to animals is also mean to animals.\n   - So, if someone is nice to animals, they are not mean to animals. In logical terms: Nice"
+    },
+    {
+        "folio_id": 184,
+        "premises": "A podcast is not a novel.\nIf a person is born in American City, the person is American.\nIf a book is a novel and it is written by a person, then the person is a novel writer.\nDani Shapiro is an American writer.\nFamily History is written by Dani Shapiro.\nFamily History is a novel written in 2003.\nDani Shapiro created a podcast called Family Secrets.\nBoston is an American city.",
+        "conclusion": "Dani Shapiro is a novel writer.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Dani Shapiro is a novel writer\" is true, false, or uncertain based on the given premises.\n\nHere are the premises again:\n\n1. A podcast is not a novel.\n\n2. If a person is born in American City, the person is American.\n\n3. If a book is a novel and it is written by a person, then the person is a novel writer.\n\n4. Dani Shapiro is an American writer"
+    },
+    {
+        "folio_id": 185,
+        "premises": "A podcast is not a novel.\nIf a person is born in American City, the person is American.\nIf a book is a novel and it is written by a person, then the person is a novel writer.\nDani Shapiro is an American writer.\nFamily History is written by Dani Shapiro.\nFamily History is a novel written in 2003.\nDani Shapiro created a podcast called Family Secrets.\nBoston is an American city.",
+        "conclusion": "Family Secrets is a novel.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer whether the hypothesis \"Family Secrets is a novel\" is true, false, or uncertain based on the premises given.\n\nHere are the premises again for clarity:\n\n1. A podcast is not a novel.\n\n2. If a person is born in American City, the person is American.\n\n3. If a book is a novel and it is written by a person, then the person is a novel writer.\n\n4. Dani Shapiro is an American"
+    },
+    {
+        "folio_id": 186,
+        "premises": "A podcast is not a novel.\nIf a person is born in American City, the person is American.\nIf a book is a novel and it is written by a person, then the person is a novel writer.\nDani Shapiro is an American writer.\nFamily History is written by Dani Shapiro.\nFamily History is a novel written in 2003.\nDani Shapiro created a podcast called Family Secrets.\nBoston is an American city.",
+        "conclusion": "Dani Shapiro was born in Boston.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if Dani Shapiro was born in Boston based on the premises. The answer choices are True, False, or Uncertain.\n\nLet me list out all the premises clearly:\n\n1. A podcast is not a novel.\n\n2. If a person is born in American City, the person is American.\n\n3. If a book is a novel and it is written by a person, then the person is a novel writer.\n\n4. Dani Shapiro is"
+    },
+    {
+        "folio_id": 187,
+        "premises": "Some professional basketball players are not American nationals.\nAll professional basketball players can do jump shots.\nIf someone can jump shots, they leap straight into the air.\nIf someone leaps straight into the air, they activate their leg muscles. \nYuri does not activate his leg muscles.",
+        "conclusion": "Yuri is an American national.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Yuri is an American national\" is true, false, or uncertain based on the premises.\n\nHere are the premises again:\n\n1. Some professional basketball players are not American nationals.\n\n2. All professional basketball players can do jump shots.\n\n3. If someone can jump shots, they leap straight into the air.\n\n4. If someone leaps straight into the air, they activate their leg muscles.\n\n5. Yuri does not"
+    },
+    {
+        "folio_id": 188,
+        "premises": "Some professional basketball players are not American nationals.\nAll professional basketball players can do jump shots.\nIf someone can jump shots, they leap straight into the air.\nIf someone leaps straight into the air, they activate their leg muscles. \nYuri does not activate his leg muscles.",
+        "conclusion": "Yuri is not an American professional basketball player.",
+        "label": "True",
+        "generate_answer": "<think>\nFirst, I need to determine if the hypothesis \"Yuri is not an American professional basketball player\" is true, false, or uncertain based on the given premises.\n\nHere are the premises:\n\n1. Some professional basketball players are not American nationals.\n\n2. All professional basketball players can do jump shots.\n\n3. If someone can jump shots, they leap straight into the air.\n\n4. If someone leaps straight into the air, they activate their leg muscles.\n\n5. Yuri"
+    },
+    {
+        "folio_id": 189,
+        "premises": "Some professional basketball players are not American nationals.\nAll professional basketball players can do jump shots.\nIf someone can jump shots, they leap straight into the air.\nIf someone leaps straight into the air, they activate their leg muscles. \nYuri does not activate his leg muscles.",
+        "conclusion": "Yuri is an American professional basketball player.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Yuri is an American professional basketball player\" is true, false, or uncertain based on the premises.\n\nHere are the premises again:\n\n1. Some professional basketball players are not American nationals.\n\n2. All professional basketball players can do jump shots.\n\n3. If someone can jump shots, they leap straight into the air.\n\n4. If someone leaps straight into the air, they activate their leg muscles.\n\n5. Yuri"
+    },
+    {
+        "folio_id": 190,
+        "premises": "Some professional basketball players are not American nationals.\nAll professional basketball players can do jump shots.\nIf someone can jump shots, they leap straight into the air.\nIf someone leaps straight into the air, they activate their leg muscles. \nYuri does not activate his leg muscles.",
+        "conclusion": "If Yuri does not leap straight into the air, then Yuri is an American professional basketball player.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis is true, false, or uncertain based on the premises. The hypothesis is: \"If Yuri does not leap straight into the air, then Yuri is an American professional basketball player.\"\n\nLet me list out all the premises clearly:\n\n1. Some professional basketball players are not American nationals.\n\n2. All professional basketball players can do jump shots.\n\n3. If someone can jump shots, they leap straight into the air.\n\n4."
+    },
+    {
+        "folio_id": 191,
+        "premises": "Some professional basketball players are not American nationals.\nAll professional basketball players can do jump shots.\nIf someone can jump shots, they leap straight into the air.\nIf someone leaps straight into the air, they activate their leg muscles. \nYuri does not activate his leg muscles.",
+        "conclusion": "If Yuri is not an American professional basketball player, then Yuri is a professional basketball player.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to understand the question. The hypothesis is: \"If Yuri is not an American professional basketball player, then Yuri is a professional basketball player.\" And I have to say if this is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Some professional basketball players are not American nationals.\n\n2. All professional basketball players can do jump shots.\n\n3. If someone can jump shots, they leap straight into"
+    },
+    {
+        "folio_id": 192,
+        "premises": "Events are either happy or sad.\nAt least one event is happy. ",
+        "conclusion": "All events are sad.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the premises are:\n\n1. Events are either happy or sad. (This means every event is classified as happy or sad; no other possibilities.)\n\n2. At least one event is happy. (So, there is at least one happy event.)\n\nThe hypothesis is: All events are sad.\n\nI need to determine if this hypothesis is true, false, or uncertain based on the premises.\n\nIf all events were sad, that would mean there are no happy events."
+    },
+    {
+        "folio_id": 193,
+        "premises": "The winner of the 1992 du Maurier Classic was Steinhauer.\nSteinhauer participated in the 1992 du Maurier Classic.\nOne six-way tie was on the leaderboard, and one person in the six-way tie was from Belgium.\nDescampe is from Belgium and is on the leaderboard of the 1992 du Maurier Classic.\nAll people on the leaderboard of the 1992 du Maurier Classic participated in the 1992 du Maurier Classic.",
+        "conclusion": "Steinhauer was not the winner of the 1992 du Maurier Classic.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer this question based on the premises given. The hypothesis is: \"Steinhauer was not the winner of the 1992 du Maurier Classic.\" And I have to say if this is true, false, or uncertain based on the options.\n\nLet me list out all the premises clearly:\n\n1. The winner of the 1992 du Maurier Classic was Steinhauer.\n\n2. Steinhauer participated in the"
+    },
+    {
+        "folio_id": 194,
+        "premises": "The winner of the 1992 du Maurier Classic was Steinhauer.\nSteinhauer participated in the 1992 du Maurier Classic.\nOne six-way tie was on the leaderboard, and one person in the six-way tie was from Belgium.\nDescampe is from Belgium and is on the leaderboard of the 1992 du Maurier Classic.\nAll people on the leaderboard of the 1992 du Maurier Classic participated in the 1992 du Maurier Classic.",
+        "conclusion": "Descampe is in the six-way tie in the leaderboard of the 1992 du Maurier Classic.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if Descampe is in the six-way tie based on the given premises. The answer choices are True, False, or Uncertain.\n\nHere are the premises:\n\n1. The winner of the 1992 du Maurier Classic was Steinhauer.\n\n2. Steinhauer participated in the 1992 du Maurier Classic.\n\n3. One six-way tie was on the leaderboard, and one person in the"
+    },
+    {
+        "folio_id": 195,
+        "premises": "Jane does not like any animals that bark.\nAll dogs are animals that bark.\nJane likes all animals that jump.\nIf an animal has legs, then it jumps.\nIf an animal is terricolous, then it has legs. \nKiKi is an animal.\nIf KiKi neither jumps nor has legs, then KiKi is terricolous or has legs.",
+        "conclusion": "KiKi is terricolous.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"KiKi is terricolous\" is true, false, or uncertain based on the premises.\n\nLet me list out all the premises clearly:\n\n1. Jane does not like any animals that bark. (So, if an animal barks, Jane does not like it.)\n\n2. All dogs are animals that bark. (So, dogs bark.)\n\n3. Jane likes all animals that jump. (So, if"
+    },
+    {
+        "folio_id": 196,
+        "premises": "Jane does not like any animals that bark.\nAll dogs are animals that bark.\nJane likes all animals that jump.\nIf an animal has legs, then it jumps.\nIf an animal is terricolous, then it has legs. \nKiKi is an animal.\nIf KiKi neither jumps nor has legs, then KiKi is terricolous or has legs.",
+        "conclusion": "KiKi is a barking dog.",
+        "label": "False",
+        "generate_answer": ""
+    },
+    {
+        "folio_id": 197,
+        "premises": "Jane does not like any animals that bark.\nAll dogs are animals that bark.\nJane likes all animals that jump.\nIf an animal has legs, then it jumps.\nIf an animal is terricolous, then it has legs. \nKiKi is an animal.\nIf KiKi neither jumps nor has legs, then KiKi is terricolous or has legs.",
+        "conclusion": "KiKi does not bark and he is not a dog.",
+        "label": "True",
+        "generate_answer": ""
+    },
+    {
+        "folio_id": 198,
+        "premises": "Ailton Silva, born in 1995, is commonly known as Ailton.\nAilton is a football player who was loaned out to Braga.\nAilton Silva is a Brazilian footballer who plays for Náutico.\nNáutico is a football club along with Braga.\nFluminense is a football club.",
+        "conclusion": "No one playing for Nautico is Brazilian.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, the hypothesis is: \"No one playing for Nautico is Brazilian.\"\n\nI need to check if this is true, false, or uncertain based on the premises.\n\nLet me list out the premises clearly:\n\n1. Ailton Silva, born in 1995, is commonly known as Ailton.\n\n2. Ailton is a football player who was loaned out to Braga.\n\n3. Ailton Silva is a Brazilian footballer who plays"
+    },
+    {
+        "folio_id": 199,
+        "premises": "Ailton Silva, born in 1995, is commonly known as Ailton.\nAilton is a football player who was loaned out to Braga.\nAilton Silva is a Brazilian footballer who plays for Náutico.\nNáutico is a football club along with Braga.\nFluminense is a football club.",
+        "conclusion": "Ailton Silva does not play for a football club.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Ailton Silva does not play for a football club\" is true, false, or uncertain based on the premises.\n\nLet me list out the premises clearly:\n\n1. Ailton Silva, born in 1995, is commonly known as Ailton.\n\n2. Ailton is a football player who was loaned out to Braga.\n\n3. Ailton Silva is a Brazilian footballer who plays for N"
+    },
+    {
+        "folio_id": 200,
+        "premises": "Ailton Silva, born in 1995, is commonly known as Ailton.\nAilton is a football player who was loaned out to Braga.\nAilton Silva is a Brazilian footballer who plays for Náutico.\nNáutico is a football club along with Braga.\nFluminense is a football club.",
+        "conclusion": "Ailton was not loaned out to a football club.",
+        "label": "False",
+        "generate_answer": "<think>\nFirst, I need to answer the question based on the premises given. The hypothesis is: \"Ailton was not loaned out to a football club.\" I have to say if it's true, false, or uncertain.\n\nLet me list out the premises clearly:\n\n1. Ailton Silva, born in 1995, is commonly known as Ailton.\n\n2. Ailton is a football player who was loaned out to Braga.\n\n3."
+    },
+    {
+        "folio_id": 201,
+        "premises": "Ailton Silva, born in 1995, is commonly known as Ailton.\nAilton is a football player who was loaned out to Braga.\nAilton Silva is a Brazilian footballer who plays for Náutico.\nNáutico is a football club along with Braga.\nFluminense is a football club.",
+        "conclusion": "Ailton Silva played for Fluminense.",
+        "label": "Uncertain",
+        "generate_answer": "<think>\nFirst, I need to figure out if the hypothesis \"Ailton Silva played for Fluminense\" is true, false, or uncertain based on the given premises.\n\nHere are the premises:\n\n1. Ailton Silva, born in 1995, is commonly known as Ailton.\n\n2. Ailton is a football player who was loaned out to Braga.\n\n3. Ailton Silva is a Brazilian footballer who plays for Náutico"
+    },
+    {
+        "folio_id": 202,
+        "premises": "Ailton Silva, born in 1995, is commonly known as Ailton.\nAilton is a football player who was loaned out to Braga.\nAilton Silva is a Brazilian footballer who plays for Náutico.\nNáutico is a football club along with Braga.\nFluminense is a football club.",
+        "conclusion": "Ailton Silva was loaned out to a football club.",
+        "label": "Uncertain",
+        "generate_answer": "theses"
+    }
+]
