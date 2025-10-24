@@ -2,15 +2,16 @@
 
 ## 📖 项目简介
 
-在近年来，**大语言模型（LLMs）** 由于其强大的文本生成能力而被广泛应用。但它们在逻辑推理中仍存在不足，尤其是**缺乏像人类一样通过错误反思来提升推理能力**。
+In recent years, **Large Language Models (LLMs)** have been widely applied due to their powerful text generation capabilities. However, they still exhibit limitations in logical reasoning, particularly in their **inability to improve reasoning ability through human-like error reflection**.
 
-本项目提出 **LFMC (Logic Fine-tuning with Mistake Correction)** 方法：
+This project proposes the **LFMC (Logic Fine-tuning with Mistake Correction)** method:
 
-* 使用 GPT-4 自动修正包含逻辑错误的推理路径
-* 构建 **LOCD (Logical Error Correction Dataset)** 数据集
-* 使用LOCD，通过 **QLoRA** 高效微调提升多种大语言模型的逻辑推理能力
+* Automatically corrects reasoning paths containing logical errors using GPT-4
+* Constructs the **LOCD (Logical Error Correction Dataset)**
+* Fine-tunes various LLMs efficiently with **QLoRA** using LOCD to enhance logical reasoning ability
 
-实验表明，使用 LOCD 微调后的模型在四个逻辑推理任务上均超越了基线模型，证明了 LLMs 能够通过错误修正学习更稳健的逻辑推理。
+Experimental results show that models fine-tuned with LOCD outperform baseline models across four logical reasoning tasks, demonstrating that LLMs can achieve more robust logical reasoning through mistake correction learning.
+
 
 ---
 
@@ -107,17 +108,6 @@ python logic_llm/qwen3/evaluate.py \
   * LogiCoT: [https://github.com/csitfun/LogiCoT](https://github.com/csitfun/LogiCoT)
   * LFUD: [https://github.com/YandaGo/LFUD](https://github.com/YandaGo/LFUD)
 ---
-
-## 🚀 LOCD数据集构建
-
-### 1. 收集在原始数据集上生成的错误推理数据
-
-
-* 🔍 **逻辑错误修正**：利用 GPT-4 生成正确的推理路径
-* 
-* 📊 **LOCD 数据集构建**：原始逻辑问题 + GPT-4 修正输出
-* ⚡ **高效微调**：通过 QLoRA 对 LLaMA3-8B 进行参数高效微调
-* 🧪 **实验验证**：在四个逻辑推理任务上显著提升性能
 
 
 
