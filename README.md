@@ -58,9 +58,9 @@ pip install -r requirements.txt
 
 ### Usage
 
-### GPT-4 correcting
+### Generating correction data
 ```bash
-# Train the model
+# 
 python gpt4_correct/models/logic_correction_v2.py --data_path ../Wrong_Inference --dataset_name [dataset_name] --api_key [openai_api_key]
 ```
 
