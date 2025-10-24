@@ -57,6 +57,14 @@ pip install -r requirements.txt
 ```
 
 ### Usage
+
+### GPT-4 correcting
+```bash
+# Train the model
+python gpt4_correct/models/logic_correction_v2.py --data_path ../Wrong_Inference --dataset_name [dataset_name] --api_key [openai_api_key]
+```
+
+
 ### Training
 This section describes how to fine-tune a single model  with the training configuration.
 
@@ -108,8 +116,6 @@ python logic_llm/qwen3/evaluate.py \
   * LogiCoT: [https://github.com/csitfun/LogiCoT](https://github.com/csitfun/LogiCoT)
   * LFUD: [https://github.com/YandaGo/LFUD](https://github.com/YandaGo/LFUD)
 ---
-
-
 
 
 
