@@ -26,14 +26,6 @@ LFMC/
 └── README.md            # Project documentation
 ```
 
-
-## 🚀 LOCD数据集构建
-
-* 🔍 **逻辑错误修正**：利用 GPT-4 生成正确的推理路径
-* 📊 **LOCD 数据集构建**：原始逻辑问题 + GPT-4 修正输出
-* ⚡ **高效微调**：通过 QLoRA 对 LLaMA3-8B 进行参数高效微调
-* 🧪 **实验验证**：在四个逻辑推理任务上显著提升性能
-
 ---
 
 ## 📦 Installation & Usage
@@ -60,7 +52,7 @@ pip install -r requirements.txt
 ```
 
 ### Usage
-## Training
+### Training
 This section describes how to fine-tune a single model  with the training configuration.
 
 ### 1. Training a Single Model
@@ -111,6 +103,17 @@ python logic_llm/qwen3/evaluate.py \
   * LogiCoT: [https://github.com/csitfun/LogiCoT](https://github.com/csitfun/LogiCoT)
   * LFUD: [https://github.com/YandaGo/LFUD](https://github.com/YandaGo/LFUD)
 ---
+
+## 🚀 LOCD数据集构建
+
+### 1. 收集在原始数据集上生成的错误推理数据
+
+
+* 🔍 **逻辑错误修正**：利用 GPT-4 生成正确的推理路径
+* 
+* 📊 **LOCD 数据集构建**：原始逻辑问题 + GPT-4 修正输出
+* ⚡ **高效微调**：通过 QLoRA 对 LLaMA3-8B 进行参数高效微调
+* 🧪 **实验验证**：在四个逻辑推理任务上显著提升性能
 
 
 
