@@ -21,7 +21,11 @@ LFMC/
 ├── data/                # Datasets (original logical questions & corrected reasoning paths)
 ├── root/                # Model weights and configurations
 ├── config/              # QLoRA fine-tuning scripts
-├── results/             # Experimental results
+├── logic_llm/           # generate and evaluate
+│   ├── wrong_reasoning_colloction/    # Collect erroneous logical reasoning data.
+│   ├── evaluate/         # evaluate
+│   ├── results/          # Save the test results.
+├── gpt4_correct/        # Using GPT-4 to correct data with faulty logical reasoning
 ├── requirements.txt     # Project dependencies
 └── README.md            # Project documentation
 ```
