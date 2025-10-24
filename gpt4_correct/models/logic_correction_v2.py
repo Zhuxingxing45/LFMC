@@ -27,7 +27,7 @@ class LogicCorrection:
         generate_answer = test_data['generate_answer']
         reference = test_data['reference']
         # full_prompt = self.prompt_template.replace('[[PROBLEM]]', problem).replace('[[QUESTION]]', question).replace('[[ORIGINAL_REASONING]]',original_reasoning)
-        full_prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process and explain, then correct these mistakes and provide the corrected final answer.Please provide the explicit option in the final line." 
+        full_prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process and explain, then correct these mistakes and provide the corrected final answer.The correction requirements must adhere to logical consistency and logical rules.Please provide the explicit option in the final line." 
         return full_prompt
 
     def prompt_logiqa_v2(self, test_data):
@@ -35,7 +35,7 @@ class LogicCorrection:
         hypothesis = test_data['hypothesis'].strip()
         generate_answer = test_data['generate_answer']
         reference = test_data['reference']
-        full_prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process  and explain, then correct these mistakes and provide the corrected final answer.Please provide the explicit option in the final line." 
+        full_prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process  and explain, then correct these mistakes and provide the corrected final answer.The correction requirements must adhere to logical consistency and logical rules.Please provide the explicit option in the final line." 
         return full_prompt
     
     def prompt_reclor(self, test_data):
@@ -44,7 +44,7 @@ class LogicCorrection:
         answers = test_data['answers']
         generate_answer = test_data['generate_answer']
         reference = test_data['reference']
-        full_prompt = "Given the following context:\n" + context + f"\nFor the following question:{question}\n Which of the following options is correct? A){answers[0]}, B){answers[1]}, C){answers[2]}, D){answers[3]}\n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process and explain, then correct these mistakes and provide the corrected final answer.Please provide the explicit option in the final line."
+        full_prompt = "Given the following context:\n" + context + f"\nFor the following question:{question}\n Which of the following options is correct? A){answers[0]}, B){answers[1]}, C){answers[2]}, D){answers[3]}\n" + "Please provide the correct option and the reasoning process to verify this conclusion.\n" + f"The original reasoning process is as follows:\n {generate_answer}\n" + f"However, the correct option is{reference}.Please identify the logical mistakes in the original reasoning process and explain, then correct these mistakes and provide the corrected final answer.The correction requirements must adhere to logical consistency and logical rules.Please provide the explicit option in the final line."
         return full_prompt
     
     def prompt_logiqa_zh(self, test_data):
@@ -55,7 +55,7 @@ class LogicCorrection:
         generate_answer = test_data['generate_answer']
         reference = test_data['reference']
 
-        full_prompt = "给定以下背景信息：\n" + context + f"\n对于以下问题：{query}\n  A){options[0]}  B){options[1]} C){options[2]} D){options[3]}\n" + "请提供正确的选项和推理过程。\n" + f"原始推理过程如下：\n {generate_answer}\n" + f"然而，正确选项是{ reference }。请识别原始推理过程中的逻辑错误并解释，然后纠正这些错误并提供修正后的最终答案。请在最后一行提供明确的选项。"
+        full_prompt = "给定以下背景信息：\n" + context + f"\n对于以下问题：{query}\n  A){options[0]}  B){options[1]} C){options[2]} D){options[3]}\n" + "请提供正确的选项和推理过程。\n" + f"原始推理过程如下：\n {generate_answer}\n" + f"然而，正确选项是{ reference }。请识别原始推理过程中的逻辑错误并解释，然后纠正这些错误并提供修正后的最终答案, 要求遵循逻辑一致性与逻辑规则。请在最后一行提供明确的选项。"
         return full_prompt
 
     
@@ -117,7 +117,7 @@ class LogicCorrection:
             except:
                 error_generating_datas.append(example)
                 if len(error_generating_datas) %  10== 0:
-                    with open(os.path.join(r'C:\Users\My\Desktop\LLM_correcting\data\Error_generate', f'{self.dataset_name}_reasoning_path.json'), 'w', encoding='utf-8') as f:
+                    with open(os.path.join('gpt4_correct/Wrong_Inference', f'{self.dataset_name}_reasoning_path.json'), 'w', encoding='utf-8') as f:
                         json.dump(error_generating_datas, f, indent=2, ensure_ascii=False)
                 print('Error in generating logic corrections for example.')
             
@@ -209,7 +209,7 @@ class LogicCorrection:
                         outputs.append(output)
                     except:
                         error_generating_datas.append(example)
-                        with open(os.path.join(r'C:\Users\My\Desktop\LLM_correcting\data\Error_generate', f'{self.dataset_name}_reasoning_path.json'), 'w', encoding='utf-8') as f:
+                        with open(os.path.join('gpt4_correct/Wrong_Inference', f'{self.dataset_name}_reasoning_path.json'), 'w', encoding='utf-8') as f:
                             json.dump(error_generating_datas, f, indent=2, ensure_ascii=False)
                         print('Error in generating logic programs for example')
 
@@ -226,10 +226,10 @@ class LogicCorrection:
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_path', type=str, default=r'C:\Users\My\Desktop\LLM_correcting\data\Wrong_Inference')
+    parser.add_argument('--data_path', type=str, default='gpt4_correct/Wrong_Inference')
     parser.add_argument('--dataset_name', type=str)
     #parser.add_argument('--split', type=str, default='dev')
-    parser.add_argument('--save_path', type=str, default=r'C:\Users\My\Desktop\LLM_correcting\outputs\logic_corrections')
+    parser.add_argument('--save_path', type=str, default='gpt4_correct/outputs/logic_corrections')
     parser.add_argument('--api_key', type=str)
     parser.add_argument('--model_name', type=str, default='gpt-4')
     parser.add_argument('--stop_words', type=str, default='------')
