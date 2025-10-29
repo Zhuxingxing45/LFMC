@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_train_1k.jsonl", 'r') as f:
+with open("data/FOLIO/folio_v2_train_1k.jsonl", 'r') as f:
     for line in f:
         data = json.loads(line)
         premises = data['premises']
@@ -63,7 +63,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/reasoning_colloction/output/basemodel/FOLIO_reasoning_path.json", 'w') as ft:
+            with open ("logic_llm/reasoning_colloction/output/basemodel/FOLIO_reasoning_path.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
             

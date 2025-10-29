@@ -23,10 +23,10 @@ from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 #######################################################################
 #                          Training Instruction                           
 #xtuner train configs/internlm/internlm2-7b/internlm2_7b_qlora_lfud.py --work-dir root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_pth
-#xtuner convert pth_to_hf /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_pth/internlm2_7b_qlora_lfud.py /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_pth/iter_7182.pth /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_adapter
+#xtuner convert pth_to_hf root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_pth/internlm2_7b_qlora_lfud.py root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_pth/iter_7182.pth root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_adapter
 #export MKL_SERVICE_FORCE_INTEL=1
-#xtuner convert merge /home/23_zxx/workspace/huggingface/internlm2-chat-7b /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_adapter /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_merged
-#rm -rf /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_merged
+#xtuner convert merge /home/23_zxx/workspace/huggingface/internlm2-chat-7b root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_adapter root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_merged
+#rm -rf root/internlm2/7b/internlm2_logic_lfud/internlm2_logic_original_hf_merged
 #streamlit run /tools/internstudio_web_demo.py /root/llama3_logic_correct_ez_v6/llama3_logic_original_hf_merged
 #######################################################################
 
@@ -39,12 +39,12 @@ use_varlen_attn = False
 
 # Data
 data_files = [
-            '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
+            'data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
 
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/lfud/datasets.json',
+              'data/qwen_format/lfud/datasets.json',
               ]
 
 prompt_template = PROMPT_TEMPLATE.default

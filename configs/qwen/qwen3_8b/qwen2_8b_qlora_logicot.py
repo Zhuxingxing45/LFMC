@@ -38,14 +38,14 @@ use_varlen_attn = False
 
 # Data
 data_files = [
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
+            #   'data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
+            #   'data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
+            #   'data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
+            #   'data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
 
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/folio2instruction_formatted.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_formatted.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_zh_formatted.json',
+              'data/qwen_format/logicot/folio2instruction_formatted.json',
+              'data/qwen_format/logicot/mrc_formatted.json',
+              'data/qwen_format/logicot/mrc_zh_formatted.json',
               ]
 prompt_template = PROMPT_TEMPLATE.default
 max_length = 4096

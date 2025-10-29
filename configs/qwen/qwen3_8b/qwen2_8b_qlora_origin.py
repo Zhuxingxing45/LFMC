@@ -23,10 +23,10 @@ from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 #######################################################################
 #                          Training Instruction                           
 #xtuner train configs/qwen/qwen2_8b/qwen2_8b_qlora_origin.py --work-dir root/qwen2/qwen3_logic_origin/qwen3_logic_original_pth
-#xtuner convert pth_to_hf /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_pth/qwen2_8b_qlora_origin.py /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_pth/iter_3216.pth /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_adapter
+#xtuner convert pth_to_hf root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_pth/qwen2_8b_qlora_origin.py root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_pth/iter_3216.pth root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_adapter
 #export MKL_SERVICE_FORCE_INTEL=1
-#xtuner convert merge /home/23_zxx/workspace/huggingface/Qwen/Qwen3-8B /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_adapter /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_merged
-#rm -rf /home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_merged
+#xtuner convert merge /home/23_zxx/workspace/huggingface/Qwen/Qwen3-8B root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_adapter root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_merged
+#rm -rf root/qwen3/8b/qwen3_logic_origin/qwen3_logic_original_hf_merged
 #streamlit run /tools/internstudio_web_demo.py /root/llama3_logic_correct_ez_v6/llama3_logic_original_hf_merged
 #######################################################################
 
@@ -39,14 +39,14 @@ use_varlen_attn = False
 
 # Data
 data_files = [
-            '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
+            'data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
+              'data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
 
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/folio2instruction_formatted.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_formatted.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_zh_formatted.json',
+            #   'data/qwen_format/logicot/folio2instruction_formatted.json',
+            #   'data/qwen_format/logicot/mrc_formatted.json',
+            #   'data/qwen_format/logicot/mrc_zh_formatted.json',
               ]
 prompt_template = PROMPT_TEMPLATE.default
 max_length = 4096
