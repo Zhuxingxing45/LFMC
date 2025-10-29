@@ -115,6 +115,7 @@ export OPENAI_API_KEY="sk-xxxx"
 
 ### 4. Fine-tune the model
 ```bash
+chmod +x scripts/fine-tune.sh
 bash  scripts/fine-tune.sh
 ```
 
@@ -129,10 +130,19 @@ Convert checkpoint:
 xtuner convert pth_to_hf <config_path> <checkpoint_path> <adapter_output_path>
 ```
 
+Merged
+```bash
+xtuner convert merge \
+    <base_model_path> \
+    <adapter_output_path> \
+    <merged_model_path>
+```
+
+
 ### 5. Evaluate
 
 ```bash
-python logic_llm/evaluate/evaluate.py     --model_path <merged_model_path>     --output_path ./results/generated_data     --result_path ./results/accuracy.json
+bash scripts/run_evaluation.sh /path/to/merged_model
 ```
 
 ---
@@ -149,22 +159,15 @@ python logic_llm/evaluate/evaluate.py     --model_path <merged_model_path>     -
 
 ## Reproduction Script
 
-A helper shell script `scripts/reproduce_all.sh` is included to automate:
+Several helper shell scripts are provided under the scripts/ directory to automate the full experimental workflow:
 
-- Dataset preparation
-- Data correction (GPT-4)
-- Model fine-tuning
-- Evaluation
-- Result aggregation
+generate_LOCD.sh — Generates logical correction data (LOCD) using GPT-4.
 
-Run:
+fine-tune.sh — Fine-tunes the base model on the generated LOCD dataset.
 
-```bash
-bash scripts/reproduce_all.sh
-```
+run_evaluation.sh — Evaluates the fine-tuned model and aggregates results.
 
-> **Note:** The script assumes configuration files and data paths exist and that you have valid API keys and sufficient GPU resources.
-
+Note: These scripts assume that configuration files and data paths are properly set, valid API keys are available, and sufficient GPU resources are provided.
 ---
 
 ## Citations
