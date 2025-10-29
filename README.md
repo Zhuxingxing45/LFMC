@@ -114,6 +114,9 @@ export OPENAI_API_KEY="sk-xxxx"
 ```
 
 ### 4. Fine-tune the model
+```bash
+bash  scripts/fine-tune.sh
+```
 
 Example:
 ```bash
@@ -140,7 +143,7 @@ python logic_llm/evaluate/evaluate.py     --model_path <merged_model_path>     -
 2. Use GPT-4 to correct reasoning chains while keeping semantic intent.
 3. Construct LOCD combining original & corrected chains for supervised fine-tuning.
 4. Fine-tune with QLoRA and low-rank adapters.
-5. Evaluate on multiple reasoning benchmarks using accuracy and chain-of-thought metrics.
+5. Evaluate on multiple reasoning benchmarks using accuracy.
 
 ---
 
