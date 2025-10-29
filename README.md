@@ -86,6 +86,25 @@ conda activate lfmc
 pip install -r requirements.txt
 ```
 
+### 3. Download Base Model
+Before running fine-tuning, download the base model from Hugging Face Hub using the huggingface-cli.
+This step ensures that the pretrained model weights are locally available for QLoRA fine-tuning.
+```bash
+huggingface-cli login
+export HF_TOKEN=<your_huggingface_token>
+
+huggingface-cli download --resume-download internlm/internlm-chat-7b \
+    --local-dir ./internlm/internlm-chat-7b
+
+huggingface-cli download --resume-download Qwen/Qwen3-8B \
+    --local-dir ./Qwen/Qwen3-8B
+
+huggingface-cli download --resume-download Qwen/Qwen3-4B \
+    --local-dir ./Qwen/Qwen3-4B
+
+
+```
+
 ### 3. Generate corrected reasoning data
 
 ```bash
