@@ -14,11 +14,22 @@ Experiments across multiple benchmarks (FOLIO, ReClor, LogiQA, LFUD, etc.) show 
 
 ---
 
+## Methodology
+![Uploading LFMC_architecture_en_fold.png…]()
+
+1. Collect logical errors by sampling model outputs and filtering inconsistent reasoning.
+2. Use GPT-4 to correct reasoning chains while keeping semantic intent.
+3. Construct LOCD combining original & corrected chains for supervised fine-tuning.
+4. Fine-tune with QLoRA and low-rank adapters.
+5. Evaluate on multiple reasoning benchmarks using accuracy.
+
+---
+
 ## Project structure
 
 ```
 LFMC/
-├── data/                # Datasets (original logical questions & corrected reasoning)
+├── data/                # Datasets (original logical questions & logical correction reasoning(LOCD) )
 ├── root/                # Model weights and configurations
 ├── config/              # QLoRA fine-tuning scripts
 ├── logic_llm/           
@@ -65,6 +76,19 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+---
+
+## Reproduction Script
+
+Several helper shell scripts are provided under the scripts/ directory to automate the full experimental workflow:
+
+generate_LOCD.sh — Generates logical correction data (LOCD) using GPT-4.
+
+fine-tune.sh — Fine-tunes the base model on the generated LOCD dataset.
+
+run_evaluation.sh — Evaluates the fine-tuned model and aggregates results.
+
+Note: These scripts assume that configuration files and data paths are properly set, valid API keys are available, and sufficient GPU resources are provided.
 ---
 
 ## Usage Instructions
@@ -147,28 +171,6 @@ bash scripts/run_evaluation.sh /path/to/merged_model
 
 ---
 
-## Methodology
-
-1. Collect logical errors by sampling model outputs and filtering inconsistent reasoning.
-2. Use GPT-4 to correct reasoning chains while keeping semantic intent.
-3. Construct LOCD combining original & corrected chains for supervised fine-tuning.
-4. Fine-tune with QLoRA and low-rank adapters.
-5. Evaluate on multiple reasoning benchmarks using accuracy.
-
----
-
-## Reproduction Script
-
-Several helper shell scripts are provided under the scripts/ directory to automate the full experimental workflow:
-
-generate_LOCD.sh — Generates logical correction data (LOCD) using GPT-4.
-
-fine-tune.sh — Fine-tunes the base model on the generated LOCD dataset.
-
-run_evaluation.sh — Evaluates the fine-tuned model and aggregates results.
-
-Note: These scripts assume that configuration files and data paths are properly set, valid API keys are available, and sufficient GPU resources are provided.
----
 
 ## Citations
 
