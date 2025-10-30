@@ -179,13 +179,14 @@ bash scripts/run_evaluation.sh /path/to/merged_model
 **Benchmark result in paper**
 <div align="center">
   <img 
-    src="https://github.com/Zhuxingxing45/LFMC/blob/main/images/benchmark%20results%20in%20paper.png?raw=true"
+    src="https://github.com/Zhuxingxing45/LFMC/blob/main/images/benchmark_results_in_paper.png?raw=true"
     alt="benchmark_result"
     width="80%"
   />
 </div>
 
 ---
+
 
 
 ## Citations
