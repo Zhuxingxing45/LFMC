@@ -94,7 +94,7 @@ fine-tune.sh — Fine-tunes the base model on the generated LOCD dataset.
 
 run_evaluation.sh — Evaluates the fine-tuned model and aggregates results.
 
-Note: These scripts assume that configuration files and data paths are properly set, valid API keys are available, and sufficient GPU resources are provided.
+<small>Note: These scripts assume that configuration files and data paths are properly set, valid API keys are available, and sufficient GPU resources are provided.</small>
 ---
 
 ## Usage Instructions
