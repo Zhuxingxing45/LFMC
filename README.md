@@ -15,7 +15,11 @@ Experiments across multiple benchmarks (FOLIO, ReClor, LogiQA, LFUD, etc.) show 
 ---
 
 ## Methodology
-<img width="800" alt="LFMC_architecture_en_fold" src="https://github.com/user-attachments/assets/091b6b77-29f6-449e-a352-bb1134f91e3b" />
+<img 
+  src="https://github.com/user-attachments/assets/091b6b77-29f6-449e-a352-bb1134f91e3b" 
+  alt="LFMC_architecture_en_fold" 
+  style="display: block; margin: 0 auto; max-width: 600px; width: 100%;" 
+/>
 
 1. Collect logical errors by sampling model outputs and filtering inconsistent reasoning.
 2. Use GPT-4 to correct reasoning chains while keeping semantic intent.
