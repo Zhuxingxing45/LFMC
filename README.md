@@ -137,7 +137,7 @@ huggingface-cli download --resume-download Qwen/Qwen3-4B \
 
 ```
 
-### 3. Generate corrected reasoning data
+### 4. Generate corrected reasoning data
 ```bash
 cd scripts
 chmod +x generate_LOCD.sh
@@ -145,7 +145,7 @@ export OPENAI_API_KEY="sk-xxxx"
 ./generate_LOCD.sh
 ```
 
-### 4. Fine-tune the model
+### 5. Fine-tune the model
 ```bash
 chmod +x scripts/fine-tune.sh
 bash  scripts/fine-tune.sh
@@ -171,7 +171,7 @@ xtuner convert merge \
 ```
 
 
-### 5. Evaluate
+### 6. Evaluate
 
 ```bash
 bash scripts/run_evaluation.sh /path/to/merged_model
