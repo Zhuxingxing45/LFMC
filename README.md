@@ -176,6 +176,14 @@ xtuner convert merge \
 ```bash
 bash scripts/run_evaluation.sh /path/to/merged_model
 ```
+**Benchmark result in paper**
+<div align="center">
+  <img 
+    src="[https://github.com/user-attachments/assets/091b6b77-29f6-449e-a352-bb1134f91e3b](https://github.com/Zhuxingxing45/LFMC/blob/main/images/benchmark%20results%20in%20paper.png)"
+    alt="benchmark_result"
+    width="80%"
+  />
+</div>
 
 ---
 
