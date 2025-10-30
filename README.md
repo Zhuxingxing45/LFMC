@@ -187,8 +187,32 @@ bash scripts/run_evaluation.sh /path/to/merged_model
 
 ---
 
+## Information of External Dataset
+**FOLIO**
+- paper:Folio: Natural language reasoning with first-order logic
+- code:https://github.com/Yale-LILY/FOLIO
+  
+**LogiQA_v2**
+- paper:Logiqa 2.0—an improved dataset for logical reasoning in natural language understanding
+- code:https://github.com/csitfun/LogiQA2.0
 
+**Logiqa-zh**
+- paper:Logiqa: A challenge dataset for machine reading comprehension with logical reasoning
+- code:https://huggingface.co/datasets/jiacheng-ye/logiqa-zh
 
+**Reclor**
+- paper:Reclor: A reading comprehension dataset requiring logical reasoning
+- code:https://whyu.me/reclor/
+
+**LFUD**
+- paper:Reason from Fallacy: Enhancing Large Language Models’ Logical Reasoning through Logical Fallacy Understanding
+- code:https://github.com/YandaGo/LFUD
+
+**LogiCoT**
+- paper:Logicot: Logical chain-of-thought instruction-tuning
+- code:https://github.com/csitfun/LogiCoT
+
+---
 ## Citations
 
 If you use LFMC or LOCD, please cite:
