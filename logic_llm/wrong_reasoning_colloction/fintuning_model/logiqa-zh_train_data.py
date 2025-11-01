@@ -3,9 +3,7 @@ import torch
 import json
 from tqdm import tqdm
 
-device = "cuda" # the device to load the model onto
-
-# model_path = "root/llama3_logic_fintue/llama3_logic_original_hf_merged"
+device = "cuda" 
 model_path = "root/llama3_logic_logicot/llama3_logic_logicot_hf_merged"
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -56,7 +54,6 @@ with open("data/logiqa-zh/zh_train.json", 'r') as f:
         ]
 
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        #print(response)
 
         new_data = {
             "id" : idx,

@@ -20,7 +20,7 @@ prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the 
 
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/val_500.json", 'r') as f:
+with open(data/Reclor/val_500.json", 'r') as f:
     dataset = json.load(f)
     for example in tqdm(dataset):
         context = example['context']
@@ -30,15 +30,9 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/val_500.
 
 
 
-        prompt = "Given the following context:\n" + context + f"\nFor the following question:{question}\n Which of the following options is correct? A){answers[0]}, B){answers[1]}, C){answers[2]}, D){answers[3]}\n" + "Please provide the correct option.There is no need to provide the reasoning process. " #"Please provide the correct option and the reasoning process to verify this conclusion, and indicate the correct option in the last sentence."
-
-        # with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/icl_examples/Reclor_Llama.txt", 'r') as fi:
-        #     fewshot = fi.read()
-
-
-        # prompt = fewshot.replace("[[INPUT]]", prompt)
+        prompt = "Given the following context:\n" + context + f"\nFor the following question:{question}\n Which of the following options is correct? A){answers[0]}, B){answers[1]}, C){answers[2]}, D){answers[3]}\n" + "Please provide the correct option.There is no need to provide the reasoning process. "
         messages = [
-            {"role": "system", "content": "You are a logician. Please select the correct answer from the options based on the given context and question."},#, and provide the reasoning process
+            {"role": "system", "content": "You are a logician. Please select the correct answer from the options based on the given context and question."},
             {"role": "user", "content": prompt}
         ]
         text = tokenizer.apply_chat_template(
@@ -57,7 +51,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/val_500.
         ]
 
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        #print(response)
         new_data = {
             "reclor_id" : idx,
             "context": example['context'],
@@ -69,7 +62,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/val_500.
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_base_answer_only/Reclor_baseline_dev.json", 'w') as ft:
+            with open (logic_llm/results/logic_base_answer_only/Reclor_baseline_dev.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
     

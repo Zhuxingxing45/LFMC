@@ -29,7 +29,6 @@ with open("data/FOLIO/folio_v2_train_1k.jsonl", 'r') as f:
         elif label == 'Uncertain':
             reference = 'C'
 
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
         prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option and the reasoning process to verify this conclusion."
 
         messages = [

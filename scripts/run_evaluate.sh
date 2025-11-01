@@ -25,7 +25,7 @@ echo "Result path: $RESULT_PATH"
 echo "=============================================="
 
 # Run the evaluation script
-python logic_llm/evaluate/evaluate.py \
+python logic_llm/evaluate/internlm/evaluate.py \
     --model_path "$MODEL_PATH" \
     --output_path "$OUTPUT_PATH" \
     --result_path "$RESULT_PATH"

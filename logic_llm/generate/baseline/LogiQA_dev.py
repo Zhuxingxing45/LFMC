@@ -25,13 +25,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/LogiQA_v2/val_1
         premise = data['premise']
         hypothesis = data['hypothesis']
         label = data['label']
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
-        prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option.There is no need to provide the reasoning process. " #"Please provide the correct option and the reasoning process to verify this conclusion, and indicate the correct option in the last sentence."
-        # with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/icl_examples/LogiQA_v2_Llama.txt", 'r') as fi:
-        #     fewshot = fi.read()
-
-        # prompt = fewshot.replace("[[INPUT]]", prompt)
-
+        prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option.There is no need to provide the reasoning process. " 
         messages = [
             {"role": "system", "content": "You are a logician. Please select the correct answer from the options based on the given context and question."},
             {"role": "user", "content": prompt}

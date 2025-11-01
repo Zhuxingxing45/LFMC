@@ -77,8 +77,6 @@ for file_path in test_files:
     if "FOLIO" in file_path:
         with open(file_path, 'r') as f:
             for i, line in enumerate(tqdm(f, desc="Processing FOLIO")):
-                # if i > 1:
-                #     break
                 data = json.loads(line)
                 premises, conclusion, label = data['premises'], data['conclusion'], data['label']
                 prompt = (
@@ -139,7 +137,6 @@ for file_path in test_files:
                     f"给定以下背景信息：\n{context}\n"
                     f"对于以下问题：{query}\n"
                     f"A){options[0]}  B){options[1]}  C){options[2]}  D){options[3]}\n"
-                    # '请只给出最终答案（A/B/C/D），不要包含任何推理过程。'
                     "请提供正确的选项与推理过程。一步一步来推理："
                 )
                 messages = [
@@ -186,7 +183,7 @@ for file_path in test_files:
                 idx += 1
                 processed_data.append(new_data)
 
-    # 保存结果
+    # save result
     dataset_key = None
 
     if "FOLIO" in file_path:

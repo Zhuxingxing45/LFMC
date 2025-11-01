@@ -54,7 +54,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/logiqa-zh/zh_te
         ]
 
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        #print(response)
         new_data = {
             "id" : idx,
             "context": example['context'],
@@ -66,10 +65,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/logiqa-zh/zh_te
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            # with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/Reclor_fintuing_dev.json", 'w') as ft:
-            #     json.dump(processed_data, ft, ensure_ascii=False, indent=4)
-            #     print(f"{len(processed_data)} new data have been generated.\n")
-
             with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_base_answer_only/logiqa-zh_baseline_test.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4) 
                 print(f"{len(processed_data)} new data have been generated.\n")

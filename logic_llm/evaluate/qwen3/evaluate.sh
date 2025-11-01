@@ -1,7 +1,6 @@
 
 
 # #8b-origin
-# #评估
 export MKL_SERVICE_FORCE_INTEL=1
 xtuner convert merge \
   /home/23_zxx/workspace/huggingface/Qwen/Qwen3-8B \

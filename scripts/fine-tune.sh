@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e  # 一旦出错立即停止
-set -x  # 调试输出（可选）
+set -e 
+set -x 
 
 # ===============================
 #  Step 1: Data Generation
@@ -25,16 +25,16 @@ echo "Data generation complete."
 echo "Step 2: Fine-tuning models with LOCD..."
 
 #Fine-tune LLaMA3-8B with LOCD
-xtuner train configs/llama/llama3_correction/llama3_8b_instruct_qlora_logic_correct_ez.py --work-dir root/llama3/8b/llama3_logic_correct_v1/llama3_logic_original_pth
+xtuner train configs/llama/llama3_correction/llama3_8b_instruct_qlora_locd.py --work-dir root/llama3/8b/llama3_logic_locd/llama3_logic_original_pth
 
 #Fine-tune internLM2-7B with LOCD
-xtuner train configs/internlm/internlm2-7b/internlm2_7b_qlora_logic_e3.py --work-dir root/internlm2/7b/internlm2_logic_correct_v1/internlm2_logic_original_pth
+xtuner train configs/internlm/internlm2-7b/internlm2_7b_qlora_locd.py --work-dir root/internlm2/7b/internlm2_logic_locd/internlm2_logic_original_pth
 
 #Fine-tune Qwen3-4B with LOCD
-xtuner train configs/qwen/qwen3_4b/qwen3_4b_qlora_logic.py --work-dir root/qwen3/4b/qwen3_logic_correct_v1/qwen3_logic_original_pth
+xtuner train configs/qwen/qwen3_4b/qwen3_4b_qlora_locd.py --work-dir root/qwen3/4b/qwen3_logic_locd/qwen3_logic_original_pth
 
 #Fine-tune Qwen3-8B with LOCD
-xtuner train configs/qwen/qwen3_8b/qwen3_8b_qlora_logic.py --work-dir root/qwen3/8b/qwen3_logic_correct_v1/qwen3_logic_original_pth
+xtuner train configs/qwen/qwen3_8b/qwen3_8b_qlora_locd.py --work-dir root/qwen3/8b/qwen3_logic_locd/qwen3_logic_original_pth
 
 echo "Fine-tuning pth complete."
 
@@ -46,9 +46,9 @@ echo "Step 3: Converting and merging checkpoints..."
 
 # Example: InternLM2-7B
 xtuner convert pth_to_hf \
-    configs/internlm/internlm2-7b/internlm2_7b_qlora_logic_e3.py \
-    root/internlm2/7b/internlm2_logic_correct_v1/internlm2_logic_original_pth/iter_6483.pth \
-    root/internlm2/7b/internlm2_logic_correct_v1/internlm2_logic_original_hf_adapter
+    configs/internlm/internlm2-7b/internlm2_7b_qlora_locd.py \
+    root/internlm2/7b/internlm2_logic_locd/internlm2_logic_original_pth/iter_6483.pth \
+    root/internlm2/7b/internlm2_logic_locd/internlm2_logic_original_hf_adapter
 
 # (Repeat as needed for other models if required)
 
@@ -61,8 +61,8 @@ export MKL_SERVICE_FORCE_INTEL=1
 # Example: InternLM2-7B
 xtuner convert merge \
     internlm2/internlm2-chat-7b \
-    root/internlm2/7b/internlm2_logic_correct_v1/internlm2_logic_original_hf_adapter \
-    root/internlm2/7b/internlm2_logic_correct_v1/internlm2_logic_original_hf_merged
+    root/internlm2/7b/internlm2_logic_locd/internlm2_logic_original_hf_adapter \
+    root/internlm2/7b/internlm2_logic_locd/internlm2_logic_original_hf_merged
 
 echo "Conversion and merging complete!"
 echo "All merged models are ready for evaluation."

@@ -133,7 +133,6 @@ for file_path in test_files:
                     f"给定以下背景信息：\n{context}\n"
                     f"对于以下问题：{query}\n"
                     f"A){options[0]}  B){options[1]}  C){options[2]}  D){options[3]}\n"
-                    # '请只给出最终答案（A/B/C/D），不要包含任何推理过程。'
                     "请提供正确的选项与推理过程。一步一步来推理："
                 )
                 messages = [
@@ -180,7 +179,6 @@ for file_path in test_files:
                 idx += 1
                 processed_data.append(new_data)
 
-    # 保存结果
     dataset_key = None
 
     if "FOLIO" in file_path:

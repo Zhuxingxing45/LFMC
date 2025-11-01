@@ -1,7 +1,7 @@
 import json
 import os
 
-# 你的数据文件列表
+#dataset_path
 data_files = [
     "data/LogiQA_v2/LogiQA_fintuing_data_formatted_base.json",
     "data/Reclor/Reclor_fintuing_data_formatted_base.json",
@@ -21,7 +21,6 @@ data_files = [
     'data/LFUD/datasets.json', 
 ]
 
-# 输出目录
 output_dir = "data/instruction_format_data"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -32,10 +31,10 @@ def convert_file(file_in, file_out):
 
     converted = []
     for item in raw:
-        # 如果是 Alpaca 格式
+        # If it is in the Alpaca format
         if "instruction" in item and "output" in item:
             converted.append(item)
-        # 如果是 conversation 格式
+        # If it is in the conversation format
         elif "conversation" in item:
             conv = item["conversation"][0]
             converted.append({

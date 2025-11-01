@@ -3,10 +3,8 @@ import torch
 import json
 from tqdm import tqdm
 
-device = "cuda" # the device to load the model onto
-
-# model_path = "/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_logic_fintue/llama3_logic_original_hf_merged"
-model_path = "/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_logic_logicot/llama3_logic_logicot_hf_merged"
+device = "cuda" 
+model_path = "root/llama3_logic_logicot/llama3_logic_logicot_hf_merged"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -17,7 +15,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/train_4.64k.json", 'r') as f:
+with open("data/Reclor/train_4.64k.json", 'r') as f:
     dataset = json.load(f)
     for example in tqdm(dataset):
         context = example['context']
@@ -56,7 +54,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/train_4.
         ]
 
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        #print(response)
         new_data = {
             "reclor_id" : idx,
             "context": example['context'],
@@ -70,7 +67,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/Reclor/train_4.
         processed_data.append(new_data)
         if idx % 10 == 0:
 
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/reasoning_colloction/output/logicotFintuing/Reclor_reasoning_path.json", 'w') as ft:
+            with open ("logic_llm/reasoning_colloction/output/logicotFintuing/Reclor_reasoning_path.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
     

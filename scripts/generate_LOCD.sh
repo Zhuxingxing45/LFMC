@@ -53,7 +53,7 @@ cd logic_llm/wrong_reasoning_colloction/basemodel
 for FILE in FOLIO_train_data.py LogiQA_v2_train_data.py Reclor_train_data.py logiqa-zh_train_data.py; do
     echo "➡ Running $FILE ..."
     if ! python "$FILE"; then
-        echo " $FILE 执行失败"
+        echo " $FILE failed"
         exit 1
     fi
 done

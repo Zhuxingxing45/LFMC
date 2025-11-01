@@ -1,7 +1,7 @@
 import json
 import re
 
-# 定义文件路径和保存路径
+# path
 files = {
     "zh_train": "/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/logiqa-zh/zh_train.txt",
     "zh_test": "/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/logiqa-zh/zh_test.txt",
@@ -66,7 +66,7 @@ def convert_txt_to_json(file_path, output_path):
     with open(output_path, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-# 执行转换
+# convert
 for key in files:
     convert_txt_to_json(files[key], json_output[key])
 

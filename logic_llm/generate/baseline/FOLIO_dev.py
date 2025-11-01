@@ -26,15 +26,9 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         conclusion = data['conclusion']
         label = data['label']
 
-
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
-        prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option.There is no need to provide the reasoning process. " #and the reasoning process to verify this conclusion, and indicate the correct option in the last sentence.
-
-        # with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/icl_examples/FOLIO_COT_Llama.txt", 'r') as fi:
-        #     fewshot = fi.read()
-        # prompt = fewshot.replace("[[INPUT]]", prompt)
+        prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option.There is no need to provide the reasoning process. " 
         messages = [
-            {"role": "system", "content": "You are a logician. Please select the correct answer from the options based on the given context and question."}, #, and provide the reasoning process
+            {"role": "system", "content": "You are a logician. Please select the correct answer from the options based on the given context and question."}, 
             {"role": "user", "content": prompt}
         ]
         text = tokenizer.apply_chat_template(
@@ -53,7 +47,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         ]
 
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        # print(response)
         new_data = {
             "folio_id" : idx,
             "premises": data['premises'],

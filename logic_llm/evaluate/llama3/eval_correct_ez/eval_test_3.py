@@ -14,9 +14,6 @@ def compute_f1(predictions, references):
     return sum(f1_scores) / len(f1_scores)
 
 def load_dataset(file_path, file_name):
-    # """Load dataset from a JSON file."""
-    # with open(file_path, 'r') as file:
-    #     dataset = json.load(file)
     
     predictions = []
     references = []
@@ -35,17 +32,15 @@ def load_dataset(file_path, file_name):
 
             generate_answer = data['generate_answer']
 
-            # Check if the first character is 'a', 'b', 'c', or 'd' (in lowercase or uppercase)
             if generate_answer[0].upper() in ('A', 'B', 'C', 'D'):
-                prediction = generate_answer[0].upper()  # Convert to uppercase
+                prediction = generate_answer[0].upper() 
             else:
-                # Search for a pattern like A), B), C), or D)
                 match = re.search(r'\b[A-D]\)', generate_answer)
                 if match:
-                    correct_option = match.group(0)  # Get the matched string, e.g., "A)"
-                    prediction = correct_option.strip(')')[0]  # Extract the letter and convert to uppercase
+                    correct_option = match.group(0)
+                    prediction = correct_option.strip(')')[0] 
                 else:
-                    prediction = ""  # No match found, set prediction to an empty string
+                    prediction = "" 
             predictions.append(prediction)
     elif file_name == 'LogiQA_v2_fintuing_dev.json':
         with open(os.path.join(file_path,file_name), 'r') as file:
@@ -59,17 +54,15 @@ def load_dataset(file_path, file_name):
             references.append(reference)
 
             generate_answer = data['generate_answer']
-            # Check if the first character is 'a', 'b', 'c', or 'd' (in lowercase or uppercase)
             if generate_answer[0].upper() in ('A', 'B', 'C', 'D'):
-                prediction = generate_answer[0].upper()  # Convert to uppercase
+                prediction = generate_answer[0].upper() 
             else:
-                # Search for a pattern like A), B), C), or D)
                 match = re.search(r'\b[A-D]\)', generate_answer)
                 if match:
-                    correct_option = match.group(0)  # Get the matched string, e.g., "A)"
-                    prediction = correct_option.strip(')')[0]  # Extract the letter and convert to uppercase
+                    correct_option = match.group(0)
+                    prediction = correct_option.strip(')')[0] 
                 else:
-                    prediction = ""  # No match found, set prediction to an empty string
+                    prediction = "" 
             predictions.append(prediction)
     elif file_name == 'Reclor_fintuing_dev.json':
         with open(os.path.join(file_path,file_name), 'r') as file:
@@ -87,17 +80,15 @@ def load_dataset(file_path, file_name):
             references.append(reference)
 
             generate_answer = data['generate_answer']
-            # Check if the first character is 'a', 'b', 'c', or 'd' (in lowercase or uppercase)
             if generate_answer[0].upper() in ('A', 'B', 'C', 'D'):
-                prediction = generate_answer[0].upper()  # Convert to uppercase
+                prediction = generate_answer[0].upper() 
             else:
-                # Search for a pattern like A), B), C), or D)
                 match = re.search(r'\b[A-D]\)', generate_answer)
                 if match:
-                    correct_option = match.group(0)  # Get the matched string, e.g., "A)"
-                    prediction = correct_option.strip(')')[0]  # Extract the letter and convert to uppercase
+                    correct_option = match.group(0)
+                    prediction = correct_option.strip(')')[0] 
                 else:
-                    prediction = ""  # No match found, set prediction to an empty string
+                    prediction = "" 
             predictions.append(prediction)
 
     elif file_name == 'logiqa-zh_fintuing_test.json':
@@ -116,17 +107,15 @@ def load_dataset(file_path, file_name):
             references.append(reference)
 
             generate_answer = data['generate_answer']
-            # Check if the first character is 'a', 'b', 'c', or 'd' (in lowercase or uppercase)
             if generate_answer[0].upper() in ('A', 'B', 'C', 'D'):
-                prediction = generate_answer[0].upper()  # Convert to uppercase
+                prediction = generate_answer[0].upper() 
             else:
-                # Search for a pattern like A), B), C), or D)
                 match = re.search(r'\b[A-D]\)', generate_answer)
                 if match:
-                    correct_option = match.group(0)  # Get the matched string, e.g., "A)"
-                    prediction = correct_option.strip(')')[0]  # Extract the letter and convert to uppercase
+                    correct_option = match.group(0)
+                    prediction = correct_option.strip(')')[0] 
                 else:
-                    prediction = ""  # No match found, set prediction to an empty string
+                    prediction = "" 
             predictions.append(prediction)
             
     return predictions, references

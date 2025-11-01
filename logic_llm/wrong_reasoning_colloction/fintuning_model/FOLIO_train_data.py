@@ -4,7 +4,7 @@ import json
 
 device = "cuda" # the device to load the model onto
 
-model_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_logic_logicot/llama3_logic_logicot_hf_merged'
+model_path = 'root/llama3_logic_logicot/llama3_logic_logicot_hf_merged'
 
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_train_1k.jsonl", 'r') as f:
+with open("data/FOLIO/folio_v2_train_1k.jsonl", 'r') as f:
     for line in f:
         data = json.loads(line)
         premises = data['premises']
@@ -29,7 +29,6 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         elif label == 'Uncertain':
             reference = 'C'
 
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
         prompt = "Given the following premises:\n" + premises + f"\nFor the following hypothesis:{conclusion}\nWhich of the following options is correct? A)True, B)False, C)Uncertain \n" + "Please provide the correct option and the reasoning process to verify this conclusion."
 
         messages = [
@@ -63,7 +62,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/reasoning_colloction/output/logicotFintuing/FOLIO_reasoning_path.json", 'w') as ft:
+            with open ("logic_llm/reasoning_colloction/output/logicotFintuing/FOLIO_reasoning_path.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
             

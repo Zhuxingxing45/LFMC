@@ -23,9 +23,9 @@ from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 #######################################################################
 #                          Training Instruction                           
 #xtuner train configs/internlm/internlm2-7b/internlm2_7b_qlora_origin.py --work-dir root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_pth
-#xtuner convert pth_to_hf root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_pth/internlm2_7b_qlora_origin.py root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_pth/iter_6483.pth root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_adapter
-#export MKL_SERVICE_FORCE_INTEL=1
-#xtuner convert merge /home/23_zxx/workspace/huggingface/internlm2-chat-7b root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_adapter root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_merged
+# xtuner convert pth_to_hf root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_pth/internlm2_7b_qlora_origin.py root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_pth/iter_6483.pth root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_adapter
+# export MKL_SERVICE_FORCE_INTEL=1
+# xtuner convert merge /home/23_zxx/workspace/huggingface/internlm2-chat-7b root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_adapter root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_merged
 #rm -rf root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_merged
 #streamlit run /tools/internstudio_web_demo.py /root/internlm2_logic_correct_ez_v6/internlm2_logic_original_hf_merged
 #######################################################################

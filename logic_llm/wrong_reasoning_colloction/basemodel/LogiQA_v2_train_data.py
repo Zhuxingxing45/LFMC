@@ -2,8 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
 
-device = "cuda" # the device to load the model onto
-# model_path = "root/llama3_logic_fintue/llama3_logic_original_hf_merged"
+device = "cuda" 
 model_path = "/home/23_zxx/workspace/llama3-ft/Meta-Llama-3-8B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -25,7 +24,7 @@ with open("data/LogiQA_v2/train_6.87k.jsonl", 'r' ) as f:
             reference = 'A'
         elif label == 'not-entailment':
             reference = 'B'
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
+
         prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option and the reasoning process to verify this conclusion."
 
         messages = [

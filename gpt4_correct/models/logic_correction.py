@@ -1,5 +1,3 @@
-# generate facts and rules based on the problem description
-
 import json
 import os
 from tqdm import tqdm
@@ -26,8 +24,6 @@ class LogicCorrection:
     
     def load_prompt_templates(self):
         prompt_file = f'./models/prompts/{self.dataset_name}.txt'
-        # if self.dataset_name == 'AR-LSAT' and self.model_name == 'gpt-4':
-        #     prompt_file = f'./models/prompts/{self.dataset_name}-long.txt'
         with open(prompt_file, 'r') as f:
             self.prompt_template = f.read()
 

@@ -1,5 +1,5 @@
 # #7b-origin
-# #评估
+# evaluate
 python logic_llm/internlm/evaluate.py \
     --model_path root/internlm2/7b/internlm2_logic_origin/internlm2_logic_original_hf_merged \
     --output_path /internlm2/7b/origin_1 \

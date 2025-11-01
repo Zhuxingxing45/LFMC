@@ -2,9 +2,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
 
-device = "cuda" # the device to load the model onto
-# model_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_LFUD_fintuing/llama3_LFU_hf_merged'
-model_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_LFUD-zh_fintuing/llama3_logic_hf_merged'
+device = "cuda" 
+model_path = 'root/llama3_LFUD-zh_fintuing/llama3_logic_hf_merged'
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
     torch_dtype=torch.bfloat16,
@@ -12,21 +11,14 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-"""
-{"role": "system", "content": "You are a logician who can generate logical reasoning processes based on given premises and clonclusions."},
-prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
-
-"""
-
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/LogiQA_v2/val_1k.jsonl", 'r' ) as f:
+with open("data/LogiQA_v2/val_1k.jsonl", 'r' ) as f:
     for line in f:
         data = json.loads(line)
         premise = data['premise']
         hypothesis = data['hypothesis']
         label = data['label']
-        #prompt = "Given the following premises:\n" + premises + f"\nWe can conclude the hypothesis '{conclusion}' is {label}.\n" + "Please provide the reasoning process to verify this conclusion."
         prompt = "Given the following premises:\n" + premise + f"\nFor the following hypothesis:{hypothesis}\nWhich of the following options is correct? A)entailment, B)not-entailment\n" + "Please provide the correct option."
 
         messages = [
@@ -59,7 +51,7 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/LogiQA_v2/val_1
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_LFUD_fintue/LogiQA_v2_fintuing_dev.json", 'w') as ft:
+            with open ("logic_llm/results/logic_LFUD_fintue/LogiQA_v2_fintuing_dev.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
     

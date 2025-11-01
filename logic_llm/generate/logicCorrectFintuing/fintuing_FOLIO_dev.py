@@ -1,14 +1,11 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
+from tqdm import tqdm
 
 device = "cuda" # the device to load the model onto
 
-# #llama3_logic_logicot_v2
-# model_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_logic_logicot_v2/llama3_logic_logicot_hf_merged'
-
-#llama3_logic_correct_ez_v14
-model_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/root/llama3_logic_correct_ez_v14/llama3_logic_original_hf_merged'
+model_path = 'root/llama3_logic_correct/llama3_logic_original_hf_merged'
 
 model = AutoModelForCausalLM.from_pretrained(
     model_path,
@@ -19,8 +16,8 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 processed_data = []
 idx = 0
-with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_validation_203.jsonl", 'r') as f:
-    for line in f:
+with open("data/FOLIO/folio_v2_validation_203.jsonl", 'r') as f:
+    for line in tqdm(f):
         data = json.loads(line)
         premises = data['premises']
         conclusion = data['conclusion']
@@ -57,12 +54,12 @@ with open("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/FOLIO/folio_v2_
         idx += 1
         processed_data.append(new_data)
         if idx % 50 == 0:
-            with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_logicot_fintue_v2/FOLIO_fintuing_dev.json", 'w') as ft:
+            with open ("logic_llm/results/logic_correct_fintue_ez_v9/FOLIO_fintuing_dev.json", 'w') as ft:
                 json.dump(processed_data, ft, ensure_ascii=False, indent=4)
                 print(f"{len(processed_data)} new data have been generated.\n")
 
 
-    with open ("/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_logicot_fintue_v2/FOLIO_fintuing_dev.json", 'w') as ft:
+    with open ("logic_llm/results/logic_correct_fintue_ez_v9/FOLIO_fintuing_dev.json", 'w') as ft:
         json.dump(processed_data, ft, ensure_ascii=False, indent=4)
         print(f"{len(processed_data)} new data have been generated.\n")        
     

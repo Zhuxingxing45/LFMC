@@ -20,7 +20,6 @@ from xtuner.model import SupervisedFinetune
 from xtuner.parallel.sequence import SequenceParallelSampler
 from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 
-
 #######################################################################
 #                          PART 1  Settings                           #
 #######################################################################
@@ -35,9 +34,8 @@ data_files = [
               '/data/FOLIO/FOLIO_fintuing_data_formatted_base.json',
               '/data/logiqa-zh/logiqa-zh_fintuing_data_formatted_base.json',
 
-              '/data/CorrectionData/Reclor_correct_fintuing_data_formatted.json',
-              '/data/CorrectionData/logiqa-zh_correct_fintuing_data_formatted.json',
-              '/data/CorrectionData/Fintue_data_format/logiqa-zh_correct_fintuing_data_formatted_2.json',
+              '/data/CorrectionData/FOLIO_correct_fintuing_data_formatted.json',
+              '/data/CorrectionData/LogiQA_correct_fintuing_data_formatted.json',
               ]
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = 2048
@@ -51,7 +49,7 @@ batch_size = 2  # per_device
 accumulative_counts = 16
 accumulative_counts *= sequence_parallel_size
 dataloader_num_workers = 0
-max_epochs = 3
+max_epochs = 2
 optim_type = AdamW
 lr = 2e-4
 betas = (0.9, 0.999)
@@ -67,13 +65,7 @@ save_total_limit = 2  # Maximum checkpoints to keep (-1 means unlimited)
 evaluation_freq = 500
 SYSTEM = SYSTEM_TEMPLATE.alpaca
 evaluation_inputs = [
-    "Given the following premises:\nLawton Park is a neighborhood in Seattle. \nAll citizens of Lawton Park use the zip code 98199. \nTom is a citizen of Lawton Park.\nDaniel uses the zip code 98199. \nFor the following hypothesis:Tom doesn't use the zip code 98199.\n Which of the following options is correct? A)True, B)False, C)Uncertain \nPlease provide the correct option.",
-    "Given the following premises:\nScreenwriter moviegoers are those who don't mind being spoiled by spoilers and even inquire about plot introductions and review all kinds of movies in advance. This kind of moviegoers pursue the feeling of controlling the development of the plot and don't like surprises.\nFor the following hypothesis:Xiao Li belongs to the screenwriter moviegoers according to the above definition, because he is fond of suspense movies, enjoys brain-burning plots, and assumes the role of a detective when watching movies. \n Which of the following options is correct? A)entailment, B)not-entailment \nPlease provide the correct option.",
-    "Given the following context:\nAny sale item that is purchased can be returned for store credit but not for a refund of the purchase price. Every home appliance and every piece of gardening equipment is on sale along with selected construction tools.\nFor the following question:If the statements above are true, which one of the following must also be true?\n Which of the following options is correct? A)Any item that is not on sale cannot be returned for store credit., B)Some construction tools are not returnable for store credit., C)No piece of gardening equipment is returnable for a refund., D)None of the things that are returnable for a refund are construction tools.\nPlease provide the correct option.",
-    "给定以下背景信息：\n有些广东人不爱吃辣椒. 因此,有些南方人不爱吃辣椒.\n对于以下问题：以下哪项能保证上述论证的成立？.\n  A)有些广东人爱吃辣椒.  B)爱吃辣椒的有些是南方人. C)所有的广东人都是南方人. D)有些广东人不爱吃辣椒也不爱吃甜食.\n请提供正确的选项。",
     "Given the following premises:\nRosa was born in Santiago. \nSantiago is the capital and largest city of Chile.\nRosa is the daughter of a Catalan building contractor, Jose.\nJose has a Chilean wife, Carmen.\nCarmen and Jose are Rosa's parents.\nPeople from Catalan are not from Chile.\nA building contractor is responsible for the day-to-day oversight of a construction site. \nFor the following hypothesis:Rosa is the daughter of someone who is responsible for the oversight of traffic.\nWhich of the following options is correct? A)True, B)False, C)Uncertain \nPlease provide the correct option and the reasoning process to verify this conclusion.\nThe original reasoning process is as follows:\n B. False\n\nReasoning process:\n\n1. Jose is a building contractor, and a building contractor is responsible for the day-to-day oversight of a construction site, not traffic.\n2. Therefore, Rosa is not the daughter of someone who is responsible for the oversight of traffic.\n\nSo, the correct answer is B) False.\nHowever, the correct option isA.Please identify and explain the mistakes in the original reasoning process, then correct these mistakes and provide the corrected final answer.",
-    # "直销是指直销企业招募直销员,由直销员在固定营业场所之外直接向最终消费者推销产品的经营方式.\n\n以下属于直销的是（）.\n\nA.某奶制品生产厂家甄选业务员后,在市内设立了一百个销售点以统一的价格销售奶制品\n\nB.某书店采取网上销售方式,顾客下订单后,由快递员将产品送至指定场所并收取费用\n\nC.某化妆品牌招聘的一些业务员在道路旁设摊点发放产品说明并以较低价格向顾客推销\n\nD.开学时,新生小贺到批发市场购买了五盏台灯,自用一盏,其他四盏卖给同学",
-    # "\nPassage: If you know a lot about history, it will be easy for you to impress people who are intellectuals. But unfortunately, you will not know much about history if you have not, for example, read a large number of history books. Ttherefore, if you are not well versed in history due to a lack of reading, it will not be easy for you to impress people who are intellectuals.\nQuestion: The argument's reasoning is flawed because the argument overlooks the possibility that\nA. it is more important to impress people who are not intellectuals than people who are intellectuals\nB. many intellectuals are not widely read in history\nC. there are other easy ways to impress intellectuals that do not involve knowing history\nD. there are people who learn about history who do not impress intellectuals\nAnswer and reasoning step by step:"
 ]
 
 #######################################################################

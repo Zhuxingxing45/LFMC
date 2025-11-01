@@ -146,8 +146,7 @@ def write_results_to_file(results, file_path):
         json.dump(results, file, indent=4)
 
 def main():
-    # 数据集路径  
-    file_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_logicot_fintue_v2'
+    file_path = 'logic_llm/results/logic_logicot_fintue_v2'
     dataset_names = {
         'FOLIO': 'FOLIO_fintuing_dev.json',
         'LogiQA_v2': 'LogiQA_v2_fintuing_dev.json',
@@ -155,11 +154,9 @@ def main():
         'logiqa-zh':'logiqa-zh_fintuing_test.json'
     }
 
-    # 评估数据集
     results = evaluate_datasets(file_path, dataset_names)
 
-    # 记录评估结果
-    results_file_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/evaluate/outputs/logic_logicot_fintue_v2_evaluation_results.json'
+    results_file_path = 'logic_llm/evaluate/outputs/logic_logicot_fintue_v2_evaluation_results.json'
     write_results_to_file(results, results_file_path)
 
     print(f"Evaluation results written to {results_file_path}")

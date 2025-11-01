@@ -20,50 +20,42 @@ from xtuner.model import SupervisedFinetune
 from xtuner.parallel.sequence import SequenceParallelSampler
 from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 
-#######################################################################
-#                          Training Instruction                           
-#xtuner train configs/qwen/qwen3_4b/qwen3_4b_qlora_logicot.py --work-dir root/qwen3/4b/qwen3_logic_logicot/qwen3_logic_original_pth
-#xtuner convert pth_to_hf /root/llama3_logic_correct_ez_v13/llama3_logic_original_pth/llama3_8b_instruct_qlora_logic_correct_ez_v13.py /root/llama3_logic_correct_ez_v13/llama3_logic_original_pth/iter_6048.pth /root/llama3_logic_correct_ez_v13/llama3_logic_original_hf_adapter
-#export MKL_SERVICE_FORCE_INTEL=1
-#xtuner convert merge /home/23_zxx/workspace/llama3-ft/Meta-Llama-3-8B-Instruct /root/llama3_logic_correct_ez_v13/llama3_logic_original_hf_adapter /root/llama3_logic_correct_ez_v13/llama3_logic_original_hf_merged
-#streamlit run /tools/internstudio_web_demo.py /root/llama3_logic_correct_ez_v6/llama3_logic_original_hf_merged
-#######################################################################
 
 #######################################################################
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-pretrained_model_name_or_path = '/home/23_zxx/workspace/huggingface/Qwen/Qwen3-4B-Thinking-2507'
+pretrained_model_name_or_path = '/path/to/Meta-Llama-3-8B-Instruct'
 use_varlen_attn = False
 
 # Data
 data_files = [
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/LogiQA_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/Reclor_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/FOLIO_fintuing_data_formatted_base.json',
-            #   '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/origin/logiqa-zh_fintuing_data_formatted_base.json',
+            '/data/LogiQA_v2/LogiQA_fintuing_data_formatted_base.json',
+              '/data/Reclor/Reclor_fintuing_data_formatted_base.json',
+              '/data/FOLIO/FOLIO_fintuing_data_formatted_base.json',
+              '/data/logiqa-zh/logiqa-zh_fintuing_data_formatted_base.json',
 
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/folio2instruction_formatted.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_formatted.json',
-              '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/data/qwen_format/logicot/mrc_zh_formatted.json',
+              '/data/CorrectionData/Reclor_correct_fintuing_data_formatted.json',
+              '/data/CorrectionData/logiqa-zh_correct_fintuing_data_formatted.json',
+              '/data/CorrectionData/Fintue_data_format/logiqa-zh_correct_fintuing_data_formatted_2.json',
               ]
-prompt_template = PROMPT_TEMPLATE.default
-max_length = 4096
+prompt_template = PROMPT_TEMPLATE.llama3_chat
+max_length = 2048
 pack_to_max_length = True
 
 # parallel
 sequence_parallel_size = 1
 
 # Scheduler & Optimizer
-batch_size = 1  # per_device
+batch_size = 2  # per_device
 accumulative_counts = 16
 accumulative_counts *= sequence_parallel_size
 dataloader_num_workers = 0
 max_epochs = 3
 optim_type = AdamW
-lr = 1e-4
+lr = 2e-4
 betas = (0.9, 0.999)
-weight_decay = 0.01
+weight_decay = 0
 max_norm = 1  # grad clip
 warmup_ratio = 0.03
 
@@ -74,15 +66,14 @@ save_total_limit = 2  # Maximum checkpoints to keep (-1 means unlimited)
 # Evaluate the generation performance during the training
 evaluation_freq = 500
 SYSTEM = SYSTEM_TEMPLATE.alpaca
-
 evaluation_inputs = [
     "Given the following premises:\nLawton Park is a neighborhood in Seattle. \nAll citizens of Lawton Park use the zip code 98199. \nTom is a citizen of Lawton Park.\nDaniel uses the zip code 98199. \nFor the following hypothesis:Tom doesn't use the zip code 98199.\n Which of the following options is correct? A)True, B)False, C)Uncertain \nPlease provide the correct option.",
     "Given the following premises:\nScreenwriter moviegoers are those who don't mind being spoiled by spoilers and even inquire about plot introductions and review all kinds of movies in advance. This kind of moviegoers pursue the feeling of controlling the development of the plot and don't like surprises.\nFor the following hypothesis:Xiao Li belongs to the screenwriter moviegoers according to the above definition, because he is fond of suspense movies, enjoys brain-burning plots, and assumes the role of a detective when watching movies. \n Which of the following options is correct? A)entailment, B)not-entailment \nPlease provide the correct option.",
     "Given the following context:\nAny sale item that is purchased can be returned for store credit but not for a refund of the purchase price. Every home appliance and every piece of gardening equipment is on sale along with selected construction tools.\nFor the following question:If the statements above are true, which one of the following must also be true?\n Which of the following options is correct? A)Any item that is not on sale cannot be returned for store credit., B)Some construction tools are not returnable for store credit., C)No piece of gardening equipment is returnable for a refund., D)None of the things that are returnable for a refund are construction tools.\nPlease provide the correct option.",
     "给定以下背景信息：\n有些广东人不爱吃辣椒. 因此,有些南方人不爱吃辣椒.\n对于以下问题：以下哪项能保证上述论证的成立？.\n  A)有些广东人爱吃辣椒.  B)爱吃辣椒的有些是南方人. C)所有的广东人都是南方人. D)有些广东人不爱吃辣椒也不爱吃甜食.\n请提供正确的选项。",
     "Given the following premises:\nRosa was born in Santiago. \nSantiago is the capital and largest city of Chile.\nRosa is the daughter of a Catalan building contractor, Jose.\nJose has a Chilean wife, Carmen.\nCarmen and Jose are Rosa's parents.\nPeople from Catalan are not from Chile.\nA building contractor is responsible for the day-to-day oversight of a construction site. \nFor the following hypothesis:Rosa is the daughter of someone who is responsible for the oversight of traffic.\nWhich of the following options is correct? A)True, B)False, C)Uncertain \nPlease provide the correct option and the reasoning process to verify this conclusion.\nThe original reasoning process is as follows:\n B. False\n\nReasoning process:\n\n1. Jose is a building contractor, and a building contractor is responsible for the day-to-day oversight of a construction site, not traffic.\n2. Therefore, Rosa is not the daughter of someone who is responsible for the oversight of traffic.\n\nSo, the correct answer is B) False.\nHowever, the correct option isA.Please identify and explain the mistakes in the original reasoning process, then correct these mistakes and provide the corrected final answer.",
+    # "\nPassage: If you know a lot about history, it will be easy for you to impress people who are intellectuals. But unfortunately, you will not know much about history if you have not, for example, read a large number of history books. Ttherefore, if you are not well versed in history due to a lack of reading, it will not be easy for you to impress people who are intellectuals.\nQuestion: The argument's reasoning is flawed because the argument overlooks the possibility that\nA. it is more important to impress people who are not intellectuals than people who are intellectuals\nB. many intellectuals are not widely read in history\nC. there are other easy ways to impress intellectuals that do not involve knowing history\nD. there are people who learn about history who do not impress intellectuals\nAnswer and reasoning step by step:"
 ]
-
 
 #######################################################################
 #                      PART 2  Model & Tokenizer                      #
@@ -112,9 +103,9 @@ model = dict(
             bnb_4bit_quant_type='nf4')),
     lora=dict(
         type=LoraConfig,
-        r=64,
+        r=16,
         lora_alpha=16,
-        lora_dropout=0.2,
+        lora_dropout=0.1,
         bias='none',
         task_type='CAUSAL_LM'))
 
@@ -123,10 +114,12 @@ model = dict(
 #######################################################################
 alpaca_en = dict(
     type=process_hf_dataset,
-    dataset=dict(type=load_dataset,path="json", data_files=data_files),
+    # dataset=dict(type=load_dataset, path=alpaca_en_path),
+    dataset=dict(type=load_dataset, path='json',data_files=data_files),
+  
     tokenizer=tokenizer,
     max_length=max_length,
-    dataset_map_fn=alpaca_map_fn,
+    dataset_map_fn=None,
     template_map_fn=dict(
         type=template_map_fn_factory, template=prompt_template),
     remove_unused_columns=True,
@@ -136,7 +129,6 @@ alpaca_en = dict(
 
 sampler = SequenceParallelSampler \
     if sequence_parallel_size > 1 else DefaultSampler
-
 train_dataloader = dict(
     batch_size=batch_size,
     num_workers=dataloader_num_workers,

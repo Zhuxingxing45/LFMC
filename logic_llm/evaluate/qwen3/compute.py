@@ -112,14 +112,11 @@ def evaluate_datasets(file_path, dataset_names):
 
 def write_results_to_file(results, file_path):
     """Write evaluation results to a JSON file."""
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ✅ 自动创建目录
+    os.makedirs(os.path.dirname(file_path), exist_ok=True) 
     with open(file_path, 'w') as file:
         json.dump(results, file, indent=4)
 
 def save_em(file_path, results_file_path):
-    # 数据集路径  
-    # file_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_correct_fintue_ez_v8_ansonly'
-    # file_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/results/logic_correct_fintue_ez_v13'
     dataset_names = {
         'FOLIO': 'FOLIO_fintuing_dev.json',
         'LogiQA_v2': 'LogiQA_v2_fintuing_dev.json',
@@ -127,11 +124,8 @@ def save_em(file_path, results_file_path):
         'logiqa-zh':'logiqa-zh_fintuing_test.json'
     }
 
-    # 评估数据集
     results = evaluate_datasets(file_path, dataset_names)
 
-    # 记录评估结果
-    # results_file_path = '/home/23_zxx/workspace/llama3-ft/Llama3-Tutorial/logic_llm/evaluate/outputs/logic_correct_fintue_ez_v13_evaluation_results.json'
     write_results_to_file(results, results_file_path)
 
     print(f"Evaluation results written to {results_file_path}")

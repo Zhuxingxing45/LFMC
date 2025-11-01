@@ -117,8 +117,6 @@ def write_results_to_file(results, file_path):
         json.dump(results, file, indent=4)
 
 def save_em(file_path, results_file_path):
-    # file_path = 'logic_llm/results/logic_correct_fintue_ez_v8_ansonly'
-    # file_path = 'logic_llm/results/logic_correct_fintue_ez_v13'
     dataset_names = {
         'FOLIO': 'FOLIO_fintuing_dev.json',
         'LogiQA_v2': 'LogiQA_v2_fintuing_dev.json',
@@ -126,11 +124,10 @@ def save_em(file_path, results_file_path):
         'logiqa-zh':'logiqa-zh_fintuing_test.json'
     }
 
-    # 评估数据集
+    # test data
     results = evaluate_datasets(file_path, dataset_names)
 
-    # 记录评估结果
-    # results_file_path = 'logic_llm/evaluate/outputs/logic_correct_fintue_ez_v13_evaluation_results.json'
+    # record
     write_results_to_file(results, results_file_path)
 
     print(f"Evaluation results written to {results_file_path}")
